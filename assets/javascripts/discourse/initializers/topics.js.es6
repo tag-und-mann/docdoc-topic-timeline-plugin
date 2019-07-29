@@ -47,6 +47,8 @@ export default {
 
         @observes('topics.[]')
         masonryObserver() {
+          if (this.observeTaskCreated) return;
+          this.observeTaskCreated = false;
           Ember.run.scheduleOnce('afterRender', this, () => {
             let _wrapper = this.$(".mansory"),
                 _cards = this.$(".topic-list-item"),
@@ -83,6 +85,7 @@ export default {
             $(rightCollection).addClass("right-column");
             leftCollection = rightCollection = null; // free vars
             this.$(".topic-list-item").append($("<div class='arrow'></div>"));
+            this.observeTaskCreated = false;
           });
         },
 
@@ -112,8 +115,8 @@ export default {
         },
 
         applyOrdering() {
-          var screenWidth = this.$(window).innerWidth() / 2;
-          if (this.$().offset().left > screenWidth) {
+          var halfScreenWidth = this.element.parentElement.offsetWidth / 2;
+          if (this.element.offsetLeft > halfScreenWidth) {
             this.$().addClass("right-column");
           } else {
             this.$().addClass("left-column");
