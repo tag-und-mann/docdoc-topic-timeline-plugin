@@ -50,7 +50,7 @@ export default {
           Ember.run.scheduleOnce('afterRender', this, () => {
             let _wrapper = this.$(".mansory"),
                 _cards = this.$(".topic-list-item"),
-                _cols = 2,
+                _cols = _wrapper.css("column-count"),
                 _out = [],
                 _col = 0;
 
@@ -66,16 +66,22 @@ export default {
               _out.push(_cards[_cards.length - 1]);
             }
             _wrapper.html(_out);
+            _out = null;
+            // let them render
 
             this.$(".topic-list-item").removeClass("right-column left-column");
-            var screenWidth = this.$(window).innerWidth() / 2;
+            var halfScreenWidth = _wrapper[0].offsetWidth / 2;
+            var leftCollection = [], rightCollection = [];
             this.$(".topic-list-item").each(function( index ) {
-              if ($(this).offset().left > screenWidth) {
-                $(this).addClass("right-column");
+              if (this.offsetLeft > halfScreenWidth) {
+                  rightCollection.push(this);
               } else {
-                $(this).addClass("left-column");
+                  leftCollection.push(this);
               }
             });
+            $(leftCollection).addClass("left-column");
+            $(rightCollection).addClass("right-column");
+            leftCollection = rightCollection = null; // free vars
             this.$(".topic-list-item").append($("<div class='arrow'></div>"));
           });
         },
