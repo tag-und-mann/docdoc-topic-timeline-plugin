@@ -48,11 +48,11 @@ export default {
         @observes('topics.[]')
         masonryObserver() {
           if (this.observeTaskCreated) return;
-          this.observeTaskCreated = false;
+          this.observeTaskCreated = true;
           Ember.run.scheduleOnce('afterRender', this, () => {
             let _wrapper = this.$(".mansory"),
                 _cards = this.$(".topic-list-item"),
-                _cols = _wrapper.css("column-count"),
+                _cols = parseInt(_wrapper.css("column-count"))||2,
                 _out = [],
                 _col = 0;
 
