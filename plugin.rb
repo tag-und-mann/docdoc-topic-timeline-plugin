@@ -1,10 +1,10 @@
-# name: berta-topic-view-plugin
+# name: berta-topic-timeline-plugin
 # about: Changes for standard topic view
-# version: 0.0.1
+# version: 0.0.2
 # authors: Vadim Bondar
 
-register_asset 'stylesheets/topics_common.scss'
-register_asset 'stylesheets/topics_mobile.scss'
+register_asset 'stylesheets/timeline_topics_common.scss'
+register_asset 'stylesheets/timeline_topics_mobile.scss'
 
 after_initialize do
   add_to_class :post, :excerpt_for_topic do

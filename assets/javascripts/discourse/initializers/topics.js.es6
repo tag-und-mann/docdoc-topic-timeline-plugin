@@ -1,6 +1,24 @@
 import { withPluginApi } from 'discourse/lib/plugin-api';
 import { on, observes } from 'ember-addons/ember-computed-decorators';
 
+function timelineDate(date) {
+  const fmt =
+    date.getFullYear() === new Date().getFullYear()
+      ? "long_no_year_no_time"
+      : "timeline_date";
+  return moment(date).format(I18n.t(`dates.${fmt}`));
+}
+
+function addCreatedDate() {
+  var createdAt = $(this).find('[data-created]').attr('data-created'),
+      createdAtDate = new Date(createdAt),
+      hasDateBlock = $(this).prev('.topic-created-at').hasClass('topic-created-at');
+
+  if (!hasDateBlock) {
+    return $("<div class='topic-created-at'></div>").text(timelineDate(createdAtDate));
+  }
+}
+
 export default {
   name: 'topics',
   initialize(container){
@@ -81,10 +99,10 @@ export default {
                   leftCollection.push(this);
               }
             });
-            $(leftCollection).addClass("left-column");
-            $(rightCollection).addClass("right-column");
+            $(leftCollection).before(addCreatedDate).addClass("right-column");
+            $(rightCollection).before(addCreatedDate).addClass("right-column");
             leftCollection = rightCollection = null; // free vars
-            this.$(".topic-list-item").append($("<div class='arrow'></div>"));
+            this.$(".topic-list-item :not(.arrow)").append($("<div class='arrow'></div>"));
             this.observeTaskCreated = false;
           });
         },
@@ -115,12 +133,7 @@ export default {
         },
 
         applyOrdering() {
-          var halfScreenWidth = this.element.parentElement.offsetWidth / 2;
-          if (this.element.offsetLeft > halfScreenWidth) {
-            this.$().addClass("right-column");
-          } else {
-            this.$().addClass("left-column");
-          }
+          this.$().before(addCreatedDate).addClass("right-column");
         }
 
       });

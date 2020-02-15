@@ -46,4 +46,4 @@ export function categoryLinkHTML(category, options) {
     );
 }
 
-registerUnbound('category-link', categoryLinkHTML);
+registerUnbound('category-status', categoryLinkHTML);
