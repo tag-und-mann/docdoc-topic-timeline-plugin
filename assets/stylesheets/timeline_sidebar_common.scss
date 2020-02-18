@@ -1,0 +1,193 @@
+.topic-sidebar {
+  flex-shrink: 0;
+  width: 310px;
+  height: auto;
+  margin-left: 25px;
+  margin-top: 32px;
+}
+
+.sidebar-lohn-block {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 25px;
+  text-align: center;
+  border: 3px solid #005289;
+  border-radius: 4px;
+  color: #637381;
+}
+
+.sidebar-lohn-title {
+  margin: 0 auto 5px;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.sidebar-lohn-description {
+  margin: 8px auto;
+  font-weight: bold;
+}
+
+.sidebar-lohn-link {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  background: #92d6b4;
+  color: #fff;
+  border-radius: 4px;
+  padding: 12px 25px;
+  font-size: 14px;
+}
+
+.sidebar-lohn-link:hover {
+  transition: all 0.2s ease-in;
+  color: #214f38;
+  background-color: rgba(146,214,180,0.6);
+}
+
+.sidebar-lohn-link:visited {
+  color: #fff;
+}
+
+.list-container {
+  position: relative;
+}
+
+.support-wrapper {
+  position: absolute;
+  right: 0;
+  top: -45px;
+  width: 310px;
+}
+
+.support-btn {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  padding: 6px 12px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #005289;
+  color: #005289;
+}
+
+.support-btn:hover {
+  transition: all 0.2s ease-in;
+  background-color: #005289;
+  color: #fff;
+}
+
+.sidebar-slider .slider-slide {
+  box-sizing: border-box;
+  width: 100%;
+  height: 450px;
+  padding: 25px;
+  background-color: #7fa8c2;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+}
+
+.sidebar-calculator-bg {
+  position: absolute;
+  top: -20px;
+  right: -70px;
+  z-index: -1;
+}
+
+// slick-slider customization
+
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0;
+  opacity: .75;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  outline: none;
+  background: transparent;
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover, .slick-next:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.slick-prev {
+  left: 10px;
+  border-right: 6px solid #fff;
+}
+
+.slick-next {
+  right: 10px;
+  border-left: 6px solid #fff;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 28px;
+  line-height: 5px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  opacity: .75;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 2px .5px rgba(255,255,255,.75);
+}
+
+.slick-dots li button:hover:before {
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  background-color: #fff;
+}

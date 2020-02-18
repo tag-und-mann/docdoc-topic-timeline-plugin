@@ -1,20 +1,19 @@
 import discourseComputed from "discourse-common/utils/decorators";
-import { ajax } from "discourse/lib/ajax";
 
 export default Ember.Component.extend({
     classNames: ["sidebar-lohn"],
-    descriptionText: 'Description text for this block',
+    descriptionText: 'Description text for this block. Test text. Have to be changed',
     btnText: 'Jet Lohn Dinstructions',
 
 
     @discourseComputed()
     lohnTitle() {
-        return 'Lohnrechner </br> der name surname';
+        return '<b>Lohnrechner</b> </br> des VSAO ZÜRICH';
     },
 
     @discourseComputed()
     lohnLink() {
-        return 'https://vsao-zh.ch/lohnrechner/?return';
+        return this.siteSettings.timeline_sidebar_lohn_url || 'https://vsao-zh.ch/lohnrechner/?return';
     }
 
 });

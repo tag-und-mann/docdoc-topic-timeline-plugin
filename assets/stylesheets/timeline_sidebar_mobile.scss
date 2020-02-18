@@ -1,0 +1,45 @@
+.mobile-view {
+  #navigation-bar .navigation-toggle {
+    border: none;
+    margin-bottom: 0;
+    background-color: #92d6b4;
+  }
+
+  #navigation-bar .toggle-link {
+    color: #fff;
+  }
+
+  #navigation-bar .toggle-link .d-icon-caret-down {
+    display: none;
+  }
+
+  #navigation-bar.nav-pills > li > a {
+    padding: 10px 15px;
+  }
+
+  .support-wrapper {
+    width: auto;
+    top: -52px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .topic-list {
+    box-sizing: initial;
+    display: block;
+    margin: 0 0 10px;
+    padding-left: 0;
+  }
+
+  #list-area .mansory {
+    border: none;
+  }
+
+  .topic-sidebar, .topic-created-at {
+    display: none;
+  }
+
+  .support-wrapper {
+    width: auto;
+  }
+}

@@ -7,5 +7,14 @@ export default Ember.Component.extend({
     @discourseComputed()
     sliders() {
         return [];
+    },
+
+    init() {
+        this._super(...arguments);
+        Ember.run.scheduleOnce('afterRender', this, () => {
+            $('.slider-cont').slick({
+                dots: true
+            });
+        });
     }
 });

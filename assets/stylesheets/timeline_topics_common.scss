@@ -352,6 +352,14 @@ button[title="yearly"] .date-section {
   order: 1;
 }
 
+.navigation-container #create-topic {
+  display: none;
+}
+
+.desktop-view .navigation-container .nav-pills li[title="Lohnrechner"]{
+  display: none;
+}
+
 .topic-list {
   box-sizing: border-box;
   display: flex;
@@ -370,50 +378,4 @@ button[title="yearly"] .date-section {
   background: #fff;
   color: #637381;
   text-align: right;
-}
-
-.topic-sidebar {
-  flex-shrink: 0;
-  width: 310px;
-  height: auto;
-  margin-left: 25px;
-}
-
-.sidebar-lohn-block {
-  margin-bottom: 20px;
-  padding: 25px;
-  text-align: center;
-  border: 3px solid #7fa7c2;
-  border-radius: 4px;
-  color: #637381;
-}
-
-.sidebar-lohn-title {
-  margin: 0 auto 5px;
-  line-height: 20px;
-  font-size: 20px;
-}
-
-.sidebar-lohn-description {
-  margin: 8px auto;
-}
-
-.sidebar-lohn-link {
-  display: inline-block;
-  transition: all 0.2s ease-in;
-  background: #92d6b4;
-  color: #FFF;
-  border-radius: 4px;
-  padding: 12px 25px;
-  font-size: 14px;
-}
-
-.sidebar-lohn-link:hover {
-  transition: all 0.2s ease-in;
-  color: #214f38;
-  background-color: rgba(146,214,180,0.6);
-}
-
-.navigation-container #create-topic {
-  display: none;
 }
