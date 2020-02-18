@@ -1,9 +1,14 @@
 .topic-sidebar {
+  display: none;
   flex-shrink: 0;
   width: 310px;
   height: auto;
   margin-left: 25px;
   margin-top: 32px;
+}
+
+.list-container .topic-sidebar {
+  display: block;
 }
 
 .sidebar-lohn-block {

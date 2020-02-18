@@ -133,7 +133,8 @@ export default {
         },
 
         applyOrdering() {
-          this.$().before(addCreatedDate).addClass("right-column");
+          var dateAdditional = $('.list-container').length ? addCreatedDate : '';
+          this.$().before(dateAdditional).addClass("right-column");
         }
 
       });
