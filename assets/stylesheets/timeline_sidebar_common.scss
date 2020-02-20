@@ -58,13 +58,19 @@
 }
 
 .support-wrapper {
+  display: none;
+}
+
+.navigation-topics .support-wrapper {
   position: absolute;
   right: 0;
-  top: -45px;
+  top: -49px;
+  display: block;
   width: 310px;
 }
 
-.support-btn {
+.navigation-topics .support-btn {
+  position: relative;
   display: inline-block;
   transition: all 0.2s ease-in;
   padding: 6px 12px;

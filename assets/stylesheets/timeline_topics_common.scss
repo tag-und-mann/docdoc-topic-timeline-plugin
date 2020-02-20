@@ -352,7 +352,7 @@ button[title="yearly"] .date-section {
   order: 1;
 }
 
-.navigation-container #create-topic {
+.navigation-topics #create-topic {
   display: none;
 }
 
@@ -379,3 +379,8 @@ button[title="yearly"] .date-section {
   color: #637381;
   text-align: right;
 }
+
+.load-more-btn {
+  display: none;
+}
+
