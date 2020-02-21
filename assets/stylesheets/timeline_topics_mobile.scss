@@ -3,6 +3,10 @@
         position: initial;
     }
 
+    #list-area {
+        margin-bottom: 20px;
+    }
+
     .topic-meta-data {
         margin-left: 60px;
         margin-top: -35px;
@@ -120,5 +124,35 @@
     #list-area .post-view-count-title,
     #list-area .post-count-title {
         margin-left: 0!important;
+    }
+
+    .navigation-container #create-topic {
+        display: none;
+    }
+
+    body[class*="category"] .load-more-btn,
+    .navigation-topics .load-more-btn {
+        display: block;
+        margin: 0 auto 40px;
+    }
+
+    .load-more-mobile {
+        display: block;
+        margin: auto;
+        background: transparent;
+        color: #005289;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+    }
+
+    .load-more-mobile:focus,
+    .load-more-mobile:active,
+    .load-more-mobile:visited,
+    .load-more-mobile:hover {
+        opacity: .8;
+        background: transparent;
+        border: none;
+        outline: none;
     }
 }

@@ -12,10 +12,10 @@
   at the end of the link, preventing it from line wrapping onto its own line.
 --}}
 <td class='main-link clearfix' colspan="1">
-  <div class="link-bottom-line">
+  <div class="link-bottom-line" data-created="{{topic.created_at}}">
     {{#unless hideCategory}}
       {{#unless topic.isPinnedUncategorized}}
-        {{category-link topic.category}}
+        {{category-status topic.category}}
       {{/unless}}
     {{/unless}}
     {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}

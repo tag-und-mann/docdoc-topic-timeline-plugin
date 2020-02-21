@@ -1,0 +1,13 @@
+plugins:
+  timeline_sidebar_enabled:
+    default: true
+    client: true
+  timeline_sidebar_lohn_url:
+    default: "https://vsao-zh.ch/lohnrechner/?return"
+    client: true
+  timeline_sidebar_enamble_slider:
+    default: true
+    client: true
+  timeline_sidebar_rss_url:
+    default: "https://vsao-zh.ch/lohnrechner/?return"
+    client: true
