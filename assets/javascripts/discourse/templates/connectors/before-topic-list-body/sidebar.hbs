@@ -1,4 +1,6 @@
 <div class="topic-sidebar">
   {{sidebar-lohn}}
-  {{sidebar-slider}}
+  {{#if siteSettings.timeline_sidebar_enamble_slider}}
+    {{sidebar-slider}}
+  {{/if}}
 </div>

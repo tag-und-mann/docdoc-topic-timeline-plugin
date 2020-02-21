@@ -130,7 +130,8 @@
         display: none;
     }
 
-    body:not(.navigation-categories) .load-more-btn {
+    body[class*="category"] .load-more-btn,
+    .navigation-topics .load-more-btn {
         display: block;
         margin: 0 auto 40px;
     }
