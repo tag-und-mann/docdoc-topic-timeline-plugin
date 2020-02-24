@@ -19,6 +19,20 @@ function addCreatedDate() {
   }
 }
 
+function onScrollMethod() {
+  const sidebarWrapper = $('.topic-sidebar');
+  const sidebar = $('.topic-sidebar-scrollable');
+  const elemCoords = sidebarWrapper.offset();
+  const pageScrollPosition = $(window).scrollTop();
+  const diffCONST = 84;
+
+  if (pageScrollPosition + diffCONST > elemCoords.top) {
+    sidebar.css({position: 'fixed', top: diffCONST});
+  } else {
+    sidebar.css({position: 'absolute', top: 0});
+  }
+}
+
 export default {
   name: 'topics',
   initialize(container){
@@ -53,6 +67,8 @@ export default {
 
             _wrapper.html(_out);
           });
+
+          $(window).bind('scroll', onScrollMethod);
         },
 
         @on('didInsertElement')
