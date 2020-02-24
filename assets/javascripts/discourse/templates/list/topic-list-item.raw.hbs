@@ -34,6 +34,9 @@
             {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
         {{~/if}}
     </span>
+    {{~#if topic.image_url}}
+      <img src="{{topic.image_url}}" class="topic-preview" alt="preview" title="preview">
+    {{~/if}}
     {{raw "list/topic-excerpt" topic=topic}}
 </td>
 <div class="topic-info-row">

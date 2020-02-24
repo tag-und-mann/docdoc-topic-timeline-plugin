@@ -9,5 +9,5 @@ plugins:
     default: true
     client: true
   timeline_sidebar_rss_url:
-    default: "https://vsao-zh.ch/lohnrechner/?return"
+    default: "https://www.infonlinemed.ch/rss.cfm?pressespiegel=410A9985E70AEC84242C59E2768258DF"
     client: true
