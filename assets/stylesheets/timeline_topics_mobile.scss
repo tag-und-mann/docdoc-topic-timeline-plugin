@@ -62,10 +62,35 @@
         width: auto!important;
     }
 
+    #list-area .topic-list-item {
+        margin-bottom: 25px;
+    }
+
+    #list-area .arrow {
+        top: auto;
+        bottom: -30px;
+        margin-top: 0;
+        margin-left: -11px;
+    }
+
     #list-area .right-column .arrow,
     #list-area .left-column .arrow {
-        display: none!important;
+        right: auto;
+        left: 50%;
+        border-top: 15px solid #e9edf2;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid transparent;
+    }
 
+    #list-area .topic-list-item.right-column.pinned .arrow {
+        border-top: 15px solid #92d6b4!important;
+        border-right: 15px solid transparent!important;
+    }
+
+    #list-area .topic-list-item.left-column.pinned .arrow {
+        border-top: 15px solid #92d6b4!important;
+        border-left: 15px solid transparent!important;
     }
 
     #list-area .topic-list-item.right-column,

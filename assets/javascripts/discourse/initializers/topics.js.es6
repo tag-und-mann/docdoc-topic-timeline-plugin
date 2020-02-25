@@ -120,7 +120,7 @@ export default {
             $(leftCollection).before(addCreatedDate).addClass("right-column");
             $(rightCollection).before(addCreatedDate).addClass("right-column");
             leftCollection = rightCollection = null; // free vars
-            this.$(".topic-list-item :not(.arrow)").append($("<div class='arrow'></div>"));
+            this.$(".topic-list-item > :not(.arrow)").append($("<div class='arrow'></div>"));
             this.observeTaskCreated = false;
           });
         },
