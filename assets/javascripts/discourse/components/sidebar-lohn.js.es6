@@ -3,7 +3,7 @@ import discourseComputed from "discourse-common/utils/decorators";
 export default Ember.Component.extend({
     classNames: ["sidebar-lohn"],
     descriptionText: 'Description text for this block. Test text. Have to be changed',
-    btnText: 'Jet Lohn Dinstructions',
+    btnText: 'Jetzt Lohn berechnen',
 
 
     @discourseComputed()

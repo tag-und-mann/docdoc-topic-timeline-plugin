@@ -26,6 +26,8 @@ function onScrollMethod() {
   const pageScrollPosition = $(window).scrollTop();
   const diffCONST = 84;
 
+  if (!sidebar.length || !sidebarWrapper.length) return;
+
   if (pageScrollPosition + diffCONST > elemCoords.top) {
     sidebar.css({position: 'fixed', top: diffCONST});
   } else {
