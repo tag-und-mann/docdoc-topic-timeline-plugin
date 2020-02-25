@@ -15,7 +15,10 @@ register_asset 'slick/slick.min.js'
 
 after_initialize do
   add_to_class :post, :excerpt_for_topic do
-    Post.excerpt(cooked, SiteSetting.post_excerpt_maxlength, strip_links: true, strip_images: true, post: self)
+    self.rebake!(invalidate_broken_images: true, priority: :normal)
+    new_cooked = Nokogiri::HTML.fragment(cooked)
+    new_cooked.css(".poll").remove
+    Post.excerpt(new_cooked.to_html, SiteSetting.post_excerpt_maxlength, strip_links: true, strip_images: true, post: self)
   end
   add_to_serializer(:listable_topic, :include_excerpt?) { true }
 
@@ -40,7 +43,7 @@ after_initialize do
     end
 
     def call
-      rss = RSS::Parser.parse(uri)
+      rss = RSS::Parser.parse(uri, false)
 
       channel = channel_data(rss.channel)
       items = items_data(rss.items)
@@ -71,8 +74,12 @@ after_initialize do
       items.map do |item|
         {
           title: item.title,
-          author: item.author,
-          description: item.description
+          link: item.link,
+          description: item.description,
+          category: item.category,
+          pub_date: item.pubDate,
+          source: item.source,
+          guid: item.guid&.content
         }
       end
     end
