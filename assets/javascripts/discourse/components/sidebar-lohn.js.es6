@@ -2,13 +2,13 @@ import discourseComputed from "discourse-common/utils/decorators";
 
 export default Ember.Component.extend({
     classNames: ["sidebar-lohn"],
-    descriptionText: 'Description text for this block. Test text. Have to be changed',
-    btnText: 'Jetzt Lohn berechnen',
+    descriptionText: 'Finde raus, was du verdienen solltest.',
+    btnText: 'Jet Lohn Dinstructions',
 
 
     @discourseComputed()
     lohnTitle() {
-        return '<b>Lohnrechner</b> </br> des VSAO ZÜRICH';
+        return '<b>Lohnrechner</b> </br> VSAO ZÜRICH';
     },
 
     @discourseComputed()
