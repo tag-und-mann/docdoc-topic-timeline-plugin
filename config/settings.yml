@@ -9,5 +9,5 @@ plugins:
     default: true
     client: true
   timeline_sidebar_rss_url:
-    default: "https://www.infonlinemed.ch/rss.cfm?pressespiegel=410A9985E70AEC84242C59E2768258DF"
+    default: "https://www.infonlinemed.ch/rss.cfm?pressespiegel=08DA431FA872860FCB4892147FDE5911"
     client: true
