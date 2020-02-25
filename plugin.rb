@@ -1,12 +1,10 @@
 # name: berta-topic-timeline-plugin
 # about: Changes for standard topic view
 # version: 0.1.0
-# authors: Vadim Bondar, Vladyslav Sydorenko
+# authors: Vladyslav Sydorenko
 
 enabled_site_setting :timeline_sidebar_enabled
 
-register_asset 'stylesheets/topics_common.scss'
-register_asset 'stylesheets/topics_mobile.scss'
 register_asset 'slick/css/slick.scss'
 register_asset 'stylesheets/timeline_sidebar_common.scss'
 register_asset 'stylesheets/timeline_topics_common.scss'
@@ -17,7 +15,7 @@ register_asset 'slick/slick.min.js'
 
 after_initialize do
   add_to_class :post, :excerpt_for_topic do
-    Post.excerpt(cooked, 300, strip_links: true, strip_images: false, post: self)
+    Post.excerpt(cooked, SiteSetting.post_excerpt_maxlength, strip_links: true, strip_images: true, post: self)
   end
   add_to_serializer(:listable_topic, :include_excerpt?) { true }
 
