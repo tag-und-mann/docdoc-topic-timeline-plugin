@@ -27,7 +27,7 @@ export default Ember.Component.extend({
                 return this.genData(data);
             }).then((data) => {
                 sliderCont.html(data);
-                $('.slider-cont').slick({
+                $('.j-slider-cont').slick({
                     dots: true
                 });
             });
@@ -41,7 +41,6 @@ export default Ember.Component.extend({
                 data.items.forEach((item) => {
                     var pubDate = moment(item.pubDate).format('DD MMMM YYYY');
                     content += `<div class="slider-slide">
-                                  <p class="news-title">Neulich in den Medien</p>
                                   <p class="news-date">${pubDate}</p>
                                   <p class="news-content">
                                     <a href="${item.link}" class="news-link" target="_blank">${item.title}</a>
