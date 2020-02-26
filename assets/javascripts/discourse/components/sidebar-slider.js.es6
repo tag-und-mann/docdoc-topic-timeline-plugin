@@ -13,7 +13,9 @@ export default Ember.Component.extend({
         if (!isSliderEnabled) return;
 
         Ember.run.scheduleOnce('afterRender', this, () => {
-            const sliderCont = $('.j-slider-cont');
+            const sliderCont = $('.j-slider-cont:visible');
+
+            if (!sliderCont.length) return;
 
             ajax(endpoint, {
                 type: "GET"
