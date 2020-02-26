@@ -1,13 +1,7 @@
-import discourseComputed from "discourse-common/utils/decorators";
 import { ajax } from "discourse/lib/ajax";
 
 export default Ember.Component.extend({
     classNames: ["sidebar-slider"],
-
-    @discourseComputed()
-    sliders() {
-        return [];
-    },
 
     init() {
         this._super(...arguments);
@@ -19,7 +13,7 @@ export default Ember.Component.extend({
         if (!isSliderEnabled) return;
 
         Ember.run.scheduleOnce('afterRender', this, () => {
-            var sliderCont = $('.slider-cont');
+            const sliderCont = $('.j-slider-cont');
 
             ajax(endpoint, {
                 type: "GET"
@@ -27,9 +21,11 @@ export default Ember.Component.extend({
                 return this.genData(data);
             }).then((data) => {
                 sliderCont.html(data);
-                $('.slider-cont').slick({
+                setTimeout(() => {
+                  sliderCont.slick({
                     dots: true
-                });
+                  });
+                }, 0);
             });
         });
     },
@@ -41,7 +37,6 @@ export default Ember.Component.extend({
                 data.items.forEach((item) => {
                     var pubDate = moment(item.pubDate).format('DD MMMM YYYY');
                     content += `<div class="slider-slide">
-                                  <p class="news-title">Neulich in den Medien</p>
                                   <p class="news-date">${pubDate}</p>
                                   <p class="news-content">
                                     <a href="${item.link}" class="news-link" target="_blank">${item.title}</a>
