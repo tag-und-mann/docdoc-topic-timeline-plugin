@@ -1,13 +1,7 @@
-import discourseComputed from "discourse-common/utils/decorators";
 import { ajax } from "discourse/lib/ajax";
 
 export default Ember.Component.extend({
     classNames: ["sidebar-slider"],
-
-    @discourseComputed()
-    sliders() {
-        return [];
-    },
 
     init() {
         this._super(...arguments);
@@ -19,7 +13,7 @@ export default Ember.Component.extend({
         if (!isSliderEnabled) return;
 
         Ember.run.scheduleOnce('afterRender', this, () => {
-            var sliderCont = $('.slider-cont');
+            const sliderCont = $('.j-slider-cont');
 
             ajax(endpoint, {
                 type: "GET"
@@ -27,9 +21,11 @@ export default Ember.Component.extend({
                 return this.genData(data);
             }).then((data) => {
                 sliderCont.html(data);
-                $('.j-slider-cont').slick({
+                setTimeout(() => {
+                  sliderCont.slick({
                     dots: true
-                });
+                  });
+                }, 0);
             });
         });
     },
