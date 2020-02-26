@@ -1,9 +1,10 @@
 import { withPluginApi } from 'discourse/lib/plugin-api';
 import { on, observes } from 'ember-addons/ember-computed-decorators';
 
+var latestCreatedAtMonth = '';
+
 function timelineDate(date) {
-  const fmt =
-    date.getFullYear() === new Date().getFullYear()
+  const fmt = date.getFullYear() === new Date().getFullYear()
       ? "long_no_year_no_time"
       : "timeline_date";
   return moment(date).format(I18n.t(`dates.${fmt}`));
@@ -12,9 +13,12 @@ function timelineDate(date) {
 function addCreatedDate() {
   var createdAt = $(this).find('[data-created]').attr('data-created'),
       createdAtDate = new Date(createdAt),
+      createdAtMonth = moment(createdAtDate).format('M'),
       hasDateBlock = $(this).prev('.topic-created-at').hasClass('topic-created-at');
 
+//   if (!hasDateBlock && latestCreatedAtMonth !== createdAtMonth) {
   if (!hasDateBlock) {
+    latestCreatedAtMonth = createdAtMonth;
     return $("<div class='topic-created-at'></div>").text(timelineDate(createdAtDate));
   }
 }
@@ -47,6 +51,10 @@ export default {
         @on('init')
         setup() {
           Ember.run.scheduleOnce('afterRender', this, () => {
+
+            if (this.order !== 'created') {
+              this.changeSort('created');
+            }
             // this.$('.mansory .right-column:nth-child(4)').addClass("top-margin");
 
             let _wrapper = this.$(".mansory"),
