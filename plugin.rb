@@ -18,9 +18,15 @@ after_initialize do
     self.rebake!(invalidate_broken_images: true, priority: :normal)
     new_cooked = Nokogiri::HTML.fragment(cooked)
     new_cooked.css(".poll").remove
-    Post.excerpt(new_cooked.to_html, SiteSetting.post_excerpt_maxlength, strip_links: true, strip_images: true, post: self)
+    text = Post.excerpt(new_cooked.to_html, SiteSetting.post_excerpt_maxlength, strip_links: true, strip_images: true, post: self)
+    text.gsub('[image]', '')
   end
   add_to_serializer(:listable_topic, :include_excerpt?) { true }
+
+  add_to_serializer(:listable_topic, :video_url, false) {
+    raw = object.posts.first.raw
+    raw.match(/^(http:\/\/|https:\/\/)(vimeo\.com|youtu\.be|www\.youtube\.com)\/([\w\/]+)([\?].*)?$/).to_a.first
+  }
 
   require_dependency "application_controller"
   require_dependency "plugin_store"
