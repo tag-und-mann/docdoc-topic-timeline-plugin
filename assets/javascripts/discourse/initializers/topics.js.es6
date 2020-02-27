@@ -20,8 +20,8 @@ function addCreatedDate() {
 }
 
 function onScrollMethod() {
-  const sidebarWrapper = $('.topic-sidebar');
-  const sidebar = $('.topic-sidebar-scrollable');
+  const sidebarWrapper = $('.desktop-view .topic-sidebar');
+  const sidebar = $('.desktop-view .topic-sidebar-scrollable');
   const elemCoords = sidebarWrapper.offset();
   const pageScrollPosition = $(window).scrollTop();
   const diffCONST = 84;
