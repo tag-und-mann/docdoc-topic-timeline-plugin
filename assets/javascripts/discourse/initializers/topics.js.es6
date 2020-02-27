@@ -51,8 +51,14 @@ export default {
         setup() {
           Ember.run.scheduleOnce('afterRender', this, () => {
 
-            if (!this.site.mobileView && $('.navigation-topics').length && this.order !== 'created') {
-              this.changeSort('created');
+            if (!this.site.mobileView && $('.navigation-topics').length) {
+              const path = window.location.pathname;
+              if (this.order !== 'created' && (path === '/' || path === '/latest')) {
+                this.changeSort('created');
+              }
+              if (this.order === 'created' && path !== '/latest') {
+                this.changeSort('default');
+              }
             }
             // this.$('.mansory .right-column:nth-child(4)').addClass("top-margin");
 
