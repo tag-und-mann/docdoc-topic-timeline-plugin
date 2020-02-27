@@ -25,6 +25,7 @@
 
 @media screen and (max-width: 950px) {
   .list-container .topic-list {
+    position: relative;
     box-sizing: initial;
     display: block;
     margin: 0 0 10px;
@@ -35,9 +36,20 @@
     border: none;
   }
 
-  .topic-created-at,
-  .list-container .topic-sidebar {
+  .topic-created-at {
     display: none;
+  }
+
+  .list-container .topic-sidebar {
+    //position: absolute;
+    //bottom: 0;
+    //margin: 0;
+    display: none;
+    margin: 40px auto 20px;
+  }
+
+  .list-container .topic-sidebar-scrollable {
+    position: static;
   }
 
   .support-wrapper {

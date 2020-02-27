@@ -154,6 +154,10 @@
         display: none;
     }
 
+    .topic-below-cont {
+        position: relative;
+    }
+
     body[class*="category"] .load-more-btn,
     .navigation-topics .load-more-btn {
         display: block;
