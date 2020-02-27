@@ -17,9 +17,12 @@ after_initialize do
   add_to_class :post, :excerpt_for_topic do
     self.rebake!(invalidate_broken_images: true, priority: :normal)
     new_cooked = Nokogiri::HTML.fragment(cooked)
-    new_cooked.css(".poll").remove
-    text = Post.excerpt(new_cooked.to_html, SiteSetting.post_excerpt_maxlength, strip_links: true, strip_images: true, post: self)
+    new_cooked.css('.poll').remove
+    mentions = new_cooked.css('.mention').map { |m| [m.inner_html, m.to_s] }
+    text = Post.excerpt(new_cooked.to_html, SiteSetting.post_excerpt_maxlength, strip_images: true, post: self)
     text.gsub('[image]', '')
+    mentions.each { |m| text.gsub(m[0], m[1]) }
+    text
   end
   add_to_serializer(:listable_topic, :include_excerpt?) { true }
 
