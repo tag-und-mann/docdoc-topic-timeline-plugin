@@ -42,6 +42,12 @@ const Scrolling = Mixin.create({
         return;
       }
       this.loadMoreEvent = event;
+      if ($('.j-load-more-btn').length && this.loadMoreEvent.type === 'click') {
+        $(document).scrollTop($('.j-load-more-btn').offset().top - 940);
+        setTimeout(() => {
+          $(document).scrollTop($('.j-load-more-btn').offset().top - 940);
+        }, 0);
+      }
       return scheduleOnce("afterRender", this, "scrolled");
     };
 

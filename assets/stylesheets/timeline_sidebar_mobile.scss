@@ -41,11 +41,10 @@
   }
 
   .list-container .topic-sidebar {
-    //position: absolute;
-    //bottom: 0;
-    //margin: 0;
-    display: none;
-    margin: 40px auto 20px;
+    position: absolute;
+    bottom: -690px;
+    left: 50%;
+    margin: 0 -155px 20px;
   }
 
   .list-container .topic-sidebar-scrollable {
