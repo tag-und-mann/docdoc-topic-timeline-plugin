@@ -51,7 +51,7 @@ export default {
         setup() {
           Ember.run.scheduleOnce('afterRender', this, () => {
 
-            if (this.order !== 'created') {
+            if (!this.site.mobileView && $('.navigation-topics').length && this.order !== 'created') {
               this.changeSort('created');
             }
             // this.$('.mansory .right-column:nth-child(4)').addClass("top-margin");

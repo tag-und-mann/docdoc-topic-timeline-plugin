@@ -41,11 +41,14 @@ const Scrolling = Mixin.create({
       if (router.activeTransition) {
         return;
       }
+
       this.loadMoreEvent = event;
+
       if ($('.j-load-more-btn').length && this.loadMoreEvent.type === 'click') {
-        $(document).scrollTop($('.j-load-more-btn').offset().top - 940);
+        const sidebarHeight = $('.topic-sidebar').outerHeight();
+        $(document).scrollTop($('.j-load-more-btn').offset().top - sidebarHeight);
         setTimeout(() => {
-          $(document).scrollTop($('.j-load-more-btn').offset().top - 940);
+          $(document).scrollTop($('.j-load-more-btn').offset().top - sidebarHeight);
         }, 0);
       }
       return scheduleOnce("afterRender", this, "scrolled");
