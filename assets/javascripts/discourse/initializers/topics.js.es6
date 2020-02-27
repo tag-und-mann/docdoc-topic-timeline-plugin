@@ -1,7 +1,7 @@
 import { withPluginApi } from 'discourse/lib/plugin-api';
 import { on, observes } from 'ember-addons/ember-computed-decorators';
 
-var latestCreatedAtMonth = '';
+var latestCreatedDate = '';
 
 function timelineDate(date) {
   const fmt = date.getFullYear() === new Date().getFullYear()
@@ -13,13 +13,12 @@ function timelineDate(date) {
 function addCreatedDate() {
   var createdAt = $(this).find('[data-created]').attr('data-created'),
       createdAtDate = new Date(createdAt),
-      createdAtMonth = moment(createdAtDate).format('M'),
+      createdDateFormatted = timelineDate(createdAtDate),
       hasDateBlock = $(this).prev('.topic-created-at').hasClass('topic-created-at');
 
-//   if (!hasDateBlock && latestCreatedAtMonth !== createdAtMonth) {
-  if (!hasDateBlock) {
-    latestCreatedAtMonth = createdAtMonth;
-    return $("<div class='topic-created-at'></div>").text(timelineDate(createdAtDate));
+  if (!hasDateBlock && latestCreatedDate !== createdDateFormatted) {
+    latestCreatedDate = createdDateFormatted;
+    return $("<div class='topic-created-at'></div>").text(createdDateFormatted);
   }
 }
 
@@ -59,7 +58,7 @@ export default {
 
             let _wrapper = this.$(".mansory"),
                 _cards = this.$(".topic-list-item"),
-                _cols = 2,
+                _cols = parseInt(_wrapper.css("column-count")) || 2,
                 _out = [],
                 _col = 0;
 
@@ -96,7 +95,7 @@ export default {
           Ember.run.scheduleOnce('afterRender', this, () => {
             let _wrapper = this.$(".mansory"),
                 _cards = this.$(".topic-list-item"),
-                _cols = parseInt(_wrapper.css("column-count"))||2,
+                _cols = parseInt(_wrapper.css("column-count")) || 2,
                 _out = [],
                 _col = 0;
 
