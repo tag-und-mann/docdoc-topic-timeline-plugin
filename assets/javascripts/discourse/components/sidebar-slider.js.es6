@@ -20,9 +20,8 @@ export default Ember.Component.extend({
             ajax(endpoint, {
                 type: "GET"
             }).then((data) => {
-                return this.genData(data);
-            }).then((data) => {
-                sliderCont.html(data);
+                var content = this.genData(data);
+                sliderCont.html(content);
                 setTimeout(() => {
                   sliderCont.slick({
                     dots: true
@@ -33,20 +32,18 @@ export default Ember.Component.extend({
     },
 
     genData(data) {
-        return new Promise((resolve, reject) => {
-            let content = '';
-            if (data.items && data.items.length) {
-                data.items.forEach((item) => {
-                    var pubDate = moment(item.pubDate).format('DD. MMMM YYYY');
-                    content += `<div class="slider-slide">
+        let content = '';
+        if (data.items && data.items.length) {
+            data.items.forEach((item) => {
+                var pubDate = moment(item.pubDate).format('DD. MMMM YYYY');
+                content += `<div class="slider-slide">
                                   <p class="news-date">${pubDate}</p>
                                   <p class="news-content">
                                     <a href="${item.link}" class="news-link" target="_blank">${item.title}</a>
                                   </p>
                                 </div>`;
-                })
-            }
-            resolve(content);
-        });
+            })
+        }
+        return content;
     }
 });

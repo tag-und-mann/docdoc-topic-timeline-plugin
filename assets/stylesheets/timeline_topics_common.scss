@@ -3,12 +3,13 @@
   column-gap: 20px;
   column-rule: 1px solid #c4cdd5;
   border-left: 1px solid #d1f0ff;
+  max-width: 710px;
 }
 
 #list-area .topic-list-item {
   border-radius: 6px;
   background: #e9edf2;
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 15px;

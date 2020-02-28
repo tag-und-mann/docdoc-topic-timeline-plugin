@@ -22,12 +22,14 @@ function getVideoId(videoUrl) {
     let [url, params] = videoUrl.split('?');
     const queryArr = params ? params.split('&') : [];
     const paramsArr = url.split('/');
-    const vimeoVideoIndex = paramsArr.findIndex(param => param === 'vimeo.com');
-    const videoIdParamIndex = queryArr.findIndex(param => param.split('=')[0] === 'v');
+    const vimeoVideo = paramsArr.find(param => param === 'vimeo.com');
+    const videoIdParam = queryArr.find(param => param.split('=')[0] === 'v');
+    const vimeoVideoIndex = vimeoVideo ? paramsArr.indexOf(vimeoVideo) : '';
+    const videoIdParamIndex = videoIdParam ? queryArr.indexOf(videoIdParam) : '';
 
-    if (videoIdParamIndex !== -1) {
+    if (videoIdParamIndex) {
         return queryArr[videoIdParamIndex].split('=')[1];
     } else {
-        return vimeoVideoIndex !== -1 ? paramsArr[vimeoVideoIndex + 1] : paramsArr[paramsArr.length - 1];
+        return vimeoVideoIndex ? paramsArr[vimeoVideoIndex + 1] : paramsArr[paramsArr.length - 1];
     }
 }
