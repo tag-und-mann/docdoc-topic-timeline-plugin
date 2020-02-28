@@ -28,7 +28,7 @@ after_initialize do
 
   add_to_serializer(:listable_topic, :video_url, false) {
     raw = object.posts.first.raw
-    raw.match(/^(http:\/\/|https:\/\/)(vimeo\.com|youtu\.be|www\.youtube\.com)\/([\w\/]+)([\?].*)?$/).to_a.first
+    raw.match(/(http:\/\/|https:\/\/)(vimeo\.com|youtu\.be|www\.youtube\.com|player\.vimeo\.com\/video)\/([\w\/]+)([\?].*)*/).to_a.first
   }
 
   require_dependency "application_controller"
