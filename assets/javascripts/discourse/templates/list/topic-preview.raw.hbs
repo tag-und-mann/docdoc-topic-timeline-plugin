@@ -1,12 +1,5 @@
 <div class="topic-preview-cont">
-  {{~#if topic.image_url}}
-    <a href="{{topic-url topic}}"
-       title="{{topic-title topic}}"
-       class="topic-preview-link">
-      <img src="{{topic.image_url}}"
-           class="topic-preview">
-    </a>
-  {{else if topic.video_url}}
+  {{~#if topic.video_url}}
     <a href="{{topic-url topic}}"
        title="{{topic-title topic}}"
        class="topic-preview-link">
@@ -16,6 +9,13 @@
               height="370"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </a>
+  {{else if topic.image_url}}
+    <a href="{{topic-url topic}}"
+       title="{{topic-title topic}}"
+       class="topic-preview-link">
+      <img src="{{topic.image_url}}"
+           class="topic-preview">
     </a>
   {{~/if}}
 </div>

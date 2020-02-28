@@ -1,11 +1,18 @@
 import { registerUnbound } from "discourse-common/lib/helpers";
 
 registerUnbound("topic-video", function(topic) {
+    const frameUrlYouTube = 'https://www.youtube.com/embed/';
+    const frameUrlVimeo = 'https://player.vimeo.com/video/';
     let url = '';
+
+    if (topic.video_url.indexOf(frameUrlVimeo) !== -1 || topic.video_url.indexOf(frameUrlYouTube) !== -1) {
+        return `${topic.video_url}?title=0&byline=0&portrait=0`;
+    }
+
     if (topic.video_url.indexOf('vimeo') !== -1) {
-        url = 'https://player.vimeo.com/video/';
+        url = frameUrlVimeo;
     } else if (topic.video_url.indexOf('youtu') !== -1) {
-        url = 'https://www.youtube.com/embed/';
+        url = frameUrlYouTube;
     }
 
     return `${url}${getVideoId(topic.video_url)}?title=0&byline=0&portrait=0`;
