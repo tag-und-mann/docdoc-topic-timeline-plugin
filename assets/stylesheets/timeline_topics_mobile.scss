@@ -183,4 +183,12 @@
         border: none;
         outline: none;
     }
+
+    .topic-preview {
+        height: auto;
+    }
+
+    #list-area table.topic-list .category-name {
+        max-width: 255px;
+    }
 }

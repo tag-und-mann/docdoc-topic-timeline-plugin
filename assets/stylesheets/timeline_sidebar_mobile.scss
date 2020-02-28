@@ -27,7 +27,7 @@
   .list-container .topic-list {
     position: relative;
     box-sizing: initial;
-    display: block;
+    flex-direction: column;
     margin: 0 0 10px;
     padding-left: 0;
   }
