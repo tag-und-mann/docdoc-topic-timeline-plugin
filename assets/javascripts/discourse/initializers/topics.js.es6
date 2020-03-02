@@ -51,6 +51,9 @@ export default {
         setup() {
           Ember.run.scheduleOnce('afterRender', this, () => {
 
+            // clear for filtration and new pages
+            latestCreatedDate = '';
+
             if (!this.site.mobileView && $('.navigation-topics').length) {
               const path = window.location.pathname;
               if (this.order !== 'created' && (path === '/' || path === '/latest')) {
