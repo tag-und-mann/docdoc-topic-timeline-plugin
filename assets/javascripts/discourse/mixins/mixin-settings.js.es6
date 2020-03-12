@@ -33,7 +33,9 @@ export default Mixin.create(Scrolling, {
 
   actions: {
     loadMore() {
-      if (!this.site.mobileView || this.loadMoreEvent.type === 'click') {
+      if (!this.siteSettings.timeline_sidebar_more_topics_mob_btn ||
+          !this.site.mobileView ||
+          this.loadMoreEvent.type === 'click') {
         Discourse.updateContextCount(0);
         this.model.loadMore().then(hasMoreResults => {
           schedule("afterRender", () => this.saveScrollPosition());

@@ -5,9 +5,12 @@ plugins:
   timeline_sidebar_lohn_url:
     default: "https://vsao-zh.ch/lohnrechner/?return"
     client: true
-  timeline_sidebar_enamble_slider:
+  timeline_sidebar_enable_slider:
     default: true
     client: true
   timeline_sidebar_rss_url:
     default: "https://www.infonlinemed.ch/rss.cfm?pressespiegel=08DA431FA872860FCB4892147FDE5911"
+    client: true
+  timeline_sidebar_more_topics_mob_btn:
+    default: false
     client: true

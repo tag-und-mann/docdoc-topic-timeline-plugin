@@ -3,4 +3,5 @@ en:
     timeline_sidebar_enabled: 'Enable timeline and sidebar plugin'
     timeline_sidebar_lohn_url: 'The URL for the Lohnrechner-Tool'
     timeline_sidebar_rss_url: 'The URL for the slider rss content'
-    timeline_sidebar_enamble_slider: 'Enable rss slider'
+    timeline_sidebar_enable_slider: 'Enable rss slider'
+    timeline_sidebar_more_topics_mob_btn: 'Enable load more button on mobile view'

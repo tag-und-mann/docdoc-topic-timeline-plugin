@@ -7,7 +7,7 @@ export default Ember.Component.extend({
         this._super(...arguments);
 
         const rssUrl = this.siteSettings.timeline_sidebar_rss_url;
-        const isSliderEnabled = this.siteSettings.timeline_sidebar_enamble_slider;
+        const isSliderEnabled = this.siteSettings.timeline_sidebar_enable_slider;
         const endpoint = `${window.location.origin}/rss_feed?uri=${rssUrl}`;
 
         if (!isSliderEnabled) return;
