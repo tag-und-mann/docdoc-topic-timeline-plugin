@@ -1,7 +1,12 @@
 en:
   site_settings:
     timeline_sidebar_enabled: 'Enable timeline and sidebar plugin'
+    timeline_sidebar_desktop_lohn_enable: 'Enable the Lohnrechner-Tool on desktop'
+    timeline_sidebar_mobile_lohn_enable: 'Enable the Lohnrechner-Tool on mobile'
     timeline_sidebar_lohn_url: 'The URL for the Lohnrechner-Tool'
+    timeline_sidebar_lohn_title: 'Title for the Lohnrechner-Tool'
+    timeline_sidebar_desktop_slider_enable: 'Enable rss slider on desktop'
+    timeline_sidebar_mobile_slider_enable: 'Enable rss slider on mobile'
+    timeline_sidebar_slider_title: 'Header title for rss slider'
     timeline_sidebar_rss_url: 'The URL for the slider rss content'
-    timeline_sidebar_enable_slider: 'Enable rss slider'
     timeline_sidebar_more_topics_mob_btn: 'Enable load more button on mobile view'
