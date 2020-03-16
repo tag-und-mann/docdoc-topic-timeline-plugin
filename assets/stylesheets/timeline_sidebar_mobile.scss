@@ -59,10 +59,14 @@
   }
 
   .list-container .topic-sidebar {
-    //position: absolute;
-    //bottom: -690px;
     left: 50%;
     margin: 0 -155px 20px;
+  }
+
+  .mobile-view .list-container .topic-sidebar.mob-on-bottom {
+    position: absolute;
+    bottom: -525px;
+    min-height: 400px;
   }
 
   .list-container .topic-sidebar-scrollable {
