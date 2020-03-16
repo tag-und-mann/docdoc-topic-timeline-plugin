@@ -54,13 +54,12 @@ export default {
             // clear for filtration and new pages
             latestCreatedDate = '';
 
-            if (!this.site.mobileView && $('.navigation-topics').length) {
+            if ($('.navigation-topics').length) {
               const path = window.location.pathname;
               if (this.order !== 'created' && (path === '/' || path === '/latest')) {
-                this.changeSort('created');
-              }
-              if (this.order === 'created' && path !== '/latest') {
-                this.changeSort('default');
+                this.setProperties({ order: 'created', ascending: false });
+              } else if (this.order === 'created' && path !== '/latest') {
+                this.setProperties({ order: 'default', ascending: false });
               }
             }
             // this.$('.mansory .right-column:nth-child(4)').addClass("top-margin");
