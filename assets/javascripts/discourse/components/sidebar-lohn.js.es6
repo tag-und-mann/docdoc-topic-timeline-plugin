@@ -8,7 +8,8 @@ export default Ember.Component.extend({
 
     @discourseComputed()
     lohnTitle() {
-        return '<b>Lohnrechner</b> </br> VSAO ZÜRICH';
+        const title = this.siteSettings.timeline_sidebar_lohn_title;
+        return '<b>' + title + '</b> </br> VSAO ZÜRICH';
     },
 
     @discourseComputed()

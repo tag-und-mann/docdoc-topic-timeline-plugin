@@ -2,11 +2,26 @@ plugins:
   timeline_sidebar_enabled:
     default: true
     client: true
+  timeline_sidebar_desktop_lohn_enable:
+    default: true
+    client: true
+  timeline_sidebar_mobile_lohn_enable:
+    default: false
+    client: true
   timeline_sidebar_lohn_url:
     default: "https://vsao-zh.ch/lohnrechner/?return"
     client: true
-  timeline_sidebar_enable_slider:
+  timeline_sidebar_lohn_title:
+    default: "Lohnrechner"
+    client: true
+  timeline_sidebar_desktop_slider_enable:
     default: true
+    client: true
+  timeline_sidebar_mobile_slider_enable:
+    default: false
+    client: true
+  timeline_sidebar_slider_title:
+    default: "Medinfo"
     client: true
   timeline_sidebar_rss_url:
     default: "https://www.infonlinemed.ch/rss.cfm?pressespiegel=08DA431FA872860FCB4892147FDE5911"

@@ -1,13 +1,19 @@
 import { ajax } from "discourse/lib/ajax";
+import discourseComputed from "discourse-common/utils/decorators";
 
 export default Ember.Component.extend({
     classNames: ["sidebar-slider"],
+
+    @discourseComputed()
+    sliderTitle() {
+        return this.siteSettings.timeline_sidebar_slider_title;
+    },
 
     init() {
         this._super(...arguments);
 
         const rssUrl = this.siteSettings.timeline_sidebar_rss_url;
-        const isSliderEnabled = this.siteSettings.timeline_sidebar_enable_slider;
+        const isSliderEnabled = this.siteSettings.timeline_sidebar_desktop_slider_enable;
         const endpoint = `${window.location.origin}/rss_feed?uri=${rssUrl}`;
 
         if (!isSliderEnabled) return;
