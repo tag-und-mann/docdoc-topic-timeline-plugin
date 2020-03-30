@@ -32,9 +32,9 @@ function onScrollMethod() {
   if (!sidebar.length || !sidebarWrapper.length) return;
 
   if (pageScrollPosition + diffCONST > elemCoords.top) {
-    sidebar.css({position: 'fixed', top: diffCONST});
+    sidebar.css({top: diffCONST}).addClass('scroll-blocked');
   } else {
-    sidebar.css({position: 'absolute', top: 0});
+    sidebar.css({top: 0}).removeClass('scroll-blocked');
   }
 }
 

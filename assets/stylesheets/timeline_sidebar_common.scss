@@ -18,6 +18,10 @@
   width: 310px;
 }
 
+.scroll-blocked {
+  position: fixed;
+}
+
 .sidebar-lohn-block {
   position: relative;
   overflow: hidden;
@@ -249,4 +253,16 @@
 .slick-dots li.slick-active button:before {
   opacity: 1;
   background-color: #fff;
+}
+
+@media screen and (max-width: 950px) {
+  .desktop-view .navigation-topics .support-wrapper {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .desktop-view .topic-list-item .arrow {
+    display: none;
+  }
 }
