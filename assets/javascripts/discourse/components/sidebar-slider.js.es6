@@ -42,9 +42,11 @@ export default Ember.Component.extend({
         if (data.items && data.items.length) {
             data.items.forEach((item) => {
                 var pubDate = moment(item.pubDate).format('DD. MMMM YYYY');
+                var source = item.source ? item.source.content || '' : '';
                 content += `<div class="slider-slide">
                                   <p class="news-date">${pubDate}</p>
                                   <p class="news-content">
+                                    <b class="news-source">${source}</b>
                                     <a href="${item.link}" class="news-link" target="_blank">${item.title}</a>
                                   </p>
                                 </div>`;
