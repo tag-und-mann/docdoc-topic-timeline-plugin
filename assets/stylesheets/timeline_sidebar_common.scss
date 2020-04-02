@@ -123,6 +123,10 @@
   padding: 0 25px 25px;
 }
 
+.sidebar-slider  .slider-slide:active,:focus {
+  outline:none;
+}
+
 .sidebar-calculator-bg {
   position: absolute;
   top: -20px;
@@ -134,11 +138,13 @@
   width: 100%;
   margin: 0;
   font-size: 14px;
+  display:none;
 }
 
 .news-content {
   width: 100%;
   margin: auto;
+  padding-bottom: 22px;
 }
 
 .news-source {
@@ -154,10 +160,6 @@
   margin: auto;
   font-size: 20px;
   color: #fff!important;
-}
-
-.news-link:hover {
-  text-decoration: underline;
 }
 
 // slick-slider customization
@@ -208,9 +210,9 @@
   position: absolute;
   bottom: 0;
   display: block;
-  width: 100%;
+  max-width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0px 16px;
   list-style: none;
   text-align: center;
 }
