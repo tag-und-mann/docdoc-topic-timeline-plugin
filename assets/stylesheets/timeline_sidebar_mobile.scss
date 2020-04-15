@@ -69,8 +69,8 @@
   }
 
   .list-container .topic-sidebar {
-    left: 50%;
-    margin: 0 -155px 20px;
+    width: 100%;
+    margin: 0 auto 20px;
   }
 
   .mobile-view .list-container .topic-sidebar.mob-on-bottom {
@@ -81,6 +81,7 @@
 
   .list-container .topic-sidebar-scrollable {
     position: static;
+    width: 100%;
   }
 
   .support-wrapper {
