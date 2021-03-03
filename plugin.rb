@@ -112,13 +112,6 @@ after_initialize do
         title: channel.title,
         link: channel.link,
         description: channel.description,
-        copyright: channel.copyright,
-        language: channel.language,
-        image: {
-          url: channel.image.url,
-          title: channel.image.title,
-          link: channel.image.link
-        }
       }
     end
 
