@@ -11,7 +11,6 @@ $gray: #454F5B;
   width: 310px;
   height: auto;
   margin-left: 25px;
-  margin-top: 32px;
 }
 
 .list-container .topic-sidebar {
@@ -107,19 +106,21 @@ $gray: #454F5B;
 .sidebar-slider {
   box-sizing: border-box;
   width: 100%;
-  padding-top: 25px;
-  background-color: #7fa8c2;
-  border-radius: 4px;
-  color: #fff;
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
+  margin-bottom: 20px;
+  padding: 25px;
+  text-align: left;
+  border-radius: 4px;
+  color: #637381;
+  background: rgba(255, 111, 0, .1);
 }
 
 .slider-static-title {
-  margin: 0;
-  font-size: 22px;
-  font-weight: bold;
+  color: $dark-blue;
+  margin: 0 auto 5px;
+  line-height: 20px;
+  font-size: 20px;
 }
 
 .sidebar-slider .slider-slide {
