@@ -247,12 +247,12 @@ div.poll .poll-container {
 
 #list-area .topic-list-item.right-column.green .arrow,
 #list-area .topic-list-item.right-column.pinned .arrow {
-  border-right: 15px solid $primary-color!important;
+  border-right: 15px solid #9dccff!important;
 }
 
 #list-area .topic-list-item.left-column.green .arrow,
 #list-area .topic-list-item.left-column.pinned .arrow {
-  border-left: 15px solid $primary-color!important;
+  border-left: 15px solid #9dccff!important;
 }
 
 #list-area .topic-list-item.pinned a[data-user-card="system"] img {
@@ -297,7 +297,7 @@ button[aria-label="Alle herunterladen"] {
 }
 
 .menu-panel li a:hover, .menu-panel li a:focus, .menu-panel li.heading a:hover, .menu-panel li.heading a:focus {
-  background-color: $primary-color!important;
+  background-color: transparent!important;
 }
 
 .composer-fields .category-desc {

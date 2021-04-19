@@ -62,7 +62,7 @@ $gray: #454F5B;
 
 .sidebar-lohn-link:hover {
   transition: all 0.2s ease-in;
-  color: #FFFFFF;
+  color: #FFFFFF!important;
   background-color: $primary-color;
 }
 
@@ -130,7 +130,6 @@ $gray: #454F5B;
   width: 100%;
   height: auto;
   min-height: 275px;
-  padding: 0 25px 25px;
 }
 
 .sidebar-slider  .slider-slide:active,:focus {
@@ -161,6 +160,7 @@ $gray: #454F5B;
   display: block;
   font-size: 15px;
   margin-bottom: 20px;
+  font-weight: 400!important;
 }
 
 .news-link,
@@ -168,8 +168,9 @@ $gray: #454F5B;
 .news-link:hover,
 .news-link:focus {
   margin: auto;
-  font-size: 20px;
-  color: #fff!important;
+  font-size: 15px;
+  color: $gray!important;
+  font-weight: 400!important;
 }
 
 // slick-slider customization
@@ -260,7 +261,7 @@ $gray: #454F5B;
   width: 6px;
   height: 6px;
   opacity: .75;
-  border-radius: 1px;
+  border-radius: 20px;
 }
 
 .slick-dots li button:hover:before {
@@ -269,7 +270,7 @@ $gray: #454F5B;
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  background-color: #fff;
+  background-color: $gray;
 }
 
 @media screen and (max-width: 950px) {
