@@ -22,6 +22,10 @@ $gray: #454F5B;
   margin-bottom: 15px;
 }
 
+#list-area .topic-list-item.green {
+  background: #9dccff!important;
+}
+
 #list-area .arrow {
   width: 0;
   position: absolute;
@@ -165,7 +169,7 @@ $gray: #454F5B;
 //}
 
 td.green {
-  background: $primary-color;
+  background: #9dccff;
 }
 
 td.green h1 {
@@ -238,7 +242,7 @@ div.poll .poll-container {
 }
 
 #list-area .topic-list-item.pinned {
-  background: $primary-color;
+  background: #9dccff;
 }
 
 #list-area .topic-list-item.right-column.green .arrow,

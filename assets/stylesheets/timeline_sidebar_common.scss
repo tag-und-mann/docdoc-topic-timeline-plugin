@@ -35,7 +35,7 @@ $gray: #454F5B;
   text-align: left;
   border-radius: 4px;
   color: #637381;
-  background: rgba(255, 111, 0, .1);
+  background: #fff0e7;
 }
 
 .sidebar-lohn-title {
@@ -53,7 +53,7 @@ $gray: #454F5B;
   display: inline-block;
   transition: all 0.2s ease-in;
   background: #FFFFFF;
-  color: $gray;
+  color: $gray!important;
   border-radius: 20px;
   border: 1px solid $primary-color;
   padding: 8px 15px;
@@ -109,11 +109,11 @@ $gray: #454F5B;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
-  padding: 25px;
+  padding: 25px 12px;
   text-align: left;
   border-radius: 4px;
   color: #637381;
-  background: rgba(255, 111, 0, .1);
+  background: #fff0e7;
 }
 
 .slider-static-title {
@@ -230,8 +230,8 @@ $gray: #454F5B;
 .slick-dots li {
   position: relative;
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   margin: 0 4px;
   padding: 0;
   cursor: pointer;
@@ -254,14 +254,13 @@ $gray: #454F5B;
 .slick-dots li button:before {
   content: '';
   position: absolute;
+  background-color: $gray;
   top: 0;
   left: 0;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   opacity: .75;
-  border: 1px solid #fff;
   border-radius: 1px;
-  box-shadow: 0 0 1px .2px rgba(255,255,255,.75);
 }
 
 .slick-dots li button:hover:before {
