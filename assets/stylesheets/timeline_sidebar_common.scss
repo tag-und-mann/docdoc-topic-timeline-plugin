@@ -1,3 +1,9 @@
+$primary-color: #ff6f00;
+$secondary-color: #3599ff;
+$dark-blue: #013367;
+$gray: #454F5B;
+
+
 .topic-sidebar {
   position: relative;
   display: none;
@@ -47,17 +53,18 @@
 .sidebar-lohn-link {
   display: inline-block;
   transition: all 0.2s ease-in;
-  background: #92d6b4;
-  color: #fff;
-  border-radius: 4px;
-  padding: 12px 25px;
+  background: #FFFFFF;
+  color: $gray;
+  border-radius: 20px;
+  border: 1px solid $primary-color;
+  padding: 8px 15px;
   font-size: 14px;
 }
 
 .sidebar-lohn-link:hover {
   transition: all 0.2s ease-in;
-  color: #214f38;
-  background-color: rgba(146,214,180,0.6);
+  color: #FFFFFF;
+  background-color: $primary-color;
 }
 
 .sidebar-lohn-link:visited {

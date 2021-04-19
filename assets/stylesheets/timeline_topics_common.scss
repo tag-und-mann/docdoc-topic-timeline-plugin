@@ -1,3 +1,8 @@
+$primary-color: #ff6f00;
+$secondary-color: #3599ff;
+$dark-blue: #013367;
+$gray: #454F5B;
+
 #list-area .mansory {
   column-count: 1;
   column-gap: 20px;
@@ -160,7 +165,7 @@
 //}
 
 td.green {
-  background: #92d6b4;
+  background: $primary-color;
 }
 
 td.green h1 {
@@ -196,16 +201,16 @@ tbody[aria-labelledby="categories-only-category"] {
 }
 
 .grippie {
-  background: #92d6b4 !important;
+  background: $primary-color !important;
 }
 
 #reply-control.draft, #reply-control.saving {
-  background: #92d6b4 !important;
+  background: $primary-color !important;
 }
 
 blockquote {
-  border-left: 5px solid #179494;
-  background-color: #a1d6c5;
+  border-left: 5px solid $secondary-color;
+  background-color: $primary-color;
   clear: both;
   color: #FFF;
 }
@@ -233,17 +238,17 @@ div.poll .poll-container {
 }
 
 #list-area .topic-list-item.pinned {
-  background: #92d6b4;
+  background: $primary-color;
 }
 
 #list-area .topic-list-item.right-column.green .arrow,
 #list-area .topic-list-item.right-column.pinned .arrow {
-  border-right: 15px solid #92d6b4!important;
+  border-right: 15px solid $primary-color!important;
 }
 
 #list-area .topic-list-item.left-column.green .arrow,
 #list-area .topic-list-item.left-column.pinned .arrow {
-  border-left: 15px solid #92d6b4!important;
+  border-left: 15px solid $primary-color!important;
 }
 
 #list-area .topic-list-item.pinned a[data-user-card="system"] img {
@@ -288,7 +293,7 @@ button[aria-label="Alle herunterladen"] {
 }
 
 .menu-panel li a:hover, .menu-panel li a:focus, .menu-panel li.heading a:hover, .menu-panel li.heading a:focus {
-  background-color: #92d6b4!important;
+  background-color: $primary-color!important;
 }
 
 .composer-fields .category-desc {
@@ -300,7 +305,7 @@ button[aria-label="Alle herunterladen"] {
 }
 
 .select-kit .select-kit-row.is-selected {
-  background: #92d6b4;
+  background: $primary-color;
 }
 
 li[data-name="quarterly"] {
