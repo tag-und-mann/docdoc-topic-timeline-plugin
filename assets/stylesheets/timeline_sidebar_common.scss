@@ -33,21 +33,21 @@ $gray: #454F5B;
   overflow: hidden;
   margin-bottom: 20px;
   padding: 25px;
-  text-align: center;
-  border: 3px solid #005289;
+  text-align: left;
   border-radius: 4px;
   color: #637381;
+  background: rgba(255, 111, 0, .1);
 }
 
 .sidebar-lohn-title {
+  color: $dark-blue;
   margin: 0 auto 5px;
   line-height: 20px;
   font-size: 20px;
 }
 
 .sidebar-lohn-description {
-  margin: 8px auto;
-  font-weight: bold;
+  margin: 15px auto;
 }
 
 .sidebar-lohn-link {
