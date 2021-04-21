@@ -15,6 +15,19 @@ export default Ember.Component.extend({
     return this.site.mobileView ?
       this.siteSettings.timeline_sidebar_mobile_slider_enable :
       this.siteSettings.timeline_sidebar_desktop_slider_enable;
-  }
+  },
 
+  @discourseComputed()
+  isMeedicusEnabled() {
+    return this.site.mobileView ?
+      this.siteSettings.timeline_sidebar_mobile_medicus_enable :
+      this.siteSettings.timeline_sidebar_desktop_medicus_enable;
+  },
+
+  @discourseComputed()
+  isDoppelDocEnabled() {
+    return this.site.mobileView ?
+      this.siteSettings.timeline_sidebar_mobile_doppel_enable :
+      this.siteSettings.timeline_sidebar_desktop_doppel_enable;
+  },
 });
