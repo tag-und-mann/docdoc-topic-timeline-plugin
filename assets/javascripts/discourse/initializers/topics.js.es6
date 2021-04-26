@@ -1,5 +1,6 @@
 import { withPluginApi } from 'discourse/lib/plugin-api';
 import { on, observes } from 'ember-addons/ember-computed-decorators';
+import { ajax } from "discourse/lib/ajax";
 
 var latestCreatedDate = '';
 
@@ -36,6 +37,10 @@ function onScrollMethod() {
   } else {
     sidebar.css({top: 0}).removeClass('scroll-blocked');
   }
+}
+
+function getTopicCooked(url) {
+  return ajax(url, { type: "GET" });
 }
 
 export default {
@@ -168,8 +173,23 @@ export default {
         applyOrdering() {
           var dateAdditional = $('.list-container').length ? addCreatedDate : '';
           this.$().before(dateAdditional).addClass("right-column");
-        }
+        },
 
+        click() {
+          if (this.topic.hasExcerpt) {
+            let topicReadMore = $(`#custom-topic-a-${this.topic.id}`);
+            let topicDiv = $(`#custom-topic-div-${this.topic.id}`);
+            let topicTagP = $(`#custom-topic-p-${this.topic.id}`);
+
+            if (topicReadMore[0]?.checked && topicTagP[0]?.innerText.length) {
+              getTopicCooked(this.topic.firstPostUrl).then(result => {
+                let fullText = result.post_stream.posts[0].cooked;
+                topicTagP.remove();
+                topicDiv.append(fullText);
+              });
+            }
+          }
+        }
       });
     });
   }
