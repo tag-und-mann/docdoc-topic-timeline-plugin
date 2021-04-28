@@ -14,6 +14,30 @@ plugins:
   timeline_sidebar_lohn_title:
     default: "Lohnrechner"
     client: true
+  timeline_sidebar_desktop_medicus_enable:
+    default: true
+    client: true
+  timeline_sidebar_mobile_medicus_enable:
+    default: false
+    client: true
+  timeline_sidebar_medicus_url:
+    default: "..."
+    client: true
+  timeline_sidebar_medicus_title:
+    default: "Medicus - Die Karriereplattform der Schweizer Ärztinnen und Ärzte"
+    client: true
+  timeline_sidebar_desktop_doppel_enable:
+    default: true
+    client: true
+  timeline_sidebar_mobile_doppel_enable:
+    default: false
+    client: true
+  timeline_sidebar_doppel_url:
+    default: "..."
+    client: true
+  timeline_sidebar_doppel_title:
+    default: "DoppelDoc - Jobsharing"
+    client: true
   timeline_sidebar_desktop_slider_enable:
     default: true
     client: true

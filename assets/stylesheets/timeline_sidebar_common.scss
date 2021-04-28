@@ -82,11 +82,10 @@ $gray: #454F5B;
   position: absolute;
   right: 0;
   top: -49px;
-  display: block;
   width: 310px;
 }
 
-.navigation-topics .support-btn {
+.support-btn {
   position: relative;
   display: inline-block;
   transition: all 0.2s ease-in;
@@ -95,6 +94,7 @@ $gray: #454F5B;
   background-color: #fff;
   border: 2px solid #005289;
   color: #005289;
+  margin-bottom: 5px;
 }
 
 .support-btn:hover {
@@ -271,6 +271,18 @@ $gray: #454F5B;
 .slick-dots li.slick-active button:before {
   opacity: 1;
   background-color: $gray;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.topic-custom-like {
+  color: #FF0000;
+}
+
+.medicus {
+  margin: 25px 0;
 }
 
 @media screen and (max-width: 950px) {
