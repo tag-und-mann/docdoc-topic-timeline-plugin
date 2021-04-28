@@ -2,6 +2,7 @@ $primary-color: #ff6f00;
 $secondary-color: #3599ff;
 $dark-blue: #013367;
 $gray: #454F5B;
+$light-gray: #FAFAFA;
 
 #list-area .mansory {
   column-count: 1;
@@ -23,7 +24,7 @@ $gray: #454F5B;
 }
 
 #list-area .topic-list-item.green {
-  background: #9dccff!important;
+  background: #fff0e7!important;
 }
 
 #list-area .arrow {
@@ -73,7 +74,7 @@ $gray: #454F5B;
 
 #list-area table.topic-list .link-top-line a.raw-topic-link {
   font-weight: bold;
-  color: #5185a9 !important;
+  color: $primary-color !important;
 }
 
 #list-area .badge-wrapper.bullet .badge-category-bg {
@@ -272,7 +273,7 @@ div.poll .poll-container {
 #list-area .topic-list-item.pinned .topic-info-row .number,
 #list-area .topic-list-item.pinned .topic-info-row,
 #list-area .topic-list-item.pinned .link-top-line a.raw-topic-link {
-  color: #FFF!important;
+  color: $primary-color!important;
 }
 
 .results .blurb span,
