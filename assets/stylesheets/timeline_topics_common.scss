@@ -95,7 +95,7 @@ $light-gray: #FAFAFA;
 }
 
 #list-area table.topic-list .topic-excerpt {
-  color: #637381;
+  color: #37474F;
 }
 
 #list-area .topic-list-item .relative-date {
@@ -186,7 +186,7 @@ td.green a {
 }
 
 td.green span {
-  color: #fff;
+  color: #013367;
 }
 
 tbody[aria-labelledby="categories-only-category"] {
@@ -269,9 +269,7 @@ div.poll .poll-container {
 
 #list-area .topic-list-item.pinned .d-icon-thumbtack,
 #list-area .topic-list-item.pinned .d-icon-thumbtack.unpinned,
-#list-area .topic-list-item.pinned .category-name,
 #list-area .topic-list-item.pinned .topic-info-row .number,
-#list-area .topic-list-item.pinned .topic-info-row,
 #list-area .topic-list-item.pinned .link-top-line a.raw-topic-link {
   color: $primary-color!important;
 }
@@ -410,5 +408,5 @@ button[title="yearly"] .date-section {
 .topic-excerpt-more {
   display: contents;
   cursor: pointer;
-  color: #5185a9;
+  color: #013367;
 }
