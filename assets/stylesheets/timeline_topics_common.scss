@@ -14,7 +14,7 @@ $light-gray: #FAFAFA;
 
 #list-area .topic-list-item {
   border-radius: 6px;
-  background: #e9edf2;
+  background: $light-gray;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -243,17 +243,17 @@ div.poll .poll-container {
 }
 
 #list-area .topic-list-item.pinned {
-  background: #9dccff;
+  background: #fff0e7;
 }
 
 #list-area .topic-list-item.right-column.green .arrow,
 #list-area .topic-list-item.right-column.pinned .arrow {
-  border-right: 15px solid #9dccff!important;
+  border-right: 15px solid #fff0e7!important;
 }
 
 #list-area .topic-list-item.left-column.green .arrow,
 #list-area .topic-list-item.left-column.pinned .arrow {
-  border-left: 15px solid #9dccff!important;
+  border-left: 15px solid #fff0e7!important;
 }
 
 #list-area .topic-list-item.pinned a[data-user-card="system"] img {
@@ -290,7 +290,7 @@ button[aria-label="Alle herunterladen"] {
 }
 
 .indent.nav-categories {
-  padding-left: 0px !important;
+  padding-left: 0!important;
 }
 
 .emoji-picker .footer {
