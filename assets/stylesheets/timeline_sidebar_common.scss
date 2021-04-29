@@ -86,21 +86,21 @@ $gray: #454F5B;
 }
 
 .support-btn {
-  position: relative;
   display: inline-block;
   transition: all 0.2s ease-in;
-  padding: 6px 12px;
-  font-weight: bold;
-  background-color: #fff;
-  border: 2px solid #005289;
-  color: #005289;
+  background: #FFFFFF;
+  color: #454F5B !important;
+  border-radius: 20px;
+  border: 1px solid #ff6f00;
+  padding: 8px 15px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 
 .support-btn:hover {
   transition: all 0.2s ease-in;
-  background-color: #005289;
-  color: #fff;
+  background-color: #fff;
+  color: $primary-color;
 }
 
 .sidebar-slider {
