@@ -1,4 +1,4 @@
 <{{view.tagName}} class='num posts-map posts {{view.likesHeat}}' title='{{view.title}}'>
 <span class="post-count-title">Antworten:</span>
-<span>{{number topic.replyCount noTitle="true"}}</span>
+<a href="{{topic-url topic}}">{{number topic.replyCount noTitle="true"}}</a>
 </{{view.tagName}}>

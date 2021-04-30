@@ -151,7 +151,7 @@ export default {
 
         // Lifecyle logic
 
-        @on('init')
+        @on('didReceiveAttrs')
         setup() {
           Ember.run.scheduleOnce('afterRender', this, this.applyOrdering);
         },
