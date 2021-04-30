@@ -32,11 +32,11 @@ function onScrollMethod() {
 
   if (!sidebar.length || !sidebarWrapper.length) return;
 
-  if (pageScrollPosition + diffCONST > elemCoords.top) {
-    sidebar.css({top: diffCONST}).addClass('scroll-blocked');
-  } else {
-    sidebar.css({top: 0}).removeClass('scroll-blocked');
-  }
+  //if (pageScrollPosition + diffCONST > elemCoords.top) {
+    //sidebar.css({top: diffCONST}).addClass('scroll-blocked');
+  //} else {
+    //sidebar.css({top: 0}).removeClass('scroll-blocked');
+  //}
 }
 
 function getTopicCooked(url) {

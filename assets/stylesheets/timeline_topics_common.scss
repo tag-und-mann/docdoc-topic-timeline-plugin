@@ -7,8 +7,8 @@ $light-gray: #FAFAFA;
 #list-area .mansory {
   column-count: 1;
   column-gap: 20px;
-  column-rule: 1px solid #c4cdd5;
-  border-left: 1px solid #d1f0ff;
+  column-rule: 1px solid $dark-blue;
+  border-left: 1px solid $dark-blue;
   max-width: 710px;
 }
 
@@ -44,7 +44,7 @@ $light-gray: #FAFAFA;
   border-top: 15px solid transparent;
   border-left: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #e9edf2;
+  border-right: 15px solid #FAFAFA;
 }
 
 #list-area .topic-list-item.left-column {
@@ -125,11 +125,11 @@ $light-gray: #FAFAFA;
 }
 
 #list-area .posters-title {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 #list-area .post-count-title {
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 #list-area .post-view-count-title {
@@ -381,8 +381,12 @@ button[title="yearly"] .date-section {
   min-width: 65px;
   padding: 10px 1px 1px;
   background: #fff;
-  color: #637381;
+  color: #013367;
   text-align: right;
+
+  &:first-child {
+    background: transparent;
+  }
 }
 
 .load-more-btn {
