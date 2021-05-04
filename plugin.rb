@@ -15,7 +15,7 @@ register_asset 'slick/slick.min.js'
 
 after_initialize do
   add_to_class :post, :excerpt_for_topic do
-    self.rebake!(invalidate_broken_images: true, priority: :normal)
+    # self.rebake!(invalidate_broken_images: true, priority: :normal)
     new_cooked = Nokogiri::HTML.fragment(cooked)
     new_cooked.css('.poll').remove
     mentions = new_cooked.css('.mention').map { |m| [m.inner_html, m.to_s] }
