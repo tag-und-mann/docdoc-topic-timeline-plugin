@@ -76,19 +76,20 @@
     #list-area .left-column .arrow {
         right: auto;
         left: 50%;
-        border-top: 15px solid #e9edf2;
-        border-right: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-        border-left: 15px solid transparent;
+        background-color: #ff6f00;
+        width: 10px;
+        height: 10px;
+        //border-top: 15px solid #e9edf2;
+        //border-right: 15px solid transparent;
+        //border-bottom: 15px solid transparent;
+        //border-left: 15px solid transparent;
     }
 
     #list-area .topic-list-item.right-column.pinned .arrow,
     #list-area .topic-list-item.left-column.pinned .arrow,
     #list-area .topic-list-item.right-column.green .arrow,
     #list-area .topic-list-item.left-column.green .arrow {
-        border-top: 15px solid #fff0e7!important;
-        border-left: 15px solid transparent!important;
-        border-right: 15px solid transparent!important;
+        background-color: $primary-color;
     }
 
     #list-area .topic-list-item.right-column,
