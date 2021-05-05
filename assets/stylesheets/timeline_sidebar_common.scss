@@ -39,6 +39,10 @@ $gray: #454F5B;
   background: #fff0e7;
 }
 
+.sidebar-lohn-block-mobile {
+  display: none;
+}
+
 .sidebar-lohn-title {
   color: $dark-blue;
   margin: 0 auto 5px;
@@ -162,6 +166,7 @@ $gray: #454F5B;
   font-size: 15px;
   margin-bottom: 20px;
   font-weight: 400!important;
+  color: $primary-color;
 }
 
 .news-link,

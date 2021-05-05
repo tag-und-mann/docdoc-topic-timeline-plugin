@@ -194,4 +194,24 @@
         max-width: 255px;
         font-size: 12px!important;
     }
+
+
+    .sidebar-lohn-block-mobile {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        padding: 25px;
+        text-align: left;
+        border-radius: 4px;
+        color: #637381;
+        background: #fff0e7;
+    }
+
+    .sidebar-lohn-title-mobile {
+        color: $dark-blue;
+        margin: 0 auto 5px;
+        line-height: 20px;
+        font-size: 20px;
+    }
 }
