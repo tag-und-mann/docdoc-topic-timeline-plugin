@@ -87,7 +87,7 @@ $gray: #454F5B;
 }
 
 .support-btn {
-  display: block;
+  display: inline-block;
   transition: all 0.2s ease-in;
   background: #FFFFFF;
   color: #454F5B !important;
@@ -95,7 +95,7 @@ $gray: #454F5B;
   border: 1px solid #ff6f00;
   padding: 8px 15px;
   font-size: 14px;
-  margin: 10px 0;
+  margin: 10px 30% 10px 0;
 }
 
 .support-btn:hover {
@@ -290,7 +290,7 @@ $gray: #454F5B;
   .desktop-view .navigation-topics .support-wrapper {
     position: static;
     width: 100%;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
   }
 
   .desktop-view .topic-list-item .arrow {
