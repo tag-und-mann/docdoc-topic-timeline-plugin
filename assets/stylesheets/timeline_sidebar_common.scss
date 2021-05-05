@@ -80,14 +80,14 @@ $gray: #454F5B;
 }
 
 .navigation-topics .support-wrapper {
-  position: absolute;
-  right: 0;
-  top: -49px;
-  width: 310px;
+  //position: absolute;
+  //right: 0;
+  //top: -49px;
+  //width: 310px;
 }
 
 .support-btn {
-  display: inline-block;
+  display: block;
   transition: all 0.2s ease-in;
   background: #FFFFFF;
   color: #454F5B !important;
@@ -95,7 +95,7 @@ $gray: #454F5B;
   border: 1px solid #ff6f00;
   padding: 8px 15px;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 .support-btn:hover {
