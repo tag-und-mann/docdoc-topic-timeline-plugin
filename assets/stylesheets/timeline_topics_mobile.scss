@@ -79,6 +79,7 @@
         background-color: #ff6f00;
         width: 10px;
         height: 10px;
+        display: none;
         //border-top: 15px solid #e9edf2;
         //border-right: 15px solid transparent;
         //border-bottom: 15px solid transparent;
@@ -90,6 +91,7 @@
     #list-area .topic-list-item.right-column.green .arrow,
     #list-area .topic-list-item.left-column.green .arrow {
         background-color: $primary-color;
+        display: none;
     }
 
     #list-area .topic-list-item.right-column,

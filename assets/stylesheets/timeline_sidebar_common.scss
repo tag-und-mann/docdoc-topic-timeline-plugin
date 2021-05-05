@@ -109,8 +109,8 @@ $gray: #454F5B;
   width: 100%;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 20px;
-  padding: 25px 12px;
+  //margin-bottom: 20px;
+  padding: 15px 12px;
   text-align: left;
   border-radius: 4px;
   color: #637381;
@@ -130,7 +130,7 @@ $gray: #454F5B;
   flex-direction: column;
   width: 100%;
   height: auto;
-  min-height: 275px;
+  min-height: 190px;
 }
 
 .sidebar-slider  .slider-slide:active,:focus {
@@ -210,12 +210,12 @@ $gray: #454F5B;
 
 .slick-prev {
   left: 5px;
-  border-right: 6px solid #fff;
+  border-right: 6px solid transparent;
 }
 
 .slick-next {
   right: 5px;
-  border-left: 6px solid #fff;
+  border-left: 6px solid transparent;
 }
 
 .slick-dots {
