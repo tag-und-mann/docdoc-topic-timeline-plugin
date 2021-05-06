@@ -116,7 +116,7 @@ $light-gray: #FAFAFA;
 }
 
 #list-area .topic-info-row {
-  display: flex;
+  display: block;
   align-items: center;
   width: 80%;
   margin-top: 12px;
@@ -136,7 +136,15 @@ $light-gray: #FAFAFA;
 }
 
 #list-area .post-view-count-title {
-  margin-left: 20px;
+  display: inline-block;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid;
+}
+
+.topic-info-row .border-top {
+  border: 1px solid #013367;
+  margin: 5px 0;
 }
 
 .user-messages-page .post-count-title,
