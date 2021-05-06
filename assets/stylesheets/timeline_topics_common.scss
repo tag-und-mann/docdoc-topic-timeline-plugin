@@ -132,7 +132,7 @@ $light-gray: #FAFAFA;
 }
 
 #list-area .post-count-title {
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 #list-area .post-view-count-title {
@@ -144,6 +144,10 @@ $light-gray: #FAFAFA;
 .topic-info-row .border-top {
   border: .5px solid #ebebeb;
   margin: 14px 0 0;
+}
+
+.topic-info-row .answer-num {
+  color: $primary-color;
 }
 
 .user-messages-page .post-count-title,
