@@ -18,7 +18,7 @@ export default Ember.Component.extend({
 
         if (!isSliderEnabled) return;
 
-        Ember.run.scheduleOnce('afterRender', this, () => {
+        Ember.run.scheduleOnce('render', this, () => {
             const sliderCont = $('.j-slider-cont:visible');
 
             if (!sliderCont.length) return;
