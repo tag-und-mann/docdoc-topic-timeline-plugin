@@ -118,7 +118,7 @@ $light-gray: #FAFAFA;
 #list-area .topic-info-row {
   display: block;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin-top: 12px;
   color: #013367;
 }
@@ -139,12 +139,11 @@ $light-gray: #FAFAFA;
   display: inline-block;
   margin: 0;
   padding-top: 14px;
-  border-top: 1px solid;
 }
 
 .topic-info-row .border-top {
-  border: 1px solid #013367;
-  margin: 5px 0;
+  border: .5px solid #ebebeb;
+  margin: 14px 0 0;
 }
 
 .user-messages-page .post-count-title,
