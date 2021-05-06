@@ -149,11 +149,15 @@ $light-gray: #FAFAFA;
 }
 
 .topic-info-row .answer-num span {
-  color: $primary-color;
+  color: $primary-color!important;
 }
 
 .topic-info-row .second-part {
-  font-size: 22px;
+  font-size: 19px;
+}
+
+.topic-post-badges .unread {
+  display: none;
 }
 
 .user-messages-page .post-count-title,
