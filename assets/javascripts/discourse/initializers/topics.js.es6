@@ -151,9 +151,19 @@ export default {
 
         // Lifecyle logic
 
+        addDate() {
+          const date = this.$().find('[data-created]').attr('data-created');
+          const saneDate = moment(date).format('D MMMM YYYY');
+          this.$('.link-top-line')
+            .append(`<span class="timeline-item-created-at">${saneDate}</span>`);
+        },
+
         @on('didReceiveAttrs')
         setup() {
-          Ember.run.scheduleOnce('afterRender', this, this.applyOrdering);
+          Ember.run.scheduleOnce('afterRender', this, () => {
+            this.addDate();
+            this.applyOrdering();
+          });
         },
 
         @on('didInsertElement')

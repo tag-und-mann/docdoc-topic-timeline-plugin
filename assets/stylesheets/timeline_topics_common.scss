@@ -409,6 +409,13 @@ button[title="yearly"] .date-section {
   text-align: right;
 }
 
+.timeline-item-created-at {
+  position: relative;
+  float: right;
+  color: #637381;
+  margin-top: 5px;
+}
+
 .load-more-btn {
   display: none;
 }
