@@ -3,18 +3,20 @@ $secondary-color: #3599ff;
 $dark-blue: #013367;
 $gray: #454F5B;
 $light-gray: #FAFAFA;
+$light-blue: #C9E2FB;
 
 #list-area .mansory {
   column-count: 1;
   column-gap: 20px;
   column-rule: 1px solid $dark-blue;
-  border-left: 1px solid $dark-blue;
+  //border-left: 1px solid $dark-blue;
   max-width: 710px;
 }
 
 #list-area .topic-list-item {
   border-radius: 6px;
-  background: $light-gray;
+  border: 2px solid $light-blue;
+  background: #ffffff;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -24,7 +26,7 @@ $light-gray: #FAFAFA;
 }
 
 #list-area .topic-list-item.green {
-  background: #fff0e7!important;
+  background: $light-blue!important;
 }
 
 #list-area .arrow {
@@ -40,14 +42,11 @@ $light-gray: #FAFAFA;
 }
 
 #list-area .right-column .arrow {
-  left: -36px;
-  width: 10px;
-  height: 10px;
-  background-color: #ff6f00;
-  //border-top: 15px solid transparent;
-  //border-left: 15px solid transparent;
-  //border-bottom: 15px solid transparent;
-  //border-right: 15px solid #FAFAFA;
+  left: -30px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid $light-blue;
 }
 
 #list-area .topic-list-item.left-column {
@@ -78,7 +77,7 @@ $light-gray: #FAFAFA;
 
 #list-area table.topic-list .link-top-line a.raw-topic-link {
   font-weight: bold;
-  color: $primary-color !important;
+  color: $secondary-color !important;
 }
 
 #list-area .badge-wrapper.bullet .badge-category-bg {
