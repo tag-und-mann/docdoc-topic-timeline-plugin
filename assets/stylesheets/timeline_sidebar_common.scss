@@ -11,7 +11,7 @@ $light-blue: #C9E2FB;
   width: 310px;
   height: auto;
   margin-left: 25px;
-  margin-top: 32px;
+  margin-top: 0;
 }
 
 .list-container .topic-sidebar {
@@ -60,9 +60,10 @@ $light-blue: #C9E2FB;
   background: #FFFFFF;
   color: $gray!important;
   border-radius: 20px;
-  border: 1px solid $secondary-color;
+  border: 2px solid $light-blue;
   padding: 8px 15px;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .sidebar-lohn-link:hover {
@@ -114,7 +115,7 @@ $light-blue: #C9E2FB;
   font-size: 18px;
   font-weight: bold;
   //margin-bottom: 20px;
-  padding: 7px 12px;
+  padding: 7px 7px;
   text-align: left;
   border-radius: 4px;
   color: #637381;
