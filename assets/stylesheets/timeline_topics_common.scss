@@ -399,6 +399,7 @@ button[title="yearly"] .date-section {
 }
 
 .topic-created-at {
+  display: none;
   position: relative;
   top: 35px;
   right: 5px;
@@ -409,10 +410,11 @@ button[title="yearly"] .date-section {
 }
 
 .timeline-item-created-at {
-  position: relative;
+  position: absolute;
   float: right;
+  top: 15px;
   color: #637381;
-  margin-top: 5px;
+  //margin-top: 5px;
 }
 
 .load-more-btn {
