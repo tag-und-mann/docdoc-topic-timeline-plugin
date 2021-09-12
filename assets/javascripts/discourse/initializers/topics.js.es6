@@ -55,19 +55,8 @@ export default {
         @on('init')
         setup() {
           Ember.run.scheduleOnce('afterRender', this, () => {
-
             // clear for filtration and new pages
             latestCreatedDate = '';
-
-            if ($('.navigation-topics').length) {
-              const path = window.location.pathname;
-              if (this.order !== 'created' && (path === '/' || path === '/latest')) {
-                this.setProperties({ order: 'created', ascending: false });
-              } else if (this.order === 'created' && path !== '/latest') {
-                this.setProperties({ order: 'default', ascending: false });
-              }
-            }
-            // this.$('.mansory .right-column:nth-child(4)').addClass("top-margin");
 
             let _wrapper = this.$(".mansory"),
                 _cards = this.$(".topic-list-item"),

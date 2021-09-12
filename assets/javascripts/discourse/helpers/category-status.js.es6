@@ -7,6 +7,10 @@ var get = Em.get,
 
 
 export function categoryLinkHTML(category, options) {
+    if (!category) {
+        return;
+    }
+
     var categoryOptions = {};
 
     // TODO: This is a compatibility layer with the old helper structure.

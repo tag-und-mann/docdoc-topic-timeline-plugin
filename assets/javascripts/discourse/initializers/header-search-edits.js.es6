@@ -4,7 +4,7 @@ import { on } from 'ember-addons/ember-computed-decorators';
 
 export default {
     name: 'header-search',
-    initialize(container){
+    initialize(container) {
 
         withPluginApi('0.8.9', api => {
 
@@ -20,7 +20,6 @@ export default {
                 },
 
                 afterRender() {
-
                     let searchMenu = $('.search-menu');
                     if (searchMenu.length > 0) {
                         let customBlock = $('.custom-block');
