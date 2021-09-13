@@ -30,7 +30,8 @@ export default Ember.Component.extend({
                 sliderCont.html(content);
                 setTimeout(() => {
                   sliderCont.slick({
-                    dots: true
+                    dots: true,
+                    adaptiveHeight: true
                   });
                 }, 0);
             });
