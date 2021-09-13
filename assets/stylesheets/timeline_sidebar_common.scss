@@ -97,7 +97,7 @@ $light-blue: #C9E2FB;
   background: #FFFFFF;
   color: #454F5B !important;
   border-radius: 20px;
-  border: 1px solid #ff6f00;
+  border: 1px solid $light-blue;
   padding: 8px 15px;
   font-size: 14px;
   margin: 10px 30% 10px 0;
@@ -106,13 +106,15 @@ $light-blue: #C9E2FB;
 .support-btn:hover {
   transition: all 0.2s ease-in;
   background-color: #fff;
-  color: $primary-color;
+  color: $light-blue;
   border-radius: 10px;
 }
 
 .sidebar-slider-container {
-  padding: 10px;
+  padding: 20px 15px 15px;
   border: 2px solid $light-blue;
+  border-radius: 10px;
+
 }
 
 .sidebar-slider {

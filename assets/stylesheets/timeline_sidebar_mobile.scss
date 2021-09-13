@@ -17,6 +17,10 @@
     padding: 10px 15px;
   }
 
+  .categories-under-banner {
+    display: none;
+  }
+
   .support-wrapper {
     width: auto;
     top: -52px;
@@ -66,7 +70,7 @@
   }
 
   .topic-created-at {
-    display: block;
+    display: none;
     right: 10px;
   }
 
