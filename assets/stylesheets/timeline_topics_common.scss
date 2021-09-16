@@ -5,6 +5,10 @@ $gray: #454F5B;
 $light-gray: #FAFAFA;
 $light-blue: #C9E2FB;
 
+.alert-emails-disabled {
+  display: none;
+}
+
 #list-area .mansory {
   column-count: 1;
   column-gap: 20px;
