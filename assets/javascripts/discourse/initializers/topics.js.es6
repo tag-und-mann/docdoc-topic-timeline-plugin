@@ -1,5 +1,6 @@
 import { withPluginApi } from 'discourse/lib/plugin-api';
-import { on, observes } from 'ember-addons/ember-computed-decorators';
+import Composer from "discourse/models/composer";
+import { on, observes } from "discourse-common/utils/decorators";
 import { ajax } from "discourse/lib/ajax";
 
 var latestCreatedDate = '';
@@ -32,11 +33,6 @@ function onScrollMethod() {
 
   if (!sidebar.length || !sidebarWrapper.length) return;
 
-  //if (pageScrollPosition + diffCONST > elemCoords.top) {
-    //sidebar.css({top: diffCONST}).addClass('scroll-blocked');
-  //} else {
-    //sidebar.css({top: 0}).removeClass('scroll-blocked');
-  //}
 }
 
 function getTopicCooked(url) {
@@ -45,7 +41,7 @@ function getTopicCooked(url) {
 
 export default {
   name: 'topics',
-  initialize(container){
+  initialize(container) {
 
     withPluginApi('0.8.12', (api) => {
 
@@ -137,7 +133,6 @@ export default {
       });
 
       api.modifyClass('component:topic-list-item', {
-
         // Lifecyle logic
 
         addDate() {
@@ -152,6 +147,10 @@ export default {
           Ember.run.scheduleOnce('afterRender', this, () => {
             this.addDate();
             this.applyOrdering();
+
+            this.$('#reply-now-button').on("click", () => {
+              this.replyNow();
+            })
           });
         },
 
@@ -188,6 +187,18 @@ export default {
               });
             }
           }
+        },
+
+        // This adds ability to reply right from the timeline. 
+        replyNow() {
+          const route = container.lookup("route:application");
+
+          route.controllerFor("composer").open({
+            action: Composer.REPLY,
+            topic: this.topic,
+            draftKey: `topic_${this.topic.id}`,
+            draftSequence: this.topic.draft_sequence || 0,
+          });
         }
       });
     });

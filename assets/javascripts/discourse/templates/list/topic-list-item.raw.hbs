@@ -65,9 +65,18 @@
     <br>
     <div class="border-top"></div>
     <div class="second-part">
-    <td class="num views {{topic.viewsHeat}}"><span class="post-view-count-title view-post">Aufrufe:</span>{{number topic.views numberKey="views_long"}}</td>
+      <td class="num views {{topic.viewsHeat}}"><span class="post-view-count-title view-post">Aufrufe:</span>{{number topic.views numberKey="views_long"}}</td>
 
-    <td class="num likes"><span class="post-view-count-title topic-custom-like">{{d-icon "heart"}}</span>{{number topic.like_count}}</td>
+      <td class="num likes">
+        <span class="post-view-count-title topic-custom-like">{{d-icon "heart"}}</span>
+        {{number topic.like_count}}
+      </td>
+
+      <td class="num reply">
+        <button class="btn btn-flat" id="reply-now-button">
+          {{d-icon 'reply'}}
+        </button>
+      </td>
     </div>
   {{raw "list/activity-column" topic=topic class="num" tagName="td"}}
 </div>

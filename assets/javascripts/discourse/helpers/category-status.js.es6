@@ -1,3 +1,5 @@
+import Handlebars from "handlebars";
+
 import { registerUnbound } from 'discourse-common/lib/helpers';
 import * as categoryLink from "discourse/helpers/category-link";
 import favorites from 'discourse/plugins/discourse-favorites/lib/favorites';

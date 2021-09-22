@@ -36,11 +36,12 @@ export default Mixin.create(Scrolling, {
       if (!this.siteSettings.timeline_sidebar_more_topics_mob_btn ||
           !this.site.mobileView ||
           this.loadMoreEvent.type === 'click') {
-        Discourse.updateContextCount(0);
+        // Discourse.updateContextCount(0);
         this.model.loadMore().then(hasMoreResults => {
           schedule("afterRender", () => this.saveScrollPosition());
           if (!hasMoreResults) {
-            this.eyeline.flushRest();
+            // FlushRest is not availble in 2.8.0
+            // this.eyeline.flushRest();
           } else if ($(window).height() >= $(document).height()) {
             this.send("loadMore");
           }
