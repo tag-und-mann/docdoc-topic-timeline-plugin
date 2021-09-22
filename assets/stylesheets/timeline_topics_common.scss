@@ -5,6 +5,10 @@ $gray: #454F5B;
 $light-gray: #FAFAFA;
 $light-blue: #C9E2FB;
 
+.alert-emails-disabled {
+  display: none;
+}
+
 #list-area .mansory {
   column-count: 1;
   column-gap: 20px;
@@ -77,7 +81,7 @@ $light-blue: #C9E2FB;
 
 #list-area table.topic-list .link-top-line a.raw-topic-link {
   font-weight: bold;
-  color: $secondary-color !important;
+  color: $primary-color !important;
 }
 
 #list-area .badge-wrapper.bullet .badge-category-bg {
@@ -189,14 +193,17 @@ $light-blue: #C9E2FB;
 //  right: 7px;
 //}
 //
-//#list-area .topic-list-item.green .d-icon-thumbtack,
-//#list-area .topic-list-item.green .d-icon-thumbtack.unpinned,
-//#list-area .topic-list-item.green .category-name,
-//#list-area .topic-list-item.green .topic-info-row .number,
-//#list-area .topic-list-item.green .topic-info-row,
-//#list-area .topic-list-item.green .link-top-line a.raw-topic-link {
-//  color: #FFF!important;
-//}
+#list-area .topic-list-item.green .d-icon-thumbtack,
+#list-area .topic-list-item.green .d-icon-thumbtack.unpinned,
+#list-area .topic-list-item.green .topic-info-row .number,
+#list-area .topic-list-item.green .topic-info-row,
+#list-area .topic-list-item.green .link-top-line a.raw-topic-link {
+ color: #389bff!important;
+}
+
+#list-area .topic-list-item.green .category-name {
+  color: #ffffff!important;
+}
 
 td.green {
   background: #9dccff;

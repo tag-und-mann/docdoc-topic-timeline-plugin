@@ -69,7 +69,7 @@ $light-blue: #C9E2FB;
 .sidebar-lohn-link:hover {
   transition: all 0.2s ease-in;
   color: #FFFFFF!important;
-  background-color: $primary-color;
+  background-color: $light-blue;
 }
 
 .sidebar-lohn-link:visited {
@@ -97,7 +97,7 @@ $light-blue: #C9E2FB;
   background: #FFFFFF;
   color: #454F5B !important;
   border-radius: 20px;
-  border: 1px solid #ff6f00;
+  border: 1px solid $light-blue;
   padding: 8px 15px;
   font-size: 14px;
   margin: 10px 30% 10px 0;
@@ -106,7 +106,15 @@ $light-blue: #C9E2FB;
 .support-btn:hover {
   transition: all 0.2s ease-in;
   background-color: #fff;
-  color: $primary-color;
+  color: $light-blue;
+  border-radius: 10px;
+}
+
+.sidebar-slider-container {
+  padding: 20px 15px 15px;
+  border: 2px solid $light-blue;
+  border-radius: 10px;
+
 }
 
 .sidebar-slider {
@@ -120,7 +128,6 @@ $light-blue: #C9E2FB;
   border-radius: 4px;
   color: #637381;
   background: #ffffff;
-  border: 2px solid $light-blue;
 }
 
 .slider-static-title {
@@ -130,16 +137,16 @@ $light-blue: #C9E2FB;
   font-size: 20px;
 }
 
-.sidebar-slider .slider-slide {
+.sidebar-slider-container .slider-slide {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: auto;
-  min-height: 190px;
+  //min-height: 190px;
 }
 
-.sidebar-slider  .slider-slide:active,:focus {
+.sidebar-slider-container  .slider-slide:active,:focus {
   outline:none;
 }
 
@@ -159,7 +166,7 @@ $light-blue: #C9E2FB;
 
 .news-content {
   width: 100%;
-  margin: auto;
+  margin: 10px;
   padding-bottom: 22px;
 }
 
