@@ -456,3 +456,22 @@ button[title="yearly"] .date-section {
   cursor: pointer;
   color: #013367;
 }
+
+.topic-body-timeline {
+  width: 100% !important;
+}
+
+.last-3-posts{
+  margin: 20px -10px -18px -10px;
+
+  article {
+    background-color: var(--header_primary-low);
+    color: var(--primary);
+    margin-bottom: 10px;
+    border-radius: 3px;
+
+    &.hidden-timeline-post {
+      display: none;
+    }
+  }
+}

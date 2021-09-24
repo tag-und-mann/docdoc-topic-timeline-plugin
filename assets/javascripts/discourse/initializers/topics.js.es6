@@ -135,7 +135,27 @@ export default {
       api.modifyClass('component:topic-list-item', {
         // Lifecyle logic
 
-        addDate() {
+        showLast3Posts() {
+          return !!this.topic.posts
+        },
+
+        bindLoadPostsEvent() {
+          this.$().find('.load-last-posts-action').on('click', () => {
+            this.$().find('.wrapper-load-last-posts-action').hide();
+            this.$().find('.hidden-timeline-post').show();
+          });
+        },
+
+        addPostDate() {
+          // debugger
+          this.$().find('[data-post-created]').each(function(_index, date) {
+            const self = $(date);
+            const saneDate = moment(self.attr('data-post-created')).format('D MMMM YYYY');
+            self.html(saneDate);
+          })
+        },
+
+        addTopicDate() {
           const date = this.$().find('[data-created]').attr('data-created');
           const saneDate = moment(date).format('D MMMM YYYY');
           this.$('.link-top-line')
@@ -145,8 +165,10 @@ export default {
         @on('didReceiveAttrs')
         setup() {
           Ember.run.scheduleOnce('afterRender', this, () => {
-            this.addDate();
+            this.addTopicDate();
+            this.addPostDate();
             this.applyOrdering();
+            this.bindLoadPostsEvent();
 
             this.$('#reply-now-button').on("click", () => {
               this.replyNow();

@@ -24,12 +24,23 @@ after_initialize do
     mentions.each { |m| text.gsub!(m[0], m[1]) }
     text
   end
+
   add_to_serializer(:listable_topic, :include_excerpt?) { true }
 
   add_to_serializer(:listable_topic, :video_url, false) {
     raw = object.posts.first.raw
     raw.match(/(http:\/\/|https:\/\/)(vimeo\.com|youtu\.be|www\.youtube\.com|player\.vimeo\.com\/video)\/([\w\/]+)([\?].*)*/).to_a.first
   }
+
+  # Load last 3 posts of a topic.
+  add_to_serializer(:topic_list_item, :posts) do
+    @posts ||= begin
+      (object.posts.last(3) || []).map do |post|
+        serializer = PostSerializer.new(post, scope: scope, root: false)
+        serializer.as_json
+      end
+    end
+  end
 
   add_to_class :topic_query, :create_list do |filter, options = {}, topics = nil|
     topics ||= default_results(options)
