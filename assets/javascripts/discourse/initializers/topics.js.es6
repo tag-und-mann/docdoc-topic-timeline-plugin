@@ -44,7 +44,6 @@ export default {
   initialize(container) {
 
     withPluginApi('0.8.12', (api) => {
-
       api.modifyClass('component:topic-list',  {
         // Lifecyle logic
 

@@ -35,7 +35,8 @@ after_initialize do
   # Load last 3 posts of a topic.
   add_to_serializer(:topic_list_item, :posts) do
     @posts ||= begin
-      (object.posts.last(3) || []).map do |post|
+      posts = object.posts_count < 4 ? object.posts.last(object.posts_count - 1) : object.posts.last(3) || []
+      posts.map do |post|
         serializer = PostSerializer.new(post, scope: scope, root: false)
         serializer.as_json
       end
