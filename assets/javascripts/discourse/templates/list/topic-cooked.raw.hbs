@@ -1,7 +1,7 @@
 {{#if topic.hasExcerpt}}
   <div class="topic-excerpt" id="custom-topic-div-{{topic.id}}">
     <p id="custom-topic-p-{{topic.id}}">
-      {{dir-span topic.escapedExcerpt}}
+      {{dir-span topic.escapedExcerpt htmlSafe="true"}}
       {{#if topic.excerptTruncated}}
         <label class="topic-excerpt-more">
           <input hidden id="custom-topic-a-{{topic.id}}" type="radio">{{i18n 'read_more'}}

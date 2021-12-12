@@ -135,7 +135,7 @@ export default {
         // Lifecyle logic
 
         showLast3Posts() {
-          return !!this.topic.posts
+          return this.topic.posts && this.topic.posts.length > 0;
         },
 
         bindLoadPostsEvent() {
