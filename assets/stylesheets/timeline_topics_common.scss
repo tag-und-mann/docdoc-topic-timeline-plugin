@@ -475,3 +475,9 @@ button[title="yearly"] .date-section {
     }
   }
 }
+
+.post-stream {
+  .widget-button.reply {
+    display: none;
+  }
+}
