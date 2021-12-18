@@ -57,10 +57,10 @@ $light-blue: #C9E2FB;
 .sidebar-lohn-link {
   display: inline-block;
   transition: all 0.2s ease-in;
-  background: #FFFFFF;
-  color: $gray!important;
+  background: #1363B4;
+  color: #ffffff!important;
   border-radius: 20px;
-  border: 2px solid $light-blue;
+  border: 2px solid #1363B4;
   padding: 8px 15px;
   font-size: 14px;
   margin-bottom: 20px;
@@ -68,12 +68,12 @@ $light-blue: #C9E2FB;
 
 .sidebar-lohn-link:hover {
   transition: all 0.2s ease-in;
-  color: #FFFFFF!important;
-  background-color: $light-blue;
+  color: #1363B4!important;
+  background-color: #ffffff;
 }
 
 .sidebar-lohn-link:visited {
-  color: #fff;
+  color: #1363B4;
 }
 
 .list-container {
