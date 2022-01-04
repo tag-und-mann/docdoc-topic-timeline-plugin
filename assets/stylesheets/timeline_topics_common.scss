@@ -481,3 +481,13 @@ button[title="yearly"] .date-section {
     display: none;
   }
 }
+
+// Hide default categories from the category dropdown
+.select-kit-collection {
+  li[data-name="VSAO"], li[data-name="Staff"], li[data-name="Feedback"], li[data-name="Staff"],
+  li[data-name="Spital News"], li[data-name="Work-Life"], li[data-name="Lounge"],
+  li[data-name="Site Feedback"], li[data-name="Uncategorized"]
+  {
+    display: none !important;
+  }
+}
