@@ -24,7 +24,9 @@
     <span class='link-top-line'>
     {{~raw-plugin-outlet name="topic-list-before-status"}}
         {{~raw "topic-status" topic=topic}}
-        {{~topic-link topic class="raw-link raw-topic-link"}}
+        <a href={{topic.url}} class="raw-link raw-topic-link">
+          {{html-safe topic.fancyTitle}}
+        </a>
         {{~#if topic.featured_link}}
             {{~topic-featured-link topic}}
         {{~/if}}
