@@ -121,13 +121,12 @@
      padding: 6px 15px;
      transition: all .4s;
      width: 49%;
-     margin: 10px 0 10px 0;
+     margin: 10px 0 10px 0 !important;
    }
-
-
-   #categories-under-banner {
+  #categories-under-banner {
     display: block;
     width: 100%;
+    bottom: 35px;
   }
   .support-btn {
     display: inline-block;
@@ -145,5 +144,24 @@
   .mobile-view .support-wrapper {
     width: 100%;
     text-align: center;
+  }
+  .slider-static-title {
+    color: #013367;
+    margin: 0 auto 5px;
+    line-height: 20px;
+    font-size: 22px !important;
+  }
+  .sidebar-lohn-link {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    background: #1363B4;
+    color: #fff !important;
+    border-radius: 20px;
+    border: 2px solid #1363B4;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 10px 0 10px 0 !important;
+    width: 40% !important;
+    text-align: center !important;
   }
 }
