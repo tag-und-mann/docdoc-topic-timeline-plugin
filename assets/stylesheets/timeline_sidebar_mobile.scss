@@ -116,15 +116,16 @@
     display: block;
   }
   .categories-wrapper .btn {
-    color: white;
-    border-radius: 20px;
-    padding: 6px 15px;
-    transition: all .4s;
-    width: 49%;
-    margin: 10px 0 10px 0;
-  }
+     color: white;
+     border-radius: 20px;
+     padding: 6px 15px;
+     transition: all .4s;
+     width: 49%;
+     margin: 10px 0 10px 0;
+   }
 
-  .mobile-view #categories-under-banner {
+
+   #categories-under-banner {
     display: block;
     width: 100%;
   }
@@ -136,7 +137,7 @@
     border-radius: 20px;
     border: 1px solid #C9E2FB;
     padding: 8px 15px;
-    font-size: 14px;s
+    font-size: 14px;
     margin: 10px 0 10px 0;
     width: 40%;
     text-align: center;
