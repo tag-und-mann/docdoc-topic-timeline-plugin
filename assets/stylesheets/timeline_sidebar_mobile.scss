@@ -129,7 +129,7 @@
     bottom: 35px;
   }
   .support-btn {
-    display: inline-block;
+    display: block;
     transition: all 0.2s ease-in;
     background: #1363B4;
     color: #ffffff !important;
@@ -174,7 +174,7 @@
     background-repeat: no-repeat;
     background-position: center top;
   }
-  mobile-view .topic-meta-data {
+  .topic-meta-data {
     margin-left: 10px !important;;
     margin-top: 10px !important;;
     margin-bottom: 20px !important;;
@@ -183,5 +183,8 @@
   .boxed .contents {
     padding: 10px 0 0 0;
     margin: 0 10px !important;
+  }
+  .container.list-container {
+    margin-top: -70px !important;
   }
 }
