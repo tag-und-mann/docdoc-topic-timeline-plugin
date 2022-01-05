@@ -129,7 +129,7 @@
     bottom: 35px;
   }
   .support-btn {
-    display: inline-block;
+    display: block;
     transition: all 0.2s ease-in;
     background: #1363B4;
     color: #ffffff !important;
@@ -185,6 +185,6 @@
     margin: 0 10px !important;
   }
   .container.list-container {
-    margin-top: -30px !important;
+    margin-top: -70px !important;
   }
 }
