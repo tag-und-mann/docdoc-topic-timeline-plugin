@@ -164,4 +164,24 @@
     width: 40% !important;
     text-align: center !important;
   }
+  .banner-block {
+    background: url(/uploads/default/original/1X/bb8b3a9….jpg);
+    text-align: center;
+    padding: 60px 0 !important;
+    width: 100%;
+    margin: 0 auto 50px auto;
+    background-size: 127% !important;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  mobile-view .topic-meta-data {
+    margin-left: 10px !important;;
+    margin-top: 10px !important;;
+    margin-bottom: 20px !important;;
+    margin-right: 10px !important;;
+  }
+  .boxed .contents {
+    padding: 10px 0 0 0;
+    margin: 0 10px !important;
+  }
 }
