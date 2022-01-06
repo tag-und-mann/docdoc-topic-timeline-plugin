@@ -187,4 +187,17 @@
   .container.list-container {
     margin-top: -70px !important;
   }
+  ol.category-breadcrumb {
+    margin: 0 -3px 5px -3px;
+    display: flex;
+    flex-wrap: unset;
+    flex: none;
+  }
+  .notifications-button, .edit-category {
+    height: 40.188px !important;
+  }
+  .list-controls{
+    margin-bottom: 80px;
+  }
+
 }
