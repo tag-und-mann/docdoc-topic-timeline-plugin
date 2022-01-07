@@ -18,3 +18,14 @@ export default Ember.Component.extend({
     }
 
 });
+
+$(document).ready(function() {
+    if(innerHTML="https://dev.docdoc.ch"){
+        var element = document.getElementsByClassName("list-controls")[0];
+        element.classList.remove("mystyle");
+    }
+    else{
+        var element = document.getElementsByClassName("list-controls")[0];
+        element.classList.add("btn-support-");
+    }
+});
