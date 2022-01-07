@@ -19,13 +19,3 @@ export default Ember.Component.extend({
 
 });
 
-document.addEventListener('DOMContentLoaded', function(){
-    if(window.location.href=="https://dev.doc-doc.ch/")
-        var element = document.getElementsByClassName("list-controls")[0];
-        element.classList.remove("btn-support-filter");
-    }
-    else{
-        var element = document.getElementsByClassName("list-controls")[0];
-        element.classList.add("btn-support-filter");
-    }
-});
