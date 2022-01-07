@@ -314,6 +314,9 @@ $light-blue: #C9E2FB;
 .navigation-container{
   height: 40px !important;
 }
+.navigation-controls {
+  display: block !important;gi
+}
 .btn, .list-controls .combo-box .combo-box-header {
   background: #ff6f00;
   display: inline-block;
@@ -322,9 +325,11 @@ $light-blue: #C9E2FB;
   border-radius: 20px;
   padding: 8px 15px;
   line-height: var(--line-height-large);
+  min-height: unset;
+  min-width: unset;
 }
 .category-name {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 svg.fa.d-icon.d-icon-wrench.svg-icon.svg-string {
   font-size: 14px;
