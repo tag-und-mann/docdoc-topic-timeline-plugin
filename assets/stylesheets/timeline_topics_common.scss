@@ -156,12 +156,17 @@ $light-blue: #C9E2FB;
 }
 
 .topic-info-row .second-part {
-  font-size: 19px;
+  font-size: 16px;
 }
 
 #reply-now-button {
   float: right;
   margin-top: 10px;
+  border-radius: 20px;
+}
+
+#reply-now-button d-icon{
+  color: #ffffff!important;
 }
 
 .topic-post-badges .unread {
