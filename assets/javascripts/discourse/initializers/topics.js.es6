@@ -140,8 +140,7 @@ export default {
 
         bindLoadPostsEvent() {
           this.$().find('.load-last-posts-action').on('click', () => {
-            this.$().find('.wrapper-load-last-posts-action').hide();
-            this.$().find('.hidden-timeline-post').show();
+            this.$().find('.hidden-timeline-post').toggleClass('hide');
           });
         },
 
