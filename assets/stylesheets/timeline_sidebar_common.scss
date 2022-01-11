@@ -365,7 +365,7 @@ div#ember123 .category-name {
   color: white !important;
 }
 .categories-wrapper .btn{
-  padding: 8px 15px;
+  padding: 8px 15px !important;
 }
 .search-container .search-advanced .search-info button{
   display:none;
@@ -376,3 +376,13 @@ div#ember123 .category-name {
 summary#ember31-header {
   display: none;
 }
+.last-3-posts {
+  margin: 20px 0px -18px 0px;
+}
+.inline-form {
+  display: none;
+}
+details#ember139 {
+  display: none !important;
+}
+
