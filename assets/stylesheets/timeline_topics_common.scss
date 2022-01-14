@@ -105,27 +105,33 @@ $light-blue: #C9E2FB;
   color: #37474F;
 }
 
-#list-area .topic-list-item .relative-date {
-  display: none;
+#list-area, #suggested-topics {
+  .topic-list-item .relative-date {
+    display: none;
+  }
 }
 
 #list-area .topic-statuses {
   float: left;
 }
 
-#list-area .topic-info-row .number {
-  color: #454f5b;
-  margin-left: 4px;
+#list-area, #suggested-topics { 
+  .topic-info-row .number {
+    color: #454f5b;
+    margin-left: 4px;
+  }
 }
 
-#list-area .topic-info-row {
-  display: block;
-  align-items: center;
-  width: 100%;
-  margin-top: 12px;
-  padding-top: 5px;
-  color: #013367;
-  border-top: 1px solid #ebebeb;
+#list-area, #suggested-topics {
+  .topic-info-row {
+    display: block;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+    padding-top: 5px;
+    color: #013367;
+    border-top: 1px solid #ebebeb;
+  }
 }
 
 #list-area a[data-user-card] {
@@ -136,15 +142,19 @@ $light-blue: #C9E2FB;
   margin-right: 5px;
 }
 
-#list-area .post-count-title {
-  margin-left: 0;
-  color: #013367;
+#list-area, #suggested-topics {
+  .post-count-title {
+    margin-left: 0;
+    color: #013367;
+  }
 }
 
-#list-area .post-view-count-title {
-  display: inline-block;
-  margin: 0;
-  padding-top: 14px;
+#list-area, #suggested-topics {
+  .post-view-count-title {
+    display: inline-block;
+    margin: 0;
+    padding-top: 14px;
+  }
 }
 
 .topic-info-row .border-top {
@@ -174,13 +184,7 @@ $light-blue: #C9E2FB;
   display: none;
 }
 
-.user-messages-page .post-count-title,
-.user-messages-page .post-view-count-title,
-.user-messages-page .topic-info-row,
-.user-messages-page .posters-title,
-#suggested-topics .post-count-title,
-#suggested-topics .post-view-count-title,
-#suggested-topics .topic-info-row {
+.user-messages-page .posters-title {
   display:none;
 }
 

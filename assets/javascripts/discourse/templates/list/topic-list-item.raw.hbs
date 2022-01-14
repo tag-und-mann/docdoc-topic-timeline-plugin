@@ -47,25 +47,6 @@
     {{raw "list/posters-column" posters=topic.participants}}
   {{/if}}
 
-  {{#if showLikes}}
-    <td class="num likes">
-      {{#if hasLikes}}
-        <a href='{{topic.summaryUrl}}'>
-          {{number topic.like_count}} {{d-icon "heart"}}
-        </a>
-      {{/if}}
-    </td>
-  {{/if}}
-
-  {{#if showOpLikes}}
-    <td class="num likes">
-      {{#if hasOpLikes}}
-        <a href='{{topic.summaryUrl}}'>
-          {{number topic.op_like_count}} {{d-icon "heart"}}
-        </a>
-      {{/if}}
-    </td>
-  {{/if}}
   <br>
   <div class="border-top"></div>
   <div class="second-part">

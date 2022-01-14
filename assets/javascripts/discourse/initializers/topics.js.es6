@@ -181,11 +181,7 @@ export default {
 
         @on('init')
         _setupProperties() {
-          if( $("#suggested-topics").length == 0 && $(".user-messages-page").length == 0 ) {
-            this.set('tagName', 'div');
-          } else {
-            this.set('tagName', 'tr');
-          }
+          this.set('tagName', 'div');
         },
 
         applyOrdering() {
