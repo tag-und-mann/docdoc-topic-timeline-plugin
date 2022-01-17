@@ -489,19 +489,7 @@ button[title="yearly"] .date-section {
 }
 
 // Hide default categories from the category dropdown
-#reply-control .select-kit-collection {
-  .select-kit-row {
-    display: none !important;
-  }
-
-  li[data-name="VSAO"], li[data-name="Berufsalltag"], li[data-name="Pausenraum"], li[data-name="Studium"],
-  li[data-name="Gesundheitspolitik"], li[data-name="Weiterbildung"]
-  {
-    display: flex !important;
-  }
-}
-
-.category-navigation .select-kit-collection {
+.reply-area .select-kit-collection {
   .select-kit-row {
     display: none !important;
   }
