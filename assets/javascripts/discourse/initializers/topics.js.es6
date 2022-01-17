@@ -140,8 +140,7 @@ export default {
 
         bindLoadPostsEvent() {
           this.$().find('.load-last-posts-action').on('click', () => {
-            this.$().find('.wrapper-load-last-posts-action').hide();
-            this.$().find('.hidden-timeline-post').show();
+            this.$().find('.hidden-timeline-post').toggleClass('hide');
           });
         },
 
@@ -182,11 +181,7 @@ export default {
 
         @on('init')
         _setupProperties() {
-          if( $("#suggested-topics").length == 0 && $(".user-messages-page").length == 0 ) {
-            this.set('tagName', 'div');
-          } else {
-            this.set('tagName', 'tr');
-          }
+          this.set('tagName', 'div');
         },
 
         applyOrdering() {

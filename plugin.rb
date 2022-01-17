@@ -43,6 +43,17 @@ after_initialize do
     end
   end
 
+  # Load last 3 posts of a suggested topic.
+  add_to_serializer(:suggested_topic, :posts) do
+    @posts ||= begin
+      posts = object.posts_count < 4 ? object.posts.last(object.posts_count - 1) : object.posts.last(3) || []
+      posts.map do |post|
+        serializer = PostSerializer.new(post, scope: scope, root: false)
+        serializer.as_json
+      end
+    end
+  end
+
   add_to_class :topic_query, :create_list do |filter, options = {}, topics = nil|
     topics ||= default_results(options)
     topics = yield(topics) if block_given?

@@ -105,27 +105,33 @@ $light-blue: #C9E2FB;
   color: #37474F;
 }
 
-#list-area .topic-list-item .relative-date {
-  display: none;
+#list-area, #suggested-topics {
+  .topic-list-item .relative-date {
+    display: none;
+  }
 }
 
 #list-area .topic-statuses {
-  float: none;
+  float: left;
 }
 
-#list-area .topic-info-row .number {
-  color: #454f5b;
-  margin-left: 4px;
+#list-area, #suggested-topics { 
+  .topic-info-row .number {
+    color: #454f5b;
+    margin-left: 4px;
+  }
 }
 
-#list-area .topic-info-row {
-  display: block;
-  align-items: center;
-  width: 100%;
-  margin-top: 12px;
-  padding-top: 5px;
-  color: #013367;
-  border-top: 1px solid #ebebeb;
+#list-area, #suggested-topics {
+  .topic-info-row {
+    display: block;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+    padding-top: 5px;
+    color: #013367;
+    border-top: 1px solid #ebebeb;
+  }
 }
 
 #list-area a[data-user-card] {
@@ -136,14 +142,19 @@ $light-blue: #C9E2FB;
   margin-right: 5px;
 }
 
-#list-area .post-count-title {
-  margin-left: 0;
+#list-area, #suggested-topics {
+  .post-count-title {
+    margin-left: 0;
+    color: #013367;
+  }
 }
 
-#list-area .post-view-count-title {
-  display: inline-block;
-  margin: 0;
-  padding-top: 14px;
+#list-area, #suggested-topics {
+  .post-view-count-title {
+    display: inline-block;
+    margin: 0;
+    padding-top: 14px;
+  }
 }
 
 .topic-info-row .border-top {
@@ -173,13 +184,7 @@ $light-blue: #C9E2FB;
   display: none;
 }
 
-.user-messages-page .post-count-title,
-.user-messages-page .post-view-count-title,
-.user-messages-page .topic-info-row,
-.user-messages-page .posters-title,
-#suggested-topics .post-count-title,
-#suggested-topics .post-view-count-title,
-#suggested-topics .topic-info-row {
+.user-messages-page .posters-title {
   display:none;
 }
 
@@ -466,7 +471,7 @@ button[title="yearly"] .date-section {
   width: 100% !important;
 }
 
-.last-3-posts{
+.last-3-posts {
   margin: 20px -10px -18px -10px;
 
   article {
@@ -474,10 +479,6 @@ button[title="yearly"] .date-section {
     color: var(--primary);
     margin-bottom: 10px;
     border-radius: 3px;
-
-    &.hidden-timeline-post {
-      display: none;
-    }
   }
 }
 
@@ -489,10 +490,13 @@ button[title="yearly"] .date-section {
 
 // Hide default categories from the category dropdown
 .select-kit-collection {
-  li[data-name="VSAO"], li[data-name="Staff"], li[data-name="Feedback"], li[data-name="Staff"],
-  li[data-name="Spital News"], li[data-name="Work-Life"], li[data-name="Lounge"],
-  li[data-name="Site Feedback"], li[data-name="Uncategorized"]
-  {
+  .select-kit-row {
     display: none !important;
+  }
+
+  li[data-name="VSAO"], li[data-name="Berufsalltag"], li[data-name="Pausenraum"], li[data-name="Studium"],
+  li[data-name="Gesundheitspolitik"], li[data-name="Weiterbildung"]
+  {
+    display: flex !important;
   }
 }

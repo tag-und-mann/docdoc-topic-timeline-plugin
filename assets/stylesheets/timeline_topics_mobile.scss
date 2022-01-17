@@ -214,4 +214,18 @@
         line-height: 20px;
         font-size: 20px;
     }
+    .table#ember148{
+        display:none;
+    }
+    .topic-statuses .topic-status {
+        margin: 0;
+        display: inline-flex;
+        color: var(--primary-medium);
+        margin-right: 0.2em;
+        vertical-align: bottom !important;
+    }
+
+    #list-area .topic-statuses {
+        float: left !important;
+    }
 }
