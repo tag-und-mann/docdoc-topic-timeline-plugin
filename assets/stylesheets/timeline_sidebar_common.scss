@@ -391,3 +391,13 @@ details#ember139 {
 .navigation-topics .banner-block, .navigation-categories .banner-block {
   display: block !important;
 }
+.link-share-actions .sources {
+  display: none !important;
+}
+.link-share-container #ember91 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
+  display: none !important;
+}
