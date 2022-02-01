@@ -200,7 +200,7 @@ $light-blue: #C9E2FB;
   height: 0px;
   padding: 0;
   margin-top: 0;
-  opacity: .75;
+  opacity: 1;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -233,7 +233,7 @@ $light-blue: #C9E2FB;
 .slick-dots {
   display:none;
   position: absolute;
-  bottom: 0;
+  bottom: -15%;
   display: block;
   width: calc(100% - 32px);
   margin: 0 16px;
