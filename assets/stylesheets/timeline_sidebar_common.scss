@@ -404,3 +404,6 @@ button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
 .badge-wrapper .badge-category .d-icon {
   margin: 0 0 0 5px !important;
 }
+body:not(.navigation-topics) .banner-block {
+  display:block !important;
+}
