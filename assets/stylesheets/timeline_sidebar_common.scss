@@ -112,7 +112,7 @@ $light-blue: #C9E2FB;
 
 .sidebar-slider-container {
   padding: 20px 15px 15px;
-  border: 2px solid $light-blue;
+  border: 2px solid #1363B4;
   border-radius: 10px;
 }
 
@@ -189,19 +189,18 @@ $light-blue: #C9E2FB;
 
 // slick-slider customization
 
-.slick-prev,
-.slick-next {
+.slick-prev, .slick-next {
   font-size: 0;
   line-height: 0;
   position: absolute;
-  top: 50%;
+  top: 90%;
   z-index: 1;
   display: block;
   width: 0;
-  height: 0;
+  height: 0px;
   padding: 0;
-  margin-top: 18px;
-  opacity: .75;
+  margin-top: 0;
+  opacity: 1;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -209,9 +208,9 @@ $light-blue: #C9E2FB;
   color: transparent;
   outline: none;
   background: transparent;
-  border-top: 6px solid transparent;
-  border-left: 6px solid transparent;
-  border-bottom: 6px solid transparent;
+  border-top: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid transparent;
   border-right: 6px solid transparent;
 }
 
@@ -223,17 +222,18 @@ $light-blue: #C9E2FB;
 
 .slick-prev {
   left: 5px;
-  border-right: 6px solid transparent;
+  border-right: 6px solid #1363B4;
 }
 
 .slick-next {
   right: 5px;
-  border-left: 6px solid transparent;
+  border-left:6px solid #1363B4;
 }
 
 .slick-dots {
+  display:none;
   position: absolute;
-  bottom: 0;
+  bottom: -15%;
   display: block;
   width: calc(100% - 32px);
   margin: 0 16px;
@@ -385,4 +385,25 @@ summary#ember31-header {
 details#ember139 {
   display: none !important;
 }
-
+.tag_all {
+  display: none !important;
+}
+.navigation-topics .banner-block, .navigation-categories .banner-block {
+  display: block !important;
+}
+.link-share-actions .sources {
+  display: none !important;
+}
+.link-share-container #ember91 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
+  display: none !important;
+}
+.badge-wrapper .badge-category .d-icon {
+  margin: 0 0 0 5px !important;
+}
+body:not(.navigation-topics) .banner-block {
+  display:block !important;
+}
