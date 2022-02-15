@@ -529,3 +529,23 @@ div#ember18{
 .topic-body {
   width: unset !important;
 }
+.clearfix:before, .clearfix:after {
+   display: table;
+   content: " ";
+   /* left: -30px; */
+   /* border-top: 15px solid transparent; */
+   /* border-left: 15px solid transparent; */
+   /* border-bottom: 15px solid transparent; */
+   /* border-right: 15px solid #C9E2FB; */
+ }
+.topic-post::before {
+  left: -30px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #C9E2FB;
+  width: 0;
+  position: absolute;
+  top: 35%;
+  margin-top: -15px;
+}
