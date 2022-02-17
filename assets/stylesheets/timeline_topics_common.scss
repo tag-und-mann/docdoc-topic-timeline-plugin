@@ -502,7 +502,7 @@ button[title="yearly"] .date-section {
 }
 
 div#ember18{
-  padding-left: 65px;
+  padding-left: 95px;
 }
 #suggested-topics .topic-list-item, tr {
   border-bottom: 0px solid var(--primary-low);
@@ -539,6 +539,17 @@ div#ember18{
    /* border-right: 15px solid #C9E2FB; */
  }
 .topic-post::before {
+  left: -30px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #C9E2FB;
+  width: 0;
+  position: absolute;
+  top: 35%;
+  margin-top: -15px;
+}
+#suggested-topics .topic-list-item::before {
   left: -30px;
   border-top: 15px solid transparent;
   border-left: 15px solid transparent;
