@@ -504,6 +504,11 @@ button[title="yearly"] .date-section {
 div#ember18{
   padding-left: 95px;
 }
+
+#topic .topic-list-item td:first-child, .topic-post {
+  max-width: 710px !important;
+}
+
 #suggested-topics .topic-list-item, tr {
   border-bottom: 0px solid var(--primary-low);
   border-left: 1px solid transparent;
