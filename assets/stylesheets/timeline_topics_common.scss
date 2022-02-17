@@ -565,3 +565,12 @@ div#ember18{
   top: 35%;
   margin-top: -15px;
 }
+body.category-weiterbildung {
+  background-size: 43.5%;
+  background-repeat: no-repeat;
+  background-position-y: 11.5%;
+  background-position-x: center;
+}
+body:not(.navigation-topics) .banner-block{
+  background: none !important;
+}
