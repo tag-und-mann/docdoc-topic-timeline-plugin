@@ -172,7 +172,7 @@ export default {
               this.replyNow();
             });
 
-            const selector = `[data-topic-id='${this.topic}']`;
+            const selector = `[data-topic-id='${this.topic.id}']`;
             this.$(selector).find('.d-icon-heart').on('click', (event) => {
               this.like(event);
             });
