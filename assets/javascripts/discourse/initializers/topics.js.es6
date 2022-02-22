@@ -170,7 +170,12 @@ export default {
 
             this.$('#reply-now-button').on("click", () => {
               this.replyNow();
-            })
+            });
+
+            const selector = `[data-topic-id='${this.topic}']`;
+            this.$(selector).find('.d-icon-heart').on('click', (event) => {
+              this.like(event);
+            });
           });
         },
 
@@ -202,6 +207,20 @@ export default {
                 topicDiv.append(fullText);
               });
             }
+          }
+        },
+
+        like(event) {
+          // this.$(event.target).
+          const post = this.model;
+          console.log('Like model:', posts);
+          const likeAction = post.get("likeAction");
+          console.log('Like action:', likeAction);
+
+          if (likeAction && likeAction.get("canToggle")) {
+            return likeAction.togglePromise(post).then((result) => {
+              console.log("Like toggle result:", result);
+            });
           }
         },
 
