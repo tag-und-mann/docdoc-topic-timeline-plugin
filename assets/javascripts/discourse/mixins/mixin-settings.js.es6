@@ -19,7 +19,7 @@ export default Mixin.create(Scrolling, {
 
   @on("didInsertElement")
   _bindEyeline() {
-    const eyeline = new Eyeline(this.eyelineSelector + ":last");
+    const eyeline = Eyeline.create({selector: this.eyelineSelector + ":last"});
     this.set("eyeline", eyeline);
     eyeline.on("sawBottom", () => this.send("loadMore"));
     eyeline.update(); // update once to consider current position

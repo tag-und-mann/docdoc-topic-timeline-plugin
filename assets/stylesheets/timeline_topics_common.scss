@@ -154,6 +154,11 @@ $light-blue: #C9E2FB;
     display: inline-block;
     margin: 0;
     padding-top: 14px;
+    cursor: pointer;
+
+    &.liked {
+      color: var(--love) !important;   
+    }
   }
 }
 

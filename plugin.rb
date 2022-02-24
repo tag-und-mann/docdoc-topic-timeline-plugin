@@ -43,6 +43,13 @@ after_initialize do
     end
   end
 
+  add_to_serializer(:topic_list_item, :main_post) do
+    @main_post ||= begin
+      serializer = PostSerializer.new(object.posts.first, scope: scope, root: false)
+      serializer.as_json
+    end
+  end
+
   # Load last 3 posts of a suggested topic.
   add_to_serializer(:suggested_topic, :posts) do
     @posts ||= begin

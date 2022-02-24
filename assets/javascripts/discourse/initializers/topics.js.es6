@@ -2,6 +2,9 @@ import { withPluginApi } from 'discourse/lib/plugin-api';
 import Composer from "discourse/models/composer";
 import { on, observes } from "discourse-common/utils/decorators";
 import { ajax } from "discourse/lib/ajax";
+import Site from "discourse/models/site";
+import Post from "discourse/models/post";
+import ActionSummary from "discourse/models/action-summary";
 
 var latestCreatedDate = '';
 
@@ -35,8 +38,8 @@ function onScrollMethod() {
 
 }
 
-function getTopicCooked(url) {
-  return ajax(url, { type: "GET" });
+function fetchActionUsers(post) {
+  return ajax(`/post_action_users?id=${post.id}&post_action_type_id=2`, { type: "GET" });
 }
 
 export default {
@@ -145,7 +148,6 @@ export default {
         },
 
         addPostDate() {
-          // debugger
           this.$().find('[data-post-created]').each(function(_index, date) {
             const self = $(date);
             const saneDate = moment(self.attr('data-post-created')).format('D MMMM YYYY');
@@ -172,8 +174,8 @@ export default {
               this.replyNow();
             });
 
-            const selector = `[data-topic-id='${this.topic.id}']`;
-            this.$(selector).find('.d-icon-heart').on('click', (event) => {
+
+            this.$('.topic-custom-like').on('click', (event) => {
               this.like(event);
             });
           });
@@ -187,6 +189,22 @@ export default {
         @on('init')
         _setupProperties() {
           this.set('tagName', 'div');
+          const post = this.topic.main_post;
+
+          if (!post) {
+            return;
+          }
+
+          this.set("postRecrod", this.store.createRecord("post", post));
+
+          // Get who liked the users and update likeAction accordingly so user can do unlike.
+          fetchActionUsers(post).then(result => {
+            if (result.post_action_users.find(user => user.id === this.currentUser.id)) {
+              this.postRecrod.likeAction.acted = true
+              this.postRecrod.likeAction.can_undo = true
+              this.$('.topic-custom-like').addClass('liked');
+            }
+          })
         },
 
         applyOrdering() {
@@ -201,25 +219,26 @@ export default {
             let topicTagP = $(`#custom-topic-p-${this.topic.id}`);
 
             if (topicReadMore[0]?.checked && topicTagP[0]?.innerText.length) {
-              getTopicCooked(this.topic.firstPostUrl).then(result => {
-                let fullText = result.post_stream.posts[0].cooked;
-                topicTagP.remove();
-                topicDiv.append(fullText);
-              });
+              topicTagP.remove();
+              topicDiv.append(this.postRecrod.cooked);
             }
           }
         },
 
+        // Like a topic right from the timeline...
         like(event) {
-          // this.$(event.target).
-          const post = this.model;
-          console.log('Like model:', posts);
-          const likeAction = post.get("likeAction");
-          console.log('Like action:', likeAction);
-
-          if (likeAction && likeAction.get("canToggle")) {
-            return likeAction.togglePromise(post).then((result) => {
-              console.log("Like toggle result:", result);
+          this.postRecrod.updateLikeCount(this.topic.like_count + 1);
+          if (this.postRecrod.likeAction && this.postRecrod.likeAction.get("canToggle")) {
+            this.postRecrod.likeAction.togglePromise(this.postRecrod).then((result) => {
+              if (result.acted) {
+                this.$('.topic-custom-like').addClass('liked');
+                this.$('.likes-count').html(this.topic.like_count + 1);
+                this.topic.set("like_count", this.topic.like_count + 1);
+              } else {
+                this.$('.topic-custom-like.liked').removeClass('liked');
+                this.$('.likes-count').html(this.topic.like_count - 1);
+                this.topic.set("like_count", this.topic.like_count - 1);
+              }
             });
           }
         },
