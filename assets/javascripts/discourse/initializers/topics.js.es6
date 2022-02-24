@@ -6,6 +6,36 @@ import Site from "discourse/models/site";
 import Post from "discourse/models/post";
 import ActionSummary from "discourse/models/action-summary";
 
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+const postsToFetchLikeUsersFor = {};
+
+// Only get if currentUser has liked the topic, when its visible.
+$(window).on('resize scroll', function() {
+  $('[data-topic-id]').each(function() {
+    var topicId = $(this).attr('data-topic-id');
+    
+    if ($(this).isInViewport()) {
+      let [post, callback, loaded] = postsToFetchLikeUsersFor[topicId];
+
+      if (!loaded) {
+        ajax(`/post_action_users?id=${post.id}&post_action_type_id=2`, { type: "GET" }).then(result => {
+          callback(result);
+        });
+        postsToFetchLikeUsersFor[topicId] = [post, callback, true];
+      }
+    }
+  });
+});
+
 var latestCreatedDate = '';
 
 function timelineDate(date) {
@@ -38,8 +68,12 @@ function onScrollMethod() {
 
 }
 
-function fetchActionUsers(post) {
-  return ajax(`/post_action_users?id=${post.id}&post_action_type_id=2`, { type: "GET" });
+function fetchLikeUsers(post, callback) {
+  setTimeout(() => {
+    ajax(`/post_action_users?id=${post.id}&post_action_type_id=2`, { type: "GET" }).then(result => {
+      callback(result);
+    })
+  }, rand);
 }
 
 export default {
@@ -198,13 +232,16 @@ export default {
           this.set("postRecrod", this.store.createRecord("post", post));
 
           // Get who liked the users and update likeAction accordingly so user can do unlike.
-          fetchActionUsers(post).then(result => {
-            if (result.post_action_users.find(user => user.id === this.currentUser.id)) {
-              this.postRecrod.likeAction.acted = true
-              this.postRecrod.likeAction.can_undo = true
-              this.$('.topic-custom-like').addClass('liked');
-            }
-          })
+          // Lazy load and update the likeAction of each post only when they are in viewport.
+          postsToFetchLikeUsersFor[this.topic.id] = [post, this.setupLikeAction.bind(this), false];
+        },
+
+        setupLikeAction(result) {
+          if (result.post_action_users.find(user => user.id === this.currentUser.id)) {
+            this.postRecrod.likeAction.acted = true
+            this.postRecrod.likeAction.can_undo = true
+            this.$('.topic-custom-like').addClass('liked');
+          }
         },
 
         applyOrdering() {
