@@ -228,4 +228,13 @@
     #list-area .topic-statuses {
         float: left !important;
     }
+    div#ember18{
+        padding-left: 0;
+    }
+    .topic-body {
+        width: 100% !important;
+    }
+    section.post-menu-area{
+        padding-left:0 !important;
+    }
 }
