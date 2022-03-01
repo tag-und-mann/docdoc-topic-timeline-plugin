@@ -33,4 +33,10 @@ $(document).ready(function () {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
     }
+    else{
+        if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
+            $('.banner-block').css('display','block');
+            $('.categories-wrapper').css('display','block');
+        }
+    }
 });
