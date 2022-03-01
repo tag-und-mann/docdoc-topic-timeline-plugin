@@ -33,7 +33,7 @@ $(document).ready(function () {
     if (window.location.href.indexOf("https://dev.doc-doc.ch") > -1) {
         $('.banner-block').css('display','block');
         $('.categories-wrapper').css('display','block');
-        if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
+        if (window.location.href.indexOf("/t/") > -1) {
             $('.banner-block').css('display','none');
             $('.categories-wrapper').css('display','none');
         }
@@ -43,8 +43,4 @@ $(document).ready(function () {
         }
     }
 
-    else{
-            $('.banner-block').css('display','block');
-            $('.categories-wrapper').css('display','block');
-    }
 });
