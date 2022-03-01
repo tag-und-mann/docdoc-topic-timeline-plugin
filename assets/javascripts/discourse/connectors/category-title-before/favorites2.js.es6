@@ -32,14 +32,14 @@ $(document).ready(function () {
 
     if (window.location.href.indexOf("https://dev.doc-doc.ch") > -1) {
         $('.banner-block').css('display','block');
-        $('.categories-wrapper').css('display','block');
+        $('.categories-wrapper').css('display','block !important');
         if (window.location.href.indexOf("/t/") > -1) {
-            $('.banner-block').css('display','none');
+            $('.banner-block').css('display','none !important');
             $('.categories-wrapper').css('display','none');
         }
         else{
             $('.banner-block').css('display','block');
-            $('.categories-wrapper').css('display','block');
+            $('.categories-wrapper').css('display','block !important');
         }
     }
 
