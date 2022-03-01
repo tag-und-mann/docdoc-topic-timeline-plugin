@@ -26,3 +26,7 @@ export default {
     }
 
 };
+
+$(document).ready(function () {
+    $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
+});
