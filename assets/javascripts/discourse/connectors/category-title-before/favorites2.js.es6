@@ -33,11 +33,16 @@ $(document).ready(function () {
     if (window.location.href.indexOf("https://dev.doc-doc.ch") > -1) {
         $('.banner-block').css('display','block');
         $('.categories-wrapper').css('display','block');
+        if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
+            $('.banner-block').css('display','none');
+            $('.categories-wrapper').css('display','none');
+        }
+        else{
+            $('.banner-block').css('display','block');
+            $('.categories-wrapper').css('display','block');
+        }
     }
-    else if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
-        $('.banner-block').css('display','none');
-        $('.categories-wrapper').css('display','none');
-    }
+
     else{
             $('.banner-block').css('display','block');
             $('.categories-wrapper').css('display','block');
