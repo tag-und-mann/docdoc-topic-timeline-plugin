@@ -582,3 +582,14 @@ body:not(.navigation-topics) .banner-block{
 .topic-body{
   padding:12px 0 0 12px !important;
 }
+div#suggested-topics .arrow {
+  left: -30px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #C9E2FB;
+  width: 0;
+  position: absolute;
+  top: 35%;
+  margin-top: -15px;
+}
