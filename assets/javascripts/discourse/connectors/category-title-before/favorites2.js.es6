@@ -30,6 +30,7 @@ export default {
 $(document).ready(function () {
     $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
     if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
-        alert("your are in a topic");
+        $('.banner-block').css('display','none');
+        $('.categories-wrapper').css('display','none');
     }
 });
