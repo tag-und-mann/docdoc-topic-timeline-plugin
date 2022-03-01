@@ -32,8 +32,6 @@ $(document).ready(function () {
     if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
-        var url      = window.location.href;
-        alert(url);
     }
     else{
         if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
