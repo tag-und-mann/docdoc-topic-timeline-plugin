@@ -404,3 +404,9 @@ button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
 .badge-wrapper .badge-category .d-icon {
   margin: 0 0 0 5px !important;
 }
+header.d-header .header-buttons>button:hover{
+  background-color: #1363B4 !important;
+}
+.discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon {
+  color: #fff !important;
+}

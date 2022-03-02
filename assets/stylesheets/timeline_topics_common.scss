@@ -608,3 +608,9 @@ div#suggested-topics .arrow {
   top: 35%;
   margin-top: -15px;
 }
+header.d-header .header-buttons>button:hover{
+  background-color: #1363B4 !important;
+}
+.discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon {
+  color: #fff !important;
+}
