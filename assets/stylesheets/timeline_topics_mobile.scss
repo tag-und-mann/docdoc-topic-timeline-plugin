@@ -14,7 +14,7 @@
     }
 
     .search-container .search-advanced-sidebar {
-        display: block!important;
+        display: block !important;
     }
 
     .bootbox.modal {
@@ -23,15 +23,15 @@
 
     .static-login #main-outlet .body-page .login-required a {
         font-size: 40px;
-        line-height: 45px!important;
+        line-height: 45px !important;
     }
 
     .static-login #main-outlet .body-page .login-required p {
-        font-size: 20px!important;
-        line-height: 28px!important;
+        font-size: 20px !important;
+        line-height: 28px !important;
     }
 
-    .login-required p>a {
+    .login-required p > a {
         font-size: 20px !important;
     }
 
@@ -52,13 +52,13 @@
     }
 
     #list-area .mansory {
-        column-count: 1!important;
-        column-gap: normal!important;
-        column-rule: none!important;
+        column-count: 1 !important;
+        column-gap: normal !important;
+        column-rule: none !important;
     }
 
     .topic-list .topic-excerpt {
-        width: auto!important;
+        width: auto !important;
     }
 
     #list-area .topic-list-item {
@@ -96,51 +96,51 @@
 
     #list-area .topic-list-item.right-column,
     #list-area .topic-list-item.left-column {
-        width: 100%!important;
-        margin-left: 0!important;
-        margin-top: 0!important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
     }
 
     .topic-body {
-        width: 100%!important;
-        border-top: none!important;
-        padding: 5px 0 0 0!important;
+        width: 100% !important;
+        border-top: none !important;
+        padding: 5px 0 0 0 !important;
     }
 
     .poll-container li {
-        flex-wrap: wrap!important;
-        height: auto!important;
-        padding: 0!important;
+        flex-wrap: wrap !important;
+        height: auto !important;
+        padding: 0 !important;
     }
 
     div.poll .poll-voters-list {
-        margin-top: 0!important;
+        margin-top: 0 !important;
     }
 
     div.poll .results .bar {
-        margin: 8px 7px 0px 0px!important;
+        margin: 8px 7px 0px 0px !important;
         //width: calc(100% - 50px)!important;
     }
 
     .topic-avatar {
-        border-top: none!important;
-        padding-top: 0!important;
+        border-top: none !important;
+        padding-top: 0 !important;
     }
 
     div.poll li[data-poll-option-id] {
-        padding: 0.5em 0em 0em 0em!important;
+        padding: 0.5em 0em 0em 0em !important;
     }
 
     .select-kit {
-        display: block!important;
-        padding-bottom: 5px!important;
+        display: block !important;
+        padding-bottom: 5px !important;
     }
 
     .topic-post:last-of-type,
     div.poll .poll-buttons,
     div.poll .poll-container,
     div.poll .poll-info {
-        padding: 0!important;
+        padding: 0 !important;
     }
 
     #list-area .topic-info-row {
@@ -149,7 +149,7 @@
 
     #list-area .post-view-count-title,
     #list-area .post-count-title {
-        margin-left: 0!important;
+        margin-left: 0 !important;
     }
 
     .navigation-container #create-topic {
@@ -192,7 +192,7 @@
 
     #list-area table.topic-list .category-name {
         max-width: 255px;
-        font-size: 12px!important;
+        font-size: 12px !important;
     }
 
 
@@ -214,9 +214,11 @@
         line-height: 20px;
         font-size: 20px;
     }
-    .table#ember148{
-        display:none;
+
+    .table#ember148 {
+        display: none;
     }
+
     .topic-statuses .topic-status {
         margin: 0;
         display: inline-flex;
@@ -228,13 +230,24 @@
     #list-area .topic-statuses {
         float: left !important;
     }
-    div#ember18{
+
+    div#ember18 {
         padding-left: 0;
     }
+
     .topic-body {
         width: 100% !important;
     }
-    section.post-menu-area{
-        padding-left:0 !important;
+
+    section.post-menu-area {
+        padding-left: 0 !important;
+    }
+
+    .topic-post article {
+        border-top: none;
+    }
+    .topic-post::before{
+        border-top: none;
+        border-left: none;
     }
 }
