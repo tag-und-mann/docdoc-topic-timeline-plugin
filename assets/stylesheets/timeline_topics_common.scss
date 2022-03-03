@@ -5,6 +5,13 @@ $gray: #454F5B;
 $light-gray: #FAFAFA;
 $light-blue: #C9E2FB;
 
+header.d-header .header-buttons>button:hover{
+  background-color: #1363B4 !important;
+}
+.discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon {
+  color: #fff !important;
+}
+
 .alert-emails-disabled {
   display: none;
 }
@@ -607,10 +614,4 @@ div#suggested-topics .arrow {
   position: absolute;
   top: 35%;
   margin-top: -15px;
-}
-header.d-header .header-buttons>button:hover{
-  background-color: #1363B4 !important;
-}
-.discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon {
-  color: #fff !important;
 }
