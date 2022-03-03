@@ -256,7 +256,7 @@
     body:not(.navigation-topics) .support-wrapper.button-show-support{
         display:none !important;
     }
-    .list-controls .navigation-container {
+    body:not(.navigation-topics) .list-controls .navigation-container {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
