@@ -253,4 +253,7 @@
     .topic-post.clearfix.regular {
         padding: 15px !important;
     }
+    body:not(.navigation-topics) .support-wrapper.button-show-support{
+        display:none !important;
+    }
 }

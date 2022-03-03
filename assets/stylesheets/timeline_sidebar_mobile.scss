@@ -66,6 +66,15 @@
   .topic-post.clearfix.regular {
     padding: 15px !important;
   }
+  body:not(.navigation-topics) .sidebar-lohn{
+    display:none !important;
+  }
+  body:not(.navigation-topics) .sidebar-medicus{
+      display:none !important;
+  }
+  body:not(.navigation-topics) .sidebar-doppel{
+      display:none !important;
+  }
 }
 
 
