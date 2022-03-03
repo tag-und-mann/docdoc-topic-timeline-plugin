@@ -46,6 +46,10 @@ $(document).ready(function () {
     $(".title a").click(function(){
         $('.banner-block').css('display','block');
         $('.categories-wrapper').css('display','block');
+        if ($(window).width() < 960) {
+            $('.banner-block').css('display','none');
+            $('.categories-wrapper').css('display','none');
+        }
     });
     if ($(window).width() < 960) {
         $('.banner-block').css('display','none');
