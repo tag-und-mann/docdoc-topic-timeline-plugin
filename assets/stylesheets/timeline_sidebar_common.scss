@@ -426,3 +426,10 @@ button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
 .d-modal.create-account .has-alt-auth .login-form .input-group, .d-modal.create-account .login-form .input-group {
   padding: 0;
 }
+.d-modal.create-account .login-welcome-header {
+  grid-area: header;
+  padding: 3em 0 1em;
+}
+.input-group.create-account-email {
+  margin-top: 2rem;
+}
