@@ -433,3 +433,16 @@ button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
 .input-group.create-account-email {
   margin-top: 2rem;
 }
+.d-modal.create-account .login-welcome-header .login-title{
+  width: fit-content !important;
+}
+img.waving-hand {
+  margin-left: 0 !important;
+}
+.static-login #login-link {
+  background: #ff6f00 !important;
+}
+.static-login #login-link:hover {
+  border: 1px solid #ff6f00;
+  color: #ff6f00 !important;
+  background: #fff !important;

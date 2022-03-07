@@ -272,4 +272,7 @@
     .select-kit .select-kit-header .selected-name .name{
         display: flex !important;
     }
+    .d-modal.login-modal:not(.hidden) .login-welcome-header, .d-modal.create-account .login-welcome-header {
+        padding: 2em 0;
+    }
 }
