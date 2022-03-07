@@ -411,3 +411,18 @@ button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
 .badge-wrapper .badge-category .d-icon {
   margin: 0 0 0 5px !important;
 }
+.d-modal.create-account .login-welcome-header, .d-modal.login-modal .login-welcome-header, .invites-show .login-welcome-header {
+  background: transparent !important;
+}
+.d-modal.create-account .has-alt-auth .login-form, .d-modal.create-account .login-form {
+  background: transparent !important;
+}
+.d-modal.create-account .modal-footer{
+  background: transparent !important;
+}
+.d-modal.create-account .modal-footer:before{
+  background-image: none !important;
+}
+.d-modal.create-account .has-alt-auth .login-form .input-group, .d-modal.create-account .login-form .input-group {
+  padding: 0;
+}
