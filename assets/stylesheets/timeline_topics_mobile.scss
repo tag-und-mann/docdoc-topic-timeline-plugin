@@ -275,4 +275,10 @@
     .d-modal.login-modal:not(.hidden) .login-welcome-header, .d-modal.create-account .login-welcome-header {
         padding: 2em 0;
     }
+    summary#ember32-header {
+        display: none;
+    }
+    .btn, .list-controls .combo-box .combo-box-header{
+        display:flex;
+    }
 }
