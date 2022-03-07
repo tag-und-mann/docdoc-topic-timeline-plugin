@@ -269,11 +269,11 @@ export default {
             this.postRecrod.likeAction.togglePromise(this.postRecrod).then((result) => {
               if (result.acted) {
                 this.$('.topic-custom-like').addClass('liked');
-                this.$('.likes-count').html(this.topic.like_count + 1);
+                this.$('.likes-count > .number').html(this.topic.like_count + 1);
                 this.topic.set("like_count", this.topic.like_count + 1);
               } else {
                 this.$('.topic-custom-like.liked').removeClass('liked');
-                this.$('.likes-count').html(this.topic.like_count - 1);
+                this.$('.likes-count > .number').html(this.topic.like_count - 1);
                 this.topic.set("like_count", this.topic.like_count - 1);
               }
             });
