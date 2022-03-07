@@ -63,6 +63,18 @@
   .slick-next {
     margin-top: 7px;
   }
+  .topic-post.clearfix.regular {
+    padding: 15px !important;
+  }
+  body:not(.navigation-topics) .sidebar-lohn{
+    display:none !important;
+  }
+  body:not(.navigation-topics) .sidebar-medicus{
+      display:none !important;
+  }
+  body:not(.navigation-topics) .sidebar-doppel{
+      display:none !important;
+  }
 }
 
 
@@ -262,4 +274,10 @@
 
 a.widget-link.badge-notification.unread-high-priority-notifications{
   display:none !important;
+}
+header.d-header .header-buttons>button:hover{
+  background-color: #1363B4 !important;
+}
+.discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon {
+  color: #fff !important;
 }

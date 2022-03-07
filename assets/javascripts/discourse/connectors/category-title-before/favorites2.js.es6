@@ -26,3 +26,33 @@ export default {
     }
 
 };
+
+$(document).ready(function () {
+    if ($(window).width() < 960) {
+    }
+    else{
+        $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
+    }
+
+    if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
+        $('.banner-block').css('display','none');
+        $('.categories-wrapper').css('display','none');
+    }
+    else{
+        $('.banner-block').css('display','block');
+        $('.categories-wrapper').css('display','block');
+    }
+
+    $(".title a").click(function(){
+        $('.banner-block').css('display','block');
+        $('.categories-wrapper').css('display','block');
+        if ($(window).width() < 960) {
+            $('.banner-block').css('display','none');
+            $('.categories-wrapper').css('display','none');
+        }
+    });
+    if ($(window).width() < 960) {
+        $('.banner-block').css('display','none');
+        $('.categories-wrapper').css('display','none');
+    }
+});

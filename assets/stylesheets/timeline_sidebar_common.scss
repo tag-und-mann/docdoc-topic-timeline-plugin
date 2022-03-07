@@ -4,6 +4,13 @@ $dark-blue: #013367;
 $gray: #454F5B;
 $light-blue: #C9E2FB;
 
+header.d-header .header-buttons>button:hover{
+  background-color: #1363B4 !important;
+}
+.discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon {
+  color: #fff !important;
+}
+
 .topic-sidebar {
   position: relative;
   display: none;
@@ -403,4 +410,40 @@ button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
 }
 .badge-wrapper .badge-category .d-icon {
   margin: 0 0 0 5px !important;
+}
+.d-modal.create-account .login-welcome-header, .d-modal.login-modal .login-welcome-header, .invites-show .login-welcome-header {
+  background: transparent !important;
+}
+.d-modal.create-account .has-alt-auth .login-form, .d-modal.create-account .login-form {
+  background: transparent !important;
+}
+.d-modal.create-account .modal-footer{
+  background: transparent !important;
+}
+.d-modal.create-account .modal-footer:before{
+  background-image: none !important;
+}
+.d-modal.create-account .has-alt-auth .login-form .input-group, .d-modal.create-account .login-form .input-group {
+  padding: 0;
+}
+.d-modal.create-account .login-welcome-header {
+  grid-area: header;
+  padding: 3em 0 1em;
+}
+.input-group.create-account-email {
+  margin-top: 2rem;
+}
+.d-modal.create-account .login-welcome-header .login-title{
+  width: fit-content !important;
+}
+img.waving-hand {
+  margin-left: 0 !important;
+}
+.static-login #login-link {
+  background: #ff6f00 !important;
+}
+.static-login #login-link:hover {
+  border: 1px solid #ff6f00;
+  color: #ff6f00 !important;
+  background: #fff !important;
 }
