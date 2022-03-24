@@ -260,7 +260,7 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        margin: 5rem 0px 2rem !important;
+        margin: 8rem 0px 2rem !important;
     }
     .mobile-view .select-kit{
         padding-bottom: 0 !important;
@@ -280,5 +280,8 @@
     }
     .btn, .list-controls .combo-box .combo-box-header{
         display:flex;
+    }
+    .tag-drop-header {
+        display: none !important;
     }
 }
