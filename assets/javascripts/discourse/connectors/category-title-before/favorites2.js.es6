@@ -62,6 +62,7 @@ $(document).ready(function () {
 });
 
 /* New version for live
+Please Zaid after release do live.
 $(document).ready(function () {
     if ($(window).width() < 960) {
     }
