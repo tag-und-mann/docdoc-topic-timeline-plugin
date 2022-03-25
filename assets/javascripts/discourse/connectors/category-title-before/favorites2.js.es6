@@ -33,7 +33,7 @@ $(document).ready(function () {
     else{
         $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
     }
-
+    //if (window.location.href.indexOf("https://doc-doc.ch/t/") > -1) {
     if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
@@ -55,6 +55,7 @@ $(document).ready(function () {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
     }
+    //if (window.location.href.indexOf("https://doc-doc.ch/u/account-created") > -1) {
     if (window.location.href.indexOf("https://dev.doc-doc.ch/u/account-created") > -1) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
