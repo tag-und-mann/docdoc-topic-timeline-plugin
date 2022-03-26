@@ -184,14 +184,14 @@ export default {
         addPostDate() {
           this.$().find('[data-post-created]').each(function(_index, date) {
             const self = $(date);
-            const saneDate = moment(self.attr('data-post-created')).format('D MMMM YYYY');
+            const saneDate = moment(self.attr('data-post-created')).format('D. MMMM YYYY');
             self.html(saneDate);
           })
         },
 
         addTopicDate() {
           const date = this.$().find('[data-created]').attr('data-created');
-          const saneDate = moment(date).format('D MMMM YYYY');
+          const saneDate = moment(date).format('D. MMMM YYYY');
           this.$('.link-top-line')
             .append(`<span class="timeline-item-created-at">${saneDate}</span>`);
         },
