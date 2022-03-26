@@ -61,15 +61,15 @@ $(document).ready(function () {
     }
 });
 
-/* New version for live
-Please Zaid after release do live.
+/* New version for live */
+
 $(document).ready(function () {
     if ($(window).width() < 960) {
     }
     else{
         $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
     }
-    //if (window.location.href.indexOf("https://doc-doc.ch/t/") > -1) {
+    if (window.location.href.indexOf("https://doc-doc.ch/t/") > -1) {
 
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
@@ -95,4 +95,4 @@ $(document).ready(function () {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
     }
-});*/
+});
