@@ -324,7 +324,7 @@ header.d-header .header-buttons>button:hover{
 
 .btn, .list-controls .combo-box .combo-box-header {
   background: #ff6f00;
-  display: inline-block;
+  display: inline-flex;
   transition: all 0.2s ease-in;
   color: #fff !important;
   border-radius: 20px;
@@ -446,4 +446,36 @@ img.waving-hand {
   border: 1px solid #ff6f00;
   color: #ff6f00 !important;
   background: #fff !important;
+}
+.menu-panel .panel-body-bottom .btn {
+  background-color: #ff6f00;
+}
+.user-menu .quick-access-panel .d-icon, .user-menu .quick-access-panel:hover .d-icon {
+  color: #fff;
+}
+.menu-panel .widget-link:hover, .menu-panel .widget-link:focus, .menu-panel .categories-link:hover, .menu-panel .categories-link:focus{
+  background: #1363B4;
+  color: #fff !important;
+}
+.menu-panel .panel-body-bottom .btn:hover {
+  background: #1363B4 !important;
+  color: #fff !important;
+}
+.user-menu .quick-access-panel li:hover{
+  background-color: #ff6f00 !important;
+}
+#reply-control .reply-to .composer-controls .d-icon{
+  color: #fff;
+}
+span.extra-buttons .fab-facebook, span.extra-buttons .fab-twitter {
+  display: none !important;
+}
+h1.login-title {
+  color: #ff6f00 !important;
+}
+.create-account-form {
+  color: #FFF !important;
+}
+a.widget-link.admin-link .d-label {
+  color: #ff6f00 !important;
 }
