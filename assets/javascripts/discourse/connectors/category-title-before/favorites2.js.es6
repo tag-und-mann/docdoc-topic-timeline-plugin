@@ -1,4 +1,4 @@
-import { ajax } from 'discourse/lib/ajax';
+import {ajax} from 'discourse/lib/ajax';
 import title from 'discourse/plugins/discourse-favorites/discourse/connectors/category-title-before/favorites';
 import favorites from 'discourse/plugins/discourse-favorites/lib/favorites';
 
@@ -29,63 +29,59 @@ export default {
 /* Version for dev */
 $(document).ready(function () {
     if ($(window).width() < 960) {
-    }
-    else{
+    } else {
         $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
     }
 });
-
 $(document).ready(function () {
-    $(".title a").click(function(){
-        $('.banner-block').css('display','block');
-        $('.categories-wrapper').css('display','block');
-        if ($(window).width() < 960) {
-            $('.banner-block').css('display','none');
-            $('.categories-wrapper').css('display','none');
-        }
-    });
-
-    $('.categories-under-banner a').on('click', function(){
+    $('.categories-under-banner a').on('click', function () {
         $("div.categories-under-banner a").removeClass('activebtn');
         $(this).addClass("activebtn");
     })
+});
 
-    $("#ember94").click(function(){
-        $('.banner-block').css('display','none');
-        $('.categories-wrapper').css('display','none');
+$(document).ready(function () {
+    $("#ember94").click(function () {
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
+    });
+});
+$(document).ready(function () {
+    $(".title a").click(function () {
+        $('.banner-block').css('display', 'block');
+        $('.categories-wrapper').css('display', 'block');
+        if ($(window).width() < 960) {
+            $('.banner-block').css('display', 'none');
+            $('.categories-wrapper').css('display', 'none');
+        }
     });
 });
 
 $(document).ready(function () {
     if ($(window).width() < 960) {
-        $('.banner-block').css('display','none');
-        $('.categories-wrapper').css('display','none');
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
     }
 });
 
 
 $(document).ready(function () {
     if (window.location.href.indexOf("dev.doc-doc.ch/g") > -1) {
-        $('.banner-block').css('display','none');
-        $('.categories-wrapper').css('display','none');
-    }
-
-    else{
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
+    } else {
         if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
-            $('.banner-block').css('display','none');
-            $('.categories-wrapper').css('display','none');
-        }
-        else{
+            $('.banner-block').css('display', 'none');
+            $('.categories-wrapper').css('display', 'none');
+        } else {
             if (window.location.href.indexOf("dev.doc-doc.ch/contact-us") > -1) {
-                $('.banner-block').css('display','none');
-                $('.categories-wrapper').css('display','none');
-            }
-            else{
+                $('.banner-block').css('display', 'none');
+                $('.categories-wrapper').css('display', 'none');
+            } else {
                 if (window.location.href.indexOf("https://dev.doc-doc.ch/u/account-created") > -1) {
-                    $('.banner-block').css('display','none');
-                    $('.categories-wrapper').css('display','none');
-                }
-                else{
+                    $('.banner-block').css('display', 'none');
+                    $('.categories-wrapper').css('display', 'none');
+                } else {
                     $('.banner-block').css('display', 'block');
                     $('.categories-wrapper').css('display', 'block');
                 }
