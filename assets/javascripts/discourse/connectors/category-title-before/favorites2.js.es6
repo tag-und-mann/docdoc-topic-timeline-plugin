@@ -54,6 +54,16 @@ $(document).ready(function () {
         }
     });
 });
+$(document).ready(function () {
+    $(".category-name").click(function () {
+        $('.banner-block').css('display', 'block');
+        $('.categories-wrapper').css('display', 'block');
+        if ($(window).width() < 960) {
+            $('.banner-block').css('display', 'none');
+            $('.categories-wrapper').css('display', 'none');
+        }
+    });
+});
 
 $(document).ready(function () {
     if ($(window).width() < 960) {
