@@ -69,6 +69,24 @@ $(document).ready(function () {
     else{
         $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
     }
+
+    if (window.location.href.indexOf("https://doc-doc.ch/contact-us") > -1) {
+        $('.banner-block').css('display','none');
+        $('.categories-wrapper').css('display','none');
+    }
+    else{
+        $('.banner-block').css('display','block');
+        $('.categories-wrapper').css('display','block');
+    }
+
+    if (window.location.href.indexOf("https://doc-doc.ch/g") > -1) {
+        $('.banner-block').css('display','none');
+        $('.categories-wrapper').css('display','none');
+    }
+    else{
+        $('.banner-block').css('display','block');
+        $('.categories-wrapper').css('display','block');
+    }
     if (window.location.href.indexOf("https://doc-doc.ch/t/") > -1) {
 
         $('.banner-block').css('display','none');
