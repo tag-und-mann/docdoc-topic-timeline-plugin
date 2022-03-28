@@ -44,11 +44,16 @@ $(document).ready(function () {
             $('.categories-wrapper').css('display','none');
         }
     });
-});
 
-$("#ember94").click(function(){
-    $('.banner-block').css('display','none');
-    $('.categories-wrapper').css('display','none');
+    $('.categories-under-banner a').on('click', function(){
+        $("div.categories-under-banner a").removeClass('activebtn');
+        $(this).addClass("activebtn");
+    })
+
+    $("#ember94").click(function(){
+        $('.banner-block').css('display','none');
+        $('.categories-wrapper').css('display','none');
+    });
 });
 
 $(document).ready(function () {
