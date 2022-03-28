@@ -449,7 +449,7 @@ img.waving-hand {
 }
 .menu-panel .panel-body-bottom .btn {
   background-color: #ff6f00;
-  height: fit-content !important;
+
 }
 .user-menu .quick-access-panel .d-icon, .user-menu .quick-access-panel:hover .d-icon {
   color: #fff;
@@ -482,4 +482,10 @@ a.widget-link.admin-link .d-label {
 }
 .user-menu .quick-access-panel li:not(.show-all){
   width:unset !important;
+}
+.menu-panel .panel-body {
+  height: fit-content !important;
+}
+.panel-body {
+  height: fit-content !important;
 }
