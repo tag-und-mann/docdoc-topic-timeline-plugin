@@ -35,7 +35,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $("#ember94").click(function ()
+    $("#ember94").click(function () {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
     });
