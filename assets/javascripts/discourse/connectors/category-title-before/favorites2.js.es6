@@ -27,15 +27,20 @@ export default {
 
 };
 /* Version for dev */
-$('.categories-under-banner a').on('click', function () {
-    $("div.categories-under-banner a").removeClass('activebtn');
-    $(this).addClass("activebtn");
+$(document).ready(function () {
+    $(".categories-under-banner a").click(function () {
+        $("div.categories-under-banner a").removeClass('activebtn');
+        $(this).addClass("activebtn");
+    });
 });
 
-$("#ember94").click(function () {
-    $('.banner-block').css('display', 'none');
-    $('.categories-wrapper').css('display', 'none');
+$(document).ready(function () {
+    $("#ember94").click(function ()
+            $('.banner-block').css('display', 'none');
+            $('.categories-wrapper').css('display', 'none');
+    });
 });
+
 
 $(document).ready(function () {
     if ($(window).width() < 960) {
