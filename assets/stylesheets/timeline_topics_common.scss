@@ -521,20 +521,6 @@ div#ember18{
   max-width: 710px !important;
 }
 
-#suggested-topics .topic-list-item, tr {
-  border-bottom: 0px solid var(--primary-low);
-  border-left: 1px solid transparent;
-  border-radius: 6px;
-  border: 2px solid #C9E2FB;
-  background: #ffffff;
-  display: block;
-  box-sizing: border-box;
-  padding: 15px;
-  position: relative;
-  margin-bottom: 15px;
-  max-width: 710px !important;
-  column-count: 1;
-}
 .container.posts {
   display: grid;
   grid-template-areas: "posts timeline";
