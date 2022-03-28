@@ -35,7 +35,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".admin-main-nav .nav nav-pills li a").click(function () {
+    $(".admin-main-nav .nav-pills li a").click(function () {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
     });
