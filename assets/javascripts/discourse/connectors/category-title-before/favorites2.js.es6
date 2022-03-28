@@ -30,12 +30,12 @@ export default {
 $(document).ready(function () {
     $(".categories-under-banner a").click(function () {
         $("div.categories-under-banner a").removeClass('activebtn');
-        $(this).addClass("activebtn");
+        $("div.categories-under-banner a").addClass("activebtn");
     });
 });
 
 $(document).ready(function () {
-    $("#ember94").click(function () {
+    $(".admin-main-nav .nav nav-pills li a").click(function () {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
     });
