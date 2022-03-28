@@ -33,8 +33,9 @@ $(document).ready(function () {
     else{
         $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
     }
+});
 
-
+$(document).ready(function () {
     if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
@@ -43,7 +44,9 @@ $(document).ready(function () {
         $('.banner-block').css('display','block');
         $('.categories-wrapper').css('display','block');
     }
+});
 
+$(document).ready(function () {
     $(".title a").click(function(){
         $('.banner-block').css('display','block');
         $('.categories-wrapper').css('display','block');
@@ -52,15 +55,21 @@ $(document).ready(function () {
             $('.categories-wrapper').css('display','none');
         }
     });
+});
+
+$(document).ready(function () {
     if ($(window).width() < 960) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
     }
+});
+$(document).ready(function () {
     if (window.location.href.indexOf("https://dev.doc-doc.ch/u/account-created") > -1) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
     }
-
+});
+$(document).ready(function () {
     if (window.location.href.indexOf("dev.doc-doc.ch/contact-us") > -1) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
@@ -70,6 +79,8 @@ $(document).ready(function () {
         $('.categories-wrapper').css('display','block');
     }
 
+});
+$(document).ready(function () {
     if (window.location.href.indexOf("dev.doc-doc.ch/g") > -1) {
         $('.banner-block').css('display','none');
         $('.categories-wrapper').css('display','none');
