@@ -27,7 +27,7 @@ export default {
 
 };
 /* Version for dev */
-$(document).ready(function () {
+/*$(document).ready(function () {
     $("#categories-under-banner .btn").click(function (e) {
         console.log("abc");
         $("div#categories-under-banner .btn").removeClass('activebtn');
@@ -35,7 +35,7 @@ $(document).ready(function () {
         e.preventDefault();
     });
 });
-
+*/
 $(document).ready(function () {
     $(".admin-main-nav .nav-pills li a").click(function () {
         $('.banner-block').css('display', 'none');
