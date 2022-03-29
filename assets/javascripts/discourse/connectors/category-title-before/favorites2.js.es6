@@ -33,104 +33,109 @@ $(document).ready(function () {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
     }
+});
+$(document).ready(function () {
     if (window.location.href.indexOf("/c/vsao") > -1) {
         console.log('works2');
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#VSAO').addClass("activebtn");
     }
+});
+$(document).ready(function () {
     if (window.location.href.indexOf("/c/weiterbildung") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Weiterbildung').addClass("activebtn");
     }
+});
+$(document).ready(function () {
     if (window.location.href.indexOf("/c/studium") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Stadium').addClass("activebtn");
     }
+});
+$(document).ready(function () {
     if (window.location.href.indexOf("/c/pausenraum") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Pausenraum').addClass("activebtn");
     }
-   else {
-       console.log("error2");
+});
+
+$(document).ready(function () {
+    $(".admin-main-nav .nav-pills li a").click(function () {
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
+    });
+});
+
+
+$(document).ready(function () {
+    if ($(window).width() < 960) {
+    } else {
+        $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
     }
 });
 
-    $(document).ready(function () {
-        $(".admin-main-nav .nav-pills li a").click(function () {
-            $('.banner-block').css('display', 'none');
-            $('.categories-wrapper').css('display', 'none');
-        });
-    });
-
-
-    $(document).ready(function () {
-        if ($(window).width() < 960) {
-        } else {
-            $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
-        }
-    });
-
-    $(document).ready(function () {
-        $(".title a").click(function () {
-            $('.banner-block').css('display', 'block');
-            $('.categories-wrapper').css('display', 'block');
-            if ($(window).width() < 960) {
-                $('.banner-block').css('display', 'none');
-                $('.categories-wrapper').css('display', 'none');
-            }
-        });
-    });
-    $(document).ready(function () {
-        $(".category-name").click(function () {
-            $('.banner-block').css('display', 'block');
-            $('.categories-wrapper').css('display', 'block');
-            if ($(window).width() < 960) {
-                $('.banner-block').css('display', 'none');
-                $('.categories-wrapper').css('display', 'none');
-            }
-        });
-        $(".category-links .category-link").click(function () {
-            $('.banner-block').css('display', 'block');
-            $('.categories-wrapper').css('display', 'block');
-            if ($(window).width() < 960) {
-                $('.banner-block').css('display', 'none');
-                $('.categories-wrapper').css('display', 'none');
-            }
-        });
-    });
-
-    $(document).ready(function () {
+$(document).ready(function () {
+    $(".title a").click(function () {
+        $('.banner-block').css('display', 'block');
+        $('.categories-wrapper').css('display', 'block');
         if ($(window).width() < 960) {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
         }
     });
+});
+$(document).ready(function () {
+    $(".category-name").click(function () {
+        $('.banner-block').css('display', 'block');
+        $('.categories-wrapper').css('display', 'block');
+        if ($(window).width() < 960) {
+            $('.banner-block').css('display', 'none');
+            $('.categories-wrapper').css('display', 'none');
+        }
+    });
+    $(".category-links .category-link").click(function () {
+        $('.banner-block').css('display', 'block');
+        $('.categories-wrapper').css('display', 'block');
+        if ($(window).width() < 960) {
+            $('.banner-block').css('display', 'none');
+            $('.categories-wrapper').css('display', 'none');
+        }
+    });
+});
+
+$(document).ready(function () {
+    if ($(window).width() < 960) {
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
+    }
+});
 
 
-    $(document).ready(function () {
-        if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
+$(document).ready(function () {
+    if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
+    } else {
+        if (window.location.href.indexOf("doc-doc.ch/t/") > -1) {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
         } else {
-            if (window.location.href.indexOf("doc-doc.ch/t/") > -1) {
+            if (window.location.href.indexOf("doc-doc.ch/contact-us") > -1) {
                 $('.banner-block').css('display', 'none');
                 $('.categories-wrapper').css('display', 'none');
             } else {
-                if (window.location.href.indexOf("doc-doc.ch/contact-us") > -1) {
+                if (window.location.href.indexOf("doc-doc.ch/u/account-created") > -1) {
                     $('.banner-block').css('display', 'none');
                     $('.categories-wrapper').css('display', 'none');
                 } else {
-                    if (window.location.href.indexOf("doc-doc.ch/u/account-created") > -1) {
-                        $('.banner-block').css('display', 'none');
-                        $('.categories-wrapper').css('display', 'none');
-                    } else {
-                        $('.banner-block').css('display', 'block');
-                        $('.categories-wrapper').css('display', 'block');
-                    }
+                    $('.banner-block').css('display', 'block');
+                    $('.categories-wrapper').css('display', 'block');
                 }
             }
         }
-    });
+    }
+});
 
 /*
  Version for Live
