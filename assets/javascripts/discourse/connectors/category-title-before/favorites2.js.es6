@@ -30,49 +30,28 @@ export default {
 $(document).ready(function () {
     if (window.location.href.indexOf("/c/berufsalltag") > -1) {
         console.log('works');
-        $('#categories-under-banner .btn').removeClass('activebtn');
+        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
     }
-    else {
-        if (window.location.href.indexOf("/c/vsao") > -1) {
-            console.log('works2');
-            $('#categories-under-banner .btn').removeClass('activebtn');
-            $('#VSAO').addClass("activebtn");
-        }
-        else {
-            if (window.location.href.indexOf("/c/weiterbildung") > -1) {
-                $('#categories-under-banner .btn').removeClass('activebtn');
-                $('#Weiterbildung').addClass("activebtn");
-            }
-            else {
-
-            }
-        }
+    if (window.location.href.indexOf("/c/vsao") > -1) {
+        console.log('works2');
+        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
+        $('#VSAO').addClass("activebtn");
     }
-
-
     if (window.location.href.indexOf("/c/weiterbildung") > -1) {
-        $('#categories-under-banner .btn').removeClass('activebtn');
+        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Weiterbildung').addClass("activebtn");
     }
-    else {
-        console.log("error");
-    }
-
     if (window.location.href.indexOf("/c/studium") > -1) {
-        $('#categories-under-banner .btn').removeClass('activebtn');
+        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Stadium').addClass("activebtn");
     }
-    else {
-        console.log("error");
-    }
-
     if (window.location.href.indexOf("/c/pausenraum") > -1) {
-        $('#categories-under-banner .btn').removeClass('activebtn');
+        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Pausenraum').addClass("activebtn");
     }
    else {
-       console.log("error");
+       console.log("error2");
     }
 });
 
