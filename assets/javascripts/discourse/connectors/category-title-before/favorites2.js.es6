@@ -30,7 +30,7 @@ export default {
 $(document).ready(function () {
     $(".categories-under-banner a").click(function () {
         $("div.categories-under-banner a").removeClass('activebtn');
-        $("div.categories-under-banner a").addClass("activebtn");
+        $(this).addClass("activebtn");
     });
 });
 
@@ -68,6 +68,14 @@ $(document).ready(function () {
             $('.categories-wrapper').css('display', 'none');
         }
     });
+    $(".category-links .category-link").click(function () {
+        $('.banner-block').css('display', 'block');
+        $('.categories-wrapper').css('display', 'block');
+        if ($(window).width() < 960) {
+            $('.banner-block').css('display', 'none');
+            $('.categories-wrapper').css('display', 'none');
+        }
+    });
 });
 
 $(document).ready(function () {
@@ -83,7 +91,7 @@ $(document).ready(function () {
         $('.banner-block').css('display', 'none');
         $('.categories-wrapper').css('display', 'none');
     } else {
-        if (window.location.href.indexOf("https://dev.doc-doc.ch/t/") > -1) {
+        if (window.location.href.indexOf("dev.doc-doc.ch/t/") > -1) {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
         } else {
@@ -91,7 +99,7 @@ $(document).ready(function () {
                 $('.banner-block').css('display', 'none');
                 $('.categories-wrapper').css('display', 'none');
             } else {
-                if (window.location.href.indexOf("https://dev.doc-doc.ch/u/account-created") > -1) {
+                if (window.location.href.indexOf("dev.doc-doc.ch/u/account-created") > -1) {
                     $('.banner-block').css('display', 'none');
                     $('.categories-wrapper').css('display', 'none');
                 } else {
