@@ -28,9 +28,11 @@ export default {
 };
 /* Version for dev */
 $("#categories-under-banner .btn").click(function () {
+    $(window).on('load', function() {
         console.log("abc");
         $("div#categories-under-banner .btn").removeClass('activebtn');
         $(this).addClass("activebtn");
+    });
 });
 
 $(document).ready(function () {
