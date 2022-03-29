@@ -28,7 +28,7 @@ export default {
 };
 /* Version for dev */
 $(document).ready(function () {
-    if (window.location.href.indexOf("doc-doc.ch/c/berufsalltag") > -1) {
+    if (window.location.href.indexOf("dev.doc-doc.ch/c/berufsalltag") > -1) {
         console.log('works');
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         console.log("Berufsalltag");
@@ -38,7 +38,7 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("doc-doc.ch/c/vsao") > -1) {
+    if (window.location.href.indexOf("dev.doc-doc.ch/c/vsao") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         console.log("VSAO");
     }
@@ -47,7 +47,7 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("doc-doc.ch/c/weiterbildung") > -1) {
+    if (window.location.href.indexOf("dev.doc-doc.ch/c/weiterbildung") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Weiterbildung').addClass("activebtn");
         console.log("Weiterbildung");
@@ -57,7 +57,7 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("doc-doc.ch/c/studium") > -1) {
+    if (window.location.href.indexOf("dev.doc-doc.ch/c/studium") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Stadium').addClass("activebtn");
     }
@@ -66,7 +66,7 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("doc-doc.ch/c/pausenraum") > -1) {
+    if (window.location.href.indexOf("dev.doc-doc.ch/c/pausenraum") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Pausenraum').addClass("activebtn");
     }
@@ -126,7 +126,13 @@ $(document).ready(function () {
     }
 });
 
-
+$(document).ready(function () {
+    if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
+    }
+    else{
+        $('.sidebar-content').css('display', 'none');
+    }
+});
 $(document).ready(function () {
     if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
         $('.banner-block').css('display', 'none');
