@@ -127,10 +127,12 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
+
     }
     else{
-        $('.sidebar-content').css('display', 'none');
+        if ($(window).width() < 960) {
+            $('.sidebar-content').css('display', 'none');
+        }
     }
 });
 $(document).ready(function () {
