@@ -29,7 +29,7 @@ export default {
 /* Version for dev */
 $("#categories-under-banner .btn").click(function () {
         console.log("abc");
-        $("div.categories-under-banner .btn").removeClass('activebtn');
+        $("div#categories-under-banner .btn").removeClass('activebtn');
         $(this).addClass("activebtn");
 });
 
