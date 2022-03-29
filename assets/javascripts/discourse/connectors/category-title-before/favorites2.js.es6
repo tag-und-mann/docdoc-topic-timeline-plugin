@@ -29,6 +29,7 @@ export default {
 /* Version for dev */
 $(document).ready(function () {
     $(".categories-under-banner a").click(function () {
+        console.log("abc");
         $("div.categories-under-banner a").removeClass('activebtn');
         $(this).addClass("activebtn");
     });
