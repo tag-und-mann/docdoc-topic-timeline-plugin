@@ -27,13 +27,11 @@ export default {
 
 };
 /* Version for dev */
-$(document).ready(function () {
     $(".categories-under-banner .btn").click(function () {
         console.log("abc");
         $("div.categories-under-banner .btn").removeClass('activebtn');
         $(this).addClass("activebtn");
     });
-});
 
 $(document).ready(function () {
     $(".admin-main-nav .nav-pills li a").click(function () {
