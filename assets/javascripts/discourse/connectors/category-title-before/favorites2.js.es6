@@ -27,15 +27,15 @@ export default {
 
 };
 /* Version for dev */
-/*$(document).ready(function () {
+$(document).ready(function () {
     $("#categories-under-banner .btn").click(function (e) {
+        e.preventDefault();
         console.log("abc");
         $("div#categories-under-banner .btn").removeClass('activebtn');
         $(this).addClass("activebtn");
-        e.preventDefault();
     });
 });
-*/
+
 $(document).ready(function () {
     $(".admin-main-nav .nav-pills li a").click(function () {
         $('.banner-block').css('display', 'none');
