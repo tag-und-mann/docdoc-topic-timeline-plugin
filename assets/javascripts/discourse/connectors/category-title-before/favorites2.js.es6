@@ -27,8 +27,8 @@ export default {
 
 };
 /* Version for dev */
-$(document).ready(function () {
     $("#categories-under-banner .btn").click(function (e) {
+        $(document).ready(function () {
         e.preventDefault();
         console.log("abc");
         $("div#categories-under-banner .btn").removeClass('activebtn');
