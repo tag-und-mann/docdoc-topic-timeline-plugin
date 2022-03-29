@@ -34,17 +34,22 @@ $(document).ready(function () {
         $('#Berufsalltag').addClass("activebtn");
     }
     else {
-        console.log("error");
+        if (window.location.href.indexOf("/c/vsao") > -1) {
+            console.log('works2');
+            $('#categories-under-banner .btn').removeClass('activebtn');
+            $('#VSAO').addClass("activebtn");
+        }
+        else {
+            if (window.location.href.indexOf("/c/weiterbildung") > -1) {
+                $('#categories-under-banner .btn').removeClass('activebtn');
+                $('#Weiterbildung').addClass("activebtn");
+            }
+            else {
+
+            }
+        }
     }
 
-    if (window.location.href.indexOf("/c/vsao") > -1) {
-        console.log('works2');
-        $('#categories-under-banner .btn').removeClass('activebtn');
-        $('#VSAO').addClass("activebtn");
-    }
-    else {
-        console.log("error");
-    }
 
     if (window.location.href.indexOf("/c/weiterbildung") > -1) {
         $('#categories-under-banner .btn').removeClass('activebtn');
