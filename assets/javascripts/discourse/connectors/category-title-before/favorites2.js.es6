@@ -29,23 +29,26 @@ export default {
 /* Version for dev */
 $(document).ready(function () {
     if (href.indexOf('/c/berufsalltag') <= 0) {
-        $('#Berufsalltag').removeClass('activebtn');
+        console.log('works');
+        $('#categories-under-banner a').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
     } else {
+        console.log('error');
         if (href.indexOf('/c/vsao') <= 0) {
-            $('#VSAO').removeClass('activebtn');
+            console.log('works2');
+            $('#categories-under-banner a').removeClass('activebtn');
             $('#VSAO').addClass("activebtn");
         } else {
             if (href.indexOf('/c/weiterbildung') <= 0) {
-                $('#Weiterbildung').removeClass('activebtn');
+                $('#categories-under-banner a').removeClass('activebtn');
                 $('#Weiterbildung').addClass("activebtn");
             } else {
                 if (href.indexOf('/c/studium') <= 0) {
-                    $('#Stadium').removeClass('activebtn');
+                    $('#categories-under-banner a').removeClass('activebtn');
                     $('#Stadium').addClass("activebtn");
                 } else {
                     if (href.indexOf('/c/pausenraum') <= 0) {
-                        $('#Pausenraum').removeClass('activebtn');
+                        $('#categories-under-banner a').removeClass('activebtn');
                         $('#Pausenraum').addClass("activebtn");
                     }
                 }
