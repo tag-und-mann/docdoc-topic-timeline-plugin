@@ -28,12 +28,10 @@ export default {
 };
 /* Version for dev */
     $("#categories-under-banner .btn").click(function (e) {
-        $(document).ready(function () {
         e.preventDefault();
         console.log("abc");
         $("div#categories-under-banner .btn").removeClass('activebtn');
         $(this).addClass("activebtn");
-    });
 });
 
 $(document).ready(function () {
