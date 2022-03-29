@@ -28,17 +28,17 @@ export default {
 };
 /* Version for dev */
 $("#categories-under-banner .btn").click(function () {
-    $(window).on('load', function() {
-        console.log("abc");
-        $("div#categories-under-banner .btn").removeClass('activebtn');
-        $(this).addClass("activebtn");
-    });
+    event.preventDefault();
+    console.log("abc");
+    $("div#categories-under-banner .btn").removeClass('activebtn');
+    $(this).addClass("activebtn");
+    event.preventDefault();
 });
 
 $(document).ready(function () {
     $(".admin-main-nav .nav-pills li a").click(function () {
-            $('.banner-block').css('display', 'none');
-            $('.categories-wrapper').css('display', 'none');
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
     });
 });
 
@@ -91,18 +91,15 @@ $(document).ready(function () {
     if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
         $('.banner-block').css('display', 'none');
         $('.categories-wrapper').css('display', 'none');
-    }
-    else {
+    } else {
         if (window.location.href.indexOf("doc-doc.ch/t/") > -1) {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
-        }
-        else {
+        } else {
             if (window.location.href.indexOf("doc-doc.ch/contact-us") > -1) {
                 $('.banner-block').css('display', 'none');
                 $('.categories-wrapper').css('display', 'none');
-            }
-            else {
+            } else {
                 if (window.location.href.indexOf("doc-doc.ch/u/account-created") > -1) {
                     $('.banner-block').css('display', 'none');
                     $('.categories-wrapper').css('display', 'none');
