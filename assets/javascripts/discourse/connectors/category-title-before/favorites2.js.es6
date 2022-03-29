@@ -28,33 +28,44 @@ export default {
 };
 /* Version for dev */
 $(document).ready(function () {
-    if (window.location.href.indexOf("/c/berufsalltag") > -1) {
+    if (window.location.href.indexOf("doc-doc.ch/c/berufsalltag") > -1) {
         console.log('works');
-        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
+        $('#Berufsalltag').removeClass('activebtn');
+        $(' #VSAO').removeClass('activebtn');
+        $('#Weiterbildung').removeClass('activebtn');
+        $('#Stadium').removeClass('activebtn');
+        $('#Pausenraum').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
+        console.log("Berufsalltag");
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("/c/vsao") > -1) {
-        console.log('works2');
-        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
+    if (window.location.href.indexOf("doc-doc.ch/c/vsao") > -1) {
+        $('#Berufsalltag').removeClass('activebtn');
+        $(' #VSAO').removeClass('activebtn');
+        $('#Weiterbildung').removeClass('activebtn');
+        $('#Stadium').removeClass('activebtn');
+        $('#Pausenraum').removeClass('activebtn');
+        $('#Berufsalltag').addClass("activebtn");
         $('#VSAO').addClass("activebtn");
+        console.log("VSAO");
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("/c/weiterbildung") > -1) {
+    if (window.location.href.indexOf("doc-doc.ch/c/weiterbildung") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Weiterbildung').addClass("activebtn");
+        console.log("Weiterbildung");
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("/c/studium") > -1) {
+    if (window.location.href.indexOf("doc-doc.ch/c/studium") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Stadium').addClass("activebtn");
     }
 });
 $(document).ready(function () {
-    if (window.location.href.indexOf("/c/pausenraum") > -1) {
+    if (window.location.href.indexOf("doc-doc.ch/c/pausenraum") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Pausenraum').addClass("activebtn");
     }
