@@ -86,19 +86,22 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    if (window.location.href.indexOf("dev.doc-doc.ch/g") > -1) {
+    if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
         $('.banner-block').css('display', 'none');
         $('.categories-wrapper').css('display', 'none');
-    } else {
-        if (window.location.href.indexOf("dev.doc-doc.ch/t/") > -1) {
+    }
+    else {
+        if (window.location.href.indexOf("doc-doc.ch/t/") > -1) {
             $('.banner-block').css('display', 'none');
             $('.categories-wrapper').css('display', 'none');
-        } else {
-            if (window.location.href.indexOf("dev.doc-doc.ch/contact-us") > -1) {
+        }
+        else {
+            if (window.location.href.indexOf("doc-doc.ch/contact-us") > -1) {
                 $('.banner-block').css('display', 'none');
                 $('.categories-wrapper').css('display', 'none');
-            } else {
-                if (window.location.href.indexOf("dev.doc-doc.ch/u/account-created") > -1) {
+            }
+            else {
+                if (window.location.href.indexOf("doc-doc.ch/u/account-created") > -1) {
                     $('.banner-block').css('display', 'none');
                     $('.categories-wrapper').css('display', 'none');
                 } else {
