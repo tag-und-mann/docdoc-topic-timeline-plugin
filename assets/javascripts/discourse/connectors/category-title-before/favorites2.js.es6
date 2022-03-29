@@ -28,27 +28,27 @@ export default {
 };
 /* Version for dev */
 $(document).ready(function () {
-    if (href.indexOf('/c/berufsalltag') <= 0) {
+    if (window.location.href.indexOf("/c/berufsalltag") > -1) {
         console.log('works');
-        $('#categories-under-banner a').removeClass('activebtn');
+        $('#categories-under-banner .btn').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
     } else {
         console.log('error');
-        if (href.indexOf('/c/vsao') <= 0) {
+        if (window.location.href.indexOf("/c/vsao") > -1) {
             console.log('works2');
-            $('#categories-under-banner a').removeClass('activebtn');
+            $('#categories-under-banner .btn').removeClass('activebtn');
             $('#VSAO').addClass("activebtn");
         } else {
-            if (href.indexOf('/c/weiterbildung') <= 0) {
-                $('#categories-under-banner a').removeClass('activebtn');
+            if (window.location.href.indexOf("/c/weiterbildung") > -1) {
+                $('#categories-under-banner .btn').removeClass('activebtn');
                 $('#Weiterbildung').addClass("activebtn");
             } else {
-                if (href.indexOf('/c/studium') <= 0) {
-                    $('#categories-under-banner a').removeClass('activebtn');
+                if (window.location.href.indexOf("/c/studium") > -1) {
+                    $('#categories-under-banner .btn').removeClass('activebtn');
                     $('#Stadium').addClass("activebtn");
                 } else {
-                    if (href.indexOf('/c/pausenraum') <= 0) {
-                        $('#categories-under-banner a').removeClass('activebtn');
+                    if (window.location.href.indexOf("/c/pausenraum") > -1) {
+                        $('#categories-under-banner .btn').removeClass('activebtn');
                         $('#Pausenraum').addClass("activebtn");
                     }
                 }
