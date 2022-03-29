@@ -27,12 +27,13 @@ export default {
 
 };
 /* Version for dev */
-$("#categories-under-banner .btn").click(function () {
-    event.preventDefault();
-    console.log("abc");
-    $("div#categories-under-banner .btn").removeClass('activebtn');
-    $(this).addClass("activebtn");
-    event.preventDefault();
+$(document).ready(function () {
+    $("#categories-under-banner .btn").click(function () {
+        console.log("abc");
+        $("div#categories-under-banner .btn").removeClass('activebtn');
+        $(this).addClass("activebtn");
+        event.preventDefault();
+    });
 });
 
 $(document).ready(function () {
