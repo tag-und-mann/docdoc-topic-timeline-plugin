@@ -28,11 +28,11 @@ export default {
 };
 /* Version for dev */
 $(document).ready(function () {
-    $("#categories-under-banner .btn").click(function () {
+    $("#categories-under-banner .btn").click(function (e) {
         console.log("abc");
         $("div#categories-under-banner .btn").removeClass('activebtn');
         $(this).addClass("activebtn");
-        event.preventDefault();
+        e.preventDefault();
     });
 });
 
