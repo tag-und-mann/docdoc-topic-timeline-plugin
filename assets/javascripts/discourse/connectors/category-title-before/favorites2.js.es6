@@ -27,16 +27,16 @@ export default {
 
 };
 /* Version for dev */
+
 function myFunction() {
     $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
-    $('#Weiterbildung').addClass("activebtn");
+    $('#Berufsalltag').addClass("activebtn");
 }
 
 function myFunction2() {
     $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
-    $('#Weiterbildung').addClass("activebtn");
+    $('#VSAO').addClass("activebtn");
 }
-
 
 
 
@@ -44,7 +44,7 @@ $(document).ready(function () {
     if (window.location.href.indexOf("dev.doc-doc.ch/c/berufsalltag") > -1) {
         console.log('works');
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
-        $('#Weiterbildung').addClass("activebtn");
+        $('#Berufsalltag').addClass("activebtn");
         console.log("Berufsalltag");
     }
     else{
@@ -54,7 +54,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     if (window.location.href.indexOf("dev.doc-doc.ch/c/vsao") > -1) {
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
-        $('#Weiterbildung').addClass("activebtn");
+        $('#VSAO').addClass("activebtn");
         console.log("VSAO");
     }
     else{
@@ -142,12 +142,12 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-
+    if (window.location.href.indexOf("doc-doc.ch") > -1) {
+        $('.sidebar-content').css('display', 'none');
     }
     else{
         if ($(window).width() < 960) {
-            $('.sidebar-content').css('display', 'none');
-        }
+        $('.sidebar-content').css('display', 'none');
     }
 });
 $(document).ready(function () {
