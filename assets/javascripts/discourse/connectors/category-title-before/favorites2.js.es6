@@ -39,27 +39,27 @@ function myFunction2() {
 }
 
 $(document).ready(function () {
-    if (window.location.href.indexOf("dev.doc-doc.ch/c/berufsalltag") > -1) {
+    if (window.location.href.indexOf("/c/berufsalltag") > -1) {
         console.log('works');
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
         console.log("Berufsalltag");
     } else {
-        if (window.location.href.indexOf("dev.doc-doc.ch/c/vsao") > -1) {
+        if (window.location.href.indexOf("/c/vsao") > -1) {
             $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
             $('#VSAO').addClass("activebtn");
             console.log("VSAO");
         } else {
-            if (window.location.href.indexOf("dev.doc-doc.ch/c/weiterbildung") > -1) {
+            if (window.location.href.indexOf("/c/weiterbildung") > -1) {
                 $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
                 $('#Weiterbildung').addClass("activebtn");
                 console.log("Weiterbildung");
             } else {
-                if (window.location.href.indexOf("dev.doc-doc.ch/c/studium") > -1) {
+                if (window.location.href.indexOf("/c/studium") > -1) {
                     $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
                     $('#Stadium').addClass("activebtn");
                 } else {
-                    if (window.location.href.indexOf("dev.doc-doc.ch/c/pausenraum") > -1) {
+                    if (window.location.href.indexOf("/c/pausenraum") > -1) {
                         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
                         $('#Pausenraum').addClass("activebtn");
                     }else {
