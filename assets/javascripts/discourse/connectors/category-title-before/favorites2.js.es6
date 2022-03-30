@@ -61,11 +61,7 @@ $(document).ready(function () {
         }
     }
 });
-function myFunction2() {
-    $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
-    $('#VSAO').addClass("activebtn");
-}
-
+/*
 $(document).ready(function () {
     if (window.location.href.indexOf("/c/berufsalltag") > -1) {
         $('.btn').removeClass('activebtn');
@@ -97,7 +93,7 @@ $(document).ready(function () {
         }
     }
 });
-
+*/
 
 $(document).ready(function () {
     $(".admin-main-nav .nav-pills li a").click(function () {
