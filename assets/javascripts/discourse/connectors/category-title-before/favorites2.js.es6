@@ -32,26 +32,26 @@ function myFunction() {
     $('.btn').removeClass('activebtn');
     let n = 1;
     while (n = 1) {
-        if (window.location.href.indexOf("/c/berufsalltag") > -1) {
+        if (window.location.href.indexOf("/berufsalltag") > -1) {
             $('.btn').removeClass('activebtn');
             $('#Berufsalltag').addClass("activebtn");
             console.log("Berufsalltag");
         } else {
             $('.btn').removeClass('activebtn');
-            if (window.location.href.indexOf("/c/vsao") > -1) {
+            if (window.location.href.indexOf("/vsao") > -1) {
                 $('.btn').removeClass('activebtn');
                 $('#VSAO').addClass("activebtn");
             } else {
-                if (window.location.href.indexOf("/c/weiterbildung") > -1) {
+                if (window.location.href.indexOf("/weiterbildung") > -1) {
                     $('.btn').removeClass('activebtn');
                     $('#Weiterbildung').addClass("activebtn");
                     console.log("Weiterbildung");
                 } else {
-                    if (window.location.href.indexOf("/c/studium") > -1) {
+                    if (window.location.href.indexOf("/studium") > -1) {
                         $('.btn').removeClass('activebtn');
                         $('#Stadium').addClass("activebtn");
                     } else {
-                        if (window.location.href.indexOf("/c/pausenraum") > -1) {
+                        if (window.location.href.indexOf("/pausenraum") > -1) {
                             $('.btn').removeClass('activebtn');
                             $('#Pausenraum').addClass("activebtn");
                         } else {
