@@ -31,28 +31,32 @@ export default {
 
 
 $(document).ready(function () {
-    location.reload(true);
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
+        location.reload(true);
         $('.btn').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
         console.log("Berufsalltag");
     } else {
         $('.btn').removeClass('activebtn');
         if (window.location.href.indexOf("/vsao") > -1) {
+            location.reload(true);
             $('.btn').removeClass('activebtn');
             $('#VSAO').addClass("activebtn");
         } else {
             if (window.location.href.indexOf("/weiterbildung") > -1) {
+                location.reload(true);
                 $('.btn').removeClass('activebtn');
                 $('#Weiterbildung').addClass("activebtn");
                 console.log("Weiterbildung");
             } else {
                 if (window.location.href.indexOf("/studium") > -1) {
+                    location.reload(true);
                     $('.btn').removeClass('activebtn');
                     $('#Stadium').addClass("activebtn");
                 } else {
                     if (window.location.href.indexOf("/pausenraum") > -1) {
+                        location.reload(true);
                         $('.btn').removeClass('activebtn');
                         $('#Pausenraum').addClass("activebtn");
                     } else {
