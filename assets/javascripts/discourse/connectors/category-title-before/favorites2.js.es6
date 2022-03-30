@@ -29,6 +29,7 @@ export default {
 /* Version for dev */
 
 function myFunction() {
+    $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/c/berufsalltag") > -1) {
         $('.btn').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
