@@ -130,7 +130,8 @@ $(document).ready(function () {
     }
     else{
         if ($(window).width() < 960) {
-        $('.sidebar-content').css('display', 'none');
+            $('.sidebar-content').css('display', 'none');
+        }
     }
 });
 $(document).ready(function () {
@@ -157,65 +158,3 @@ $(document).ready(function () {
         }
     }
 });
-
-/*
- Version for Live
- */
-/*
-$(document).ready(function () {
-    if ($(window).width() < 960) {
-    }
-    else{
-        $("<div class='arrow'></div>").insertBefore(".link-bottom-line");
-    }
-});
-
-$(document).ready(function () {
-    $(".title a").click(function(){
-        $('.banner-block').css('display','block');
-        $('.categories-wrapper').css('display','block');
-        if ($(window).width() < 960) {
-            $('.banner-block').css('display','none');
-            $('.categories-wrapper').css('display','none');
-        }
-    });
-});
-
-$(document).ready(function () {
-    if ($(window).width() < 960) {
-        $('.banner-block').css('display','none');
-        $('.categories-wrapper').css('display','none');
-    }
-});
-
-
-$(document).ready(function () {
-    if (window.location.href.indexOf("doc-doc.ch/g") > -1) {
-        $('.banner-block').css('display','none');
-        $('.categories-wrapper').css('display','none');
-    }
-
-    else{
-        if (window.location.href.indexOf("doc-doc.ch/t/") > -1) {
-            $('.banner-block').css('display','none');
-            $('.categories-wrapper').css('display','none');
-        }
-        else{
-            if (window.location.href.indexOf("doc-doc.ch/contact-us") > -1) {
-                $('.banner-block').css('display','none');
-                $('.categories-wrapper').css('display','none');
-            }
-            else{
-                if (window.location.href.indexOf("dev.doc-doc.ch/u/account-created") > -1) {
-                    $('.banner-block').css('display','none');
-                    $('.categories-wrapper').css('display','none');
-                }
-                else{
-                    $('.banner-block').css('display', 'block');
-                    $('.categories-wrapper').css('display', 'block');
-                }
-            }
-        }
-    }
-});
-*/
