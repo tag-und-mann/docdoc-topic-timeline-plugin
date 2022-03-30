@@ -40,15 +40,14 @@ function myFunction2() {
 
 $(document).ready(function () {
     if (window.location.href.indexOf("/c/berufsalltag") > -1) {
-        console.log('works');
         $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
         console.log("Berufsalltag");
     } else {
+        $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
         if (window.location.href.indexOf("/c/vsao") > -1) {
             $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
             $('#VSAO').addClass("activebtn");
-            console.log("VSAO");
         } else {
             if (window.location.href.indexOf("/c/weiterbildung") > -1) {
                 $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
