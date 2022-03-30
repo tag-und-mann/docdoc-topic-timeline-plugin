@@ -29,6 +29,7 @@ export default {
 
 /* Version for dev */
 
+/*
 $(document).ready(function () {
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
@@ -61,7 +62,7 @@ $(document).ready(function () {
         }
     }
 });
-/*
+
 $(document).ready(function () {
     if (window.location.href.indexOf("/c/berufsalltag") > -1) {
         $('.btn').removeClass('activebtn');
