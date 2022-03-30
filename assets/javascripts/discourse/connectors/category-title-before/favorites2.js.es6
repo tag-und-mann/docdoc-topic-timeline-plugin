@@ -30,7 +30,8 @@ export default {
 /* Version for dev */
 
 
-$(document).ready(function () {
+(function($) {
+    $(function(){
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
 
@@ -66,7 +67,9 @@ $(document).ready(function () {
             }
         }
     }
-});
+    });
+}(jQuery));
+
 
 
 $(document).ready(function () {
