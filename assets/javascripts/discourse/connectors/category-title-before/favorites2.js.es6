@@ -149,7 +149,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     if (window.location.href.indexOf("doc-doc.ch") > -1) {
-        $('.sidebar-content').css('display', 'none');
+        $('.sidebar-content').css('display', 'block');
     } else {
         if ($(window).width() < 960) {
             $('.sidebar-content').css('display', 'none');
