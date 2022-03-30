@@ -29,7 +29,7 @@ export default {
 
 /* Version for dev */
 
-function myFunction() {
+$(document).ready(function () {
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
         $('.btn').removeClass('activebtn');
@@ -60,8 +60,7 @@ function myFunction() {
             }
         }
     }
-}
-
+});
 function myFunction2() {
     $('#Berufsalltag, #VSAO, #Weiterbildung, #Stadium, #Pausenraum').removeClass('activebtn');
     $('#VSAO').addClass("activebtn");
