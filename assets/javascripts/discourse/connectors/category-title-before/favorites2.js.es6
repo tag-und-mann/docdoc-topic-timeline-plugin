@@ -26,37 +26,35 @@ export default {
     }
 
 };
+
 /* Version for dev */
 
 function myFunction() {
     $('.btn').removeClass('activebtn');
-    let n = 1;
-    while (n = 1) {
-        if (window.location.href.indexOf("/berufsalltag") > -1) {
+    if (window.location.href.indexOf("/berufsalltag") > -1) {
+        $('.btn').removeClass('activebtn');
+        $('#Berufsalltag').addClass("activebtn");
+        console.log("Berufsalltag");
+    } else {
+        $('.btn').removeClass('activebtn');
+        if (window.location.href.indexOf("/vsao") > -1) {
             $('.btn').removeClass('activebtn');
-            $('#Berufsalltag').addClass("activebtn");
-            console.log("Berufsalltag");
+            $('#VSAO').addClass("activebtn");
         } else {
-            $('.btn').removeClass('activebtn');
-            if (window.location.href.indexOf("/vsao") > -1) {
+            if (window.location.href.indexOf("/weiterbildung") > -1) {
                 $('.btn').removeClass('activebtn');
-                $('#VSAO').addClass("activebtn");
+                $('#Weiterbildung').addClass("activebtn");
+                console.log("Weiterbildung");
             } else {
-                if (window.location.href.indexOf("/weiterbildung") > -1) {
+                if (window.location.href.indexOf("/studium") > -1) {
                     $('.btn').removeClass('activebtn');
-                    $('#Weiterbildung').addClass("activebtn");
-                    console.log("Weiterbildung");
+                    $('#Stadium').addClass("activebtn");
                 } else {
-                    if (window.location.href.indexOf("/studium") > -1) {
+                    if (window.location.href.indexOf("/pausenraum") > -1) {
                         $('.btn').removeClass('activebtn');
-                        $('#Stadium').addClass("activebtn");
+                        $('#Pausenraum').addClass("activebtn");
                     } else {
-                        if (window.location.href.indexOf("/pausenraum") > -1) {
-                            $('.btn').removeClass('activebtn');
-                            $('#Pausenraum').addClass("activebtn");
-                        } else {
-                            $('.btn').removeClass('activebtn');
-                        }
+                        $('.btn').removeClass('activebtn');
                     }
                 }
             }
@@ -92,7 +90,7 @@ $(document).ready(function () {
                     if (window.location.href.indexOf("/c/pausenraum") > -1) {
                         $('.btn').removeClass('activebtn');
                         $('#Pausenraum').addClass("activebtn");
-                    }else {
+                    } else {
                         $('.btn').removeClass('activebtn');
                     }
                 }
@@ -100,7 +98,6 @@ $(document).ready(function () {
         }
     }
 });
-
 
 
 $(document).ready(function () {
@@ -157,8 +154,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     if (window.location.href.indexOf("doc-doc.ch") > -1) {
         $('.sidebar-content').css('display', 'none');
-    }
-    else{
+    } else {
         if ($(window).width() < 960) {
             $('.sidebar-content').css('display', 'none');
         }
