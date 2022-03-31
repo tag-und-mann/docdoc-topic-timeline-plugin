@@ -28,15 +28,24 @@ export default {
 };
 
 /* Version for dev */
+$('.btn').click(function (event) {
+    event.preventDefault();
+$(this).addClass('active');
+});
+
 
 $(".nav-pills li a").click(function() {
     console.log("test");
     $(".banner-block").addClass("displaynone");
     $("#categories-under-banner").addClass("displaynone");
+    $(document).ready(function () {
+        $(".banner-block").addClass("displaynone");
+        $("#categories-under-banner").addClass("displaynone");
+    });
 });
 
 
-$(document).ready(function () {
+/*$(document).ready(function () {
     console.log("works");
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
@@ -67,7 +76,7 @@ $(document).ready(function () {
         }
     }
 });
-
+*/
 
 
 $(document).ready(function () {
