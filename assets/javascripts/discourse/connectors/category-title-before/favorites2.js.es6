@@ -29,7 +29,7 @@ export default {
 
 /* Version for dev */
 
-$(window).on('hashchange', function(e){
+$(document).ready(function () {
     console.log("works");
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
