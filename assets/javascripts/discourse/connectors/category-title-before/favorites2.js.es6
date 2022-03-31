@@ -29,8 +29,9 @@ export default {
 
 /* Version for dev */
 $('.btn').click(function (event) {
+    console.log("test");
     event.preventDefault();
-$(this).addClass('active');
+    $(this).addClass('active');
 });
 
 
