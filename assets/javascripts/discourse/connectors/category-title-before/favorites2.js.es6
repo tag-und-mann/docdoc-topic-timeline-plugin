@@ -28,8 +28,7 @@ export default {
 };
 
 /* Version for dev */
-$('.btn').click(function (event) {
-    console.log("test");
+$('body').on('click', '.btn', function (event) {
     event.preventDefault();
     $(this).addClass('active');
 });
