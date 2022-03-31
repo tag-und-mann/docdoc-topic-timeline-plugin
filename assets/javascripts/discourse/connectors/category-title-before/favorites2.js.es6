@@ -28,9 +28,12 @@ export default {
 };
 
 /* Version for dev */
-$('body').on('click', '.btn', function (event) {
+$(document).ready(function () {
+$('.btn').click(function (event) {
+    console.log("test");
     event.preventDefault();
     $(this).addClass('active');
+});
 });
 
 
