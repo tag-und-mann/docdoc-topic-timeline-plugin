@@ -31,7 +31,8 @@ export default {
 $(document).ready(function () {
 $('.btn').click(function (event) {
     console.log("test");
-    event.preventDefault();
+    //event.preventDefault();
+    $(".btn").removeClass("active");
     $(this).addClass('active');
 });
 });
