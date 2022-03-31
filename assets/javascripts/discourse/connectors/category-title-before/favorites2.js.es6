@@ -35,6 +35,7 @@ $('.btn').click(function (event) {
     $(".btn").removeClass("active");
     $(this).addClass('active');
 });
+console.log($(this));
 });
 
 
