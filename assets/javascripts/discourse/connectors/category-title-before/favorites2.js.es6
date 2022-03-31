@@ -29,59 +29,82 @@ export default {
 
 /* Version for dev */
 $(document).ready(function () {
-$('.btn').click(function (event) {
-    console.log("test");
-    //event.preventDefault();
-    $(".btn").removeClass("active");
-    $(this).addClass('active');
-});
-console.log($(this));
+    $('#categories-under-banner .btn').click(function (event) {
+        console.log("test");
+        //event.preventDefault();
+        $(".btn").removeClass("active");
+        $(this).addClass('active');
+    });
+
+    $('.category-link .bullet').click(function (event) {
+        if (window.location.href.indexOf("/berufsalltag") > -1) {
+            $('.btn').removeClass('activebtn');
+            $('#Berufsalltag').addClass("active");
+        } else {
+            $('.btn').removeClass('activebtn');
+            if (window.location.href.indexOf("/vsao") > -1) {
+                $('.btn').removeClass('activebtn');
+                $('#VSAO').addClass("active");
+            } else {
+                if (window.location.href.indexOf("/weiterbildung") > -1) {
+                    $('.btn').removeClass('activebtn');
+                    $('#Weiterbildung').addClass("active");
+                } else {
+                    if (window.location.href.indexOf("/studium") > -1) {
+                        $('.btn').removeClass('active');
+                        $('#Stadium').addClass("active");
+                    } else {
+                        if (window.location.href.indexOf("/pausenraum") > -1) {
+                            $('.btn').removeClass('activebtn');
+                            $('#Pausenraum').addClass("active");
+                        } else {
+                            $('.btn').removeClass('active');
+                        }
+                    }
+                }
+            }
+        }
+    });
 });
 
-
-$(".nav-pills li a").click(function() {
-    console.log("test");
-    $(".banner-block").addClass("displaynone");
-    $("#categories-under-banner").addClass("displaynone");
-    $(document).ready(function () {
+$(document).ready(function () {
+    $('.nav-pills li a').click(function (event) {
         $(".banner-block").addClass("displaynone");
         $("#categories-under-banner").addClass("displaynone");
     });
 });
 
 
-/*$(document).ready(function () {
-    console.log("works");
+$(document).ready(function () {
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
         $('.btn').removeClass('activebtn');
-        $('#Berufsalltag').addClass("activebtn");
+        $('#Berufsalltag').addClass("active");
     } else {
         $('.btn').removeClass('activebtn');
         if (window.location.href.indexOf("/vsao") > -1) {
             $('.btn').removeClass('activebtn');
-            $('#VSAO').addClass("activebtn");
+            $('#VSAO').addClass("active");
         } else {
             if (window.location.href.indexOf("/weiterbildung") > -1) {
                 $('.btn').removeClass('activebtn');
-                $('#Weiterbildung').addClass("activebtn");
+                $('#Weiterbildung').addClass("active");
             } else {
                 if (window.location.href.indexOf("/studium") > -1) {
-                    $('.btn').removeClass('activebtn');
-                    $('#Stadium').addClass("activebtn");
+                    $('.btn').removeClass('active');
+                    $('#Stadium').addClass("active");
                 } else {
                     if (window.location.href.indexOf("/pausenraum") > -1) {
                         $('.btn').removeClass('activebtn');
-                        $('#Pausenraum').addClass("activebtn");
+                        $('#Pausenraum').addClass("active");
                     } else {
-                        $('.btn').removeClass('activebtn');
+                        $('.btn').removeClass('active');
                     }
                 }
             }
         }
     }
 });
-*/
 
 
 $(document).ready(function () {
