@@ -30,9 +30,9 @@ export default {
 /* Version for dev */
 
 function myFunction() {
+    console.log("works");
     $('.btn').removeClass('activebtn');
     if (window.location.href.indexOf("/berufsalltag") > -1) {
-
         $('.btn').removeClass('activebtn');
         $('#Berufsalltag').addClass("activebtn");
         console.log("Berufsalltag");
