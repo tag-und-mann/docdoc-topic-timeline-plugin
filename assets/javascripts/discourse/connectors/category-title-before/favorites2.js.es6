@@ -31,8 +31,8 @@ export default {
 
 $(".nav-pills li a").click(function() {
     console.log("test");
-    $('.banner-block').css('display', 'none');
-    $('.categories-wrapper').css('display', 'none');
+    $(".banner-block").addClass("displaynone");
+    $("#categories-under-banner").addClass("displaynone");
 });
 
 
