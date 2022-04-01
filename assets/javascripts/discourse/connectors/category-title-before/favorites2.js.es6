@@ -37,9 +37,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     console.log("david");
-    $('a.bullet').click(function (e) {
+    $('.bullet').click(function () {
         console.log("david test");
-        e.preventDefault();
+
         $(".btn").removeClass("active");
     });
 });
