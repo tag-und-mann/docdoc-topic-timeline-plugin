@@ -29,6 +29,14 @@ export default {
 
 /* Version for dev */
 $(document).ready(function () {
+    $('.title a').click(function (event) {
+        console.log("test");
+        //event.preventDefault();
+        $(".btn").removeClass("active");
+    });
+});
+
+$(document).ready(function () {
     $('#categories-under-banner .btn').click(function (event) {
         console.log("test");
         //event.preventDefault();
