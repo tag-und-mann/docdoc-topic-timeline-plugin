@@ -30,7 +30,6 @@ export default {
 /* Version for dev */
 $(document).ready(function () {
     $('.title a').click(function (event) {
-        console.log("test");
         //event.preventDefault();
         $(".btn").removeClass("active");
     });
@@ -38,13 +37,17 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#categories-under-banner .btn').click(function (event) {
-        console.log("test");
         //event.preventDefault();
         $(".btn").removeClass("active");
         $(this).addClass('active');
     });
+    $('.badge-wrapper').click(function (event) {
+        //event.preventDefault();
+        console.log("david test");
+        $(".btn").removeClass("active");
+    });
 
-    $('.category-link .bullet').click(function (event) {
+    /*$('.category-link .bullet').click(function (event) {
         if (window.location.href.indexOf("/berufsalltag") > -1) {
             $('.btn').removeClass('activebtn');
             $('#Berufsalltag').addClass("active");
@@ -72,21 +75,13 @@ $(document).ready(function () {
                 }
             }
         }
-    });
+    });*/
 });
 
 $(document).ready(function () {
     $('.nav-pills li a').click(function (event) {
         $(".banner-block").addClass("displaynone");
         $("#categories-under-banner").addClass("displaynone");
-    });
-});
-
-$(document).ready(function () {
-    $('.category-links .category-link span a').click(function (event) {
-        console.log("tester");
-        //event.preventDefault();
-        $('.btn').removeClass('activebtn');
     });
 });
 
@@ -120,15 +115,6 @@ $(document).ready(function () {
         }
     }
 });
-
-
-$(document).ready(function () {
-    $(".admin-main-nav .nav-pills li a").click(function () {
-        $('.banner-block').css('display', 'none');
-        $('.categories-wrapper').css('display', 'none');
-    });
-});
-
 
 $(document).ready(function () {
     if ($(window).width() < 960) {
