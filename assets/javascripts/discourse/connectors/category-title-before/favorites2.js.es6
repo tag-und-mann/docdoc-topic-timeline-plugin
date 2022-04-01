@@ -82,6 +82,13 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.category-link span a').click(function (event) {
+        console.log("tester");
+        //event.preventDefault();
+        $('.btn').removeClass('activebtn');
+    });
+});
 
 $(document).ready(function () {
     $('.btn').removeClass('activebtn');
