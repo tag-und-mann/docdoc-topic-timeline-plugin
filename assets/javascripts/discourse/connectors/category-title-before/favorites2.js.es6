@@ -36,17 +36,20 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    console.log("david");
+    $('a.bullet').click(function (e) {
+        console.log("david test");
+        e.preventDefault();
+        $(".btn").removeClass("active");
+    });
+});
+$(document).ready(function () {
     $('#categories-under-banner .btn').click(function (event) {
         //event.preventDefault();
         $(".btn").removeClass("active");
         $(this).addClass('active');
     });
 
-    $('.badge-wrapper').click(function (events) {
-        console.log("david test");
-        events.preventDefault();
-        $(".btn").removeClass("active");
-    });
 
     /*$('.category-link .bullet').click(function (event) {
         if (window.location.href.indexOf("/berufsalltag") > -1) {
