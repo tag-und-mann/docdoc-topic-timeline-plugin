@@ -62,6 +62,7 @@ after_initialize do
   end
 
   add_to_class :topic_query, :create_list do |filter, options = {}, topics = nil|
+    options[:filter] ||= filter
     topics ||= default_results(options)
     topics = yield(topics) if block_given?
 
@@ -80,16 +81,14 @@ after_initialize do
         user_ids << ft.user_id << ft.last_post_user_id << ft.featured_user_ids << ft.allowed_user_ids
       end
 
-      avatar_lookup = AvatarLookup.new(user_ids)
-      primary_group_lookup = PrimaryGroupLookup.new(user_ids)
+      user_lookup = UserLookup.new(user_ids)
 
       # memoize for loop so we don't keep looking these up
       translations = TopicPostersSummary.translations
 
       topics.each do |t|
         t.posters = t.posters_summary(
-          avatar_lookup: avatar_lookup,
-          primary_group_lookup: primary_group_lookup,
+          user_lookup: user_lookup,
           translations: translations
         )
       end
