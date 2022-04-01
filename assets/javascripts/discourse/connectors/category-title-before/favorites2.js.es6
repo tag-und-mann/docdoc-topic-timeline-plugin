@@ -41,9 +41,10 @@ $(document).ready(function () {
         $(".btn").removeClass("active");
         $(this).addClass('active');
     });
-    $('.badge-wrapper').click(function (event) {
-        event.preventDefault();
+
+    $('.badge-wrapper').click(function (events) {
         console.log("david test");
+        events.preventDefault();
         $(".btn").removeClass("active");
     });
 
