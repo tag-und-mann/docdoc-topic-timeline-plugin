@@ -83,7 +83,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $('.category-link span a').click(function (event) {
+    $('.category-links .category-link span a').click(function (event) {
         console.log("tester");
         //event.preventDefault();
         $('.btn').removeClass('activebtn');
