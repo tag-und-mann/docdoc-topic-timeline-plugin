@@ -37,10 +37,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     console.log("david1");
-    $('.bullet').click(function (e) {
-        console.log("david test");
-        e.preventDefault();
-        $(".btn").removeClass("active");
+    $('.badge-wrapper').click(function (e) {
+        $("a.active").removeClass("active");
     });
 });
 $(document).ready(function () {
