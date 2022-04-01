@@ -42,7 +42,7 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
     $('.badge-wrapper').click(function (event) {
-        //event.preventDefault();
+        event.preventDefault();
         console.log("david test");
         $(".btn").removeClass("active");
     });
