@@ -28,6 +28,7 @@ export default {
 };
 
 /* Version for dev */
+/*
 $(document).ready(function () {
     $('.title a').click(function (event) {
         //event.preventDefault();
@@ -36,7 +37,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    console.log("david1");
     $('.badge-wrapper').click(function (e) {
         $("a.active").removeClass("active");
     });
@@ -47,7 +47,6 @@ $(document).ready(function () {
         $(".btn").removeClass("active");
         $(this).addClass('active');
     });
-
 
     /*$('.category-link .bullet').click(function (event) {
         if (window.location.href.indexOf("/berufsalltag") > -1) {
@@ -78,7 +77,7 @@ $(document).ready(function () {
             }
         }
     });*/
-});
+});*/
 
 $(document).ready(function () {
     $('.nav-pills li a').click(function (event) {
