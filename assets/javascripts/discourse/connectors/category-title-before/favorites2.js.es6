@@ -28,7 +28,7 @@ export default {
 };
 
 /* Version for dev */
-/*
+
 $(document).ready(function () {
     $('.title a').click(function (event) {
         //event.preventDefault();
@@ -77,7 +77,7 @@ $(document).ready(function () {
             }
         }
     });
-});*/
+});
 
 $(document).ready(function () {
     $('.nav-pills li a').click(function (event) {
