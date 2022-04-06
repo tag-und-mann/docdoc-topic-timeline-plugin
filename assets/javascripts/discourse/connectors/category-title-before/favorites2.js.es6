@@ -202,3 +202,10 @@ $(document).ready(function () {
         $('#categories-under-banner a.btn .d-button-label:contains("'+category+'")').parent().addClass('activebtn');
     });
 });
+$(document).ready(function () {
+    $('.full-width').on('click', '.admin-main-nav .ember-view a', function() {
+        console.log("test");
+        $('.banner-block').css('display', 'none');
+        $('.categories-wrapper').css('display', 'none');
+    });
+});
