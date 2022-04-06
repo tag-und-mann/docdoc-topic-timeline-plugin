@@ -193,3 +193,12 @@ $(document).ready(function () {
         }
     }
 });
+
+$(document).ready(function () {
+    $('.d-header').on('click', 'ul.category-links li.category-link a', function() {
+        var category = $('.category-name', $(this)).text();
+
+        $('#categories-under-banner a.btn.activebtn').removeClass('activebtn');
+        $('#categories-under-banner a.btn .d-button-label:contains("'+category+'")').parent().addClass('activebtn');
+    });
+});
