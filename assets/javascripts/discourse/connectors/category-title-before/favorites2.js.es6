@@ -32,45 +32,45 @@ export default {
 $(document).ready(function () {
     $('.title a').click(function (event) {
         //event.preventDefault();
-        $(".btn").removeClass("active");
+        $(".btn").removeClass("activebtn");
     });
 });
 
 $(document).ready(function () {
     $('.badge-wrapper').click(function (e) {
-        $("a.active").removeClass("active");
+        $("a.activebtn").removeClass("activebtn");
     });
 });
 $(document).ready(function () {
     $('#categories-under-banner .btn').click(function (event) {
         //event.preventDefault();
-        $(".btn").removeClass("active");
-        $(this).addClass('active');
+        $(".btn").removeClass("activebtn");
+        $(this).addClass('activebtn');
     });
 
-    /*$('.category-link .bullet').click(function (event) {
+    $('.category-link .bullet').click(function (event) {
         if (window.location.href.indexOf("/berufsalltag") > -1) {
             $('.btn').removeClass('activebtn');
-            $('#Berufsalltag').addClass("active");
+            $('#Berufsalltag').addClass("activebtn");
         } else {
             $('.btn').removeClass('activebtn');
             if (window.location.href.indexOf("/vsao") > -1) {
                 $('.btn').removeClass('activebtn');
-                $('#VSAO').addClass("active");
+                $('#VSAO').addClass("activebtn");
             } else {
                 if (window.location.href.indexOf("/weiterbildung") > -1) {
                     $('.btn').removeClass('activebtn');
-                    $('#Weiterbildung').addClass("active");
+                    $('#Weiterbildung').addClass("activebtn");
                 } else {
                     if (window.location.href.indexOf("/studium") > -1) {
-                        $('.btn').removeClass('active');
-                        $('#Stadium').addClass("active");
+                        $('.btn').removeClass('activebtn');
+                        $('#Stadium').addClass("activebtn");
                     } else {
                         if (window.location.href.indexOf("/pausenraum") > -1) {
                             $('.btn').removeClass('activebtn');
-                            $('#Pausenraum').addClass("active");
+                            $('#Pausenraum').addClass("activebtn");
                         } else {
-                            $('.btn').removeClass('active');
+                            $('.btn').removeClass('activebtn');
                         }
                     }
                 }
@@ -95,21 +95,21 @@ $(document).ready(function () {
         $('.btn').removeClass('activebtn');
         if (window.location.href.indexOf("/vsao") > -1) {
             $('.btn').removeClass('activebtn');
-            $('#VSAO').addClass("active");
+            $('#VSAO').addClass("activebtn");
         } else {
             if (window.location.href.indexOf("/weiterbildung") > -1) {
                 $('.btn').removeClass('activebtn');
-                $('#Weiterbildung').addClass("active");
+                $('#Weiterbildung').addClass("activebtn");
             } else {
                 if (window.location.href.indexOf("/studium") > -1) {
-                    $('.btn').removeClass('active');
-                    $('#Stadium').addClass("active");
+                    $('.btn').removeClass('activebtn');
+                    $('#Stadium').addClass("activebtn");
                 } else {
                     if (window.location.href.indexOf("/pausenraum") > -1) {
                         $('.btn').removeClass('activebtn');
-                        $('#Pausenraum').addClass("active");
+                        $('#Pausenraum').addClass("activebtn");
                     } else {
-                        $('.btn').removeClass('active');
+                        $('.btn').removeClass('activebtn');
                     }
                 }
             }
